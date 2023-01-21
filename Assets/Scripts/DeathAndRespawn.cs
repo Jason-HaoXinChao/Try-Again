@@ -10,6 +10,8 @@ public class DeathAndRespawn : MonoBehaviour
     public bool isDead = false;
     public GameObject player;
     public GameObject corpse;
+    public AudioSource impaleSound;
+    public AudioSource spawnSound;
 
     private void Awake()
     {   
@@ -30,8 +32,11 @@ public class DeathAndRespawn : MonoBehaviour
     {
         renderer.enabled = false;
         Instantiate(corpse, player.transform.position, Quaternion.identity);
+        impaleSound.Play();
 
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(2.5f);
+
+        spawnSound.Play();
 
         transform.position = respawnPoint.position;
         transform.rotation = Quaternion.identity;
