@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag(GroundTag)) {
+        if (collision.gameObject.CompareTag(GroundTag) || collision.gameObject.CompareTag("Corpse")) {
             isGrounded = true;
             Debug.Log("Ground Collision");
         }
