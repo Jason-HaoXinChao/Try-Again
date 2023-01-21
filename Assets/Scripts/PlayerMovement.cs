@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerBody;
     private bool isGrounded;
     private string GroundTag = "Ground";
+    private string SpikeTag = "Spike";
     
 
     private void Awake() {
@@ -49,7 +50,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag(GroundTag)) {
             isGrounded = true;
-            Debug.Log("Landed");
+            Debug.Log("Ground Collision");
+        }
+
+        if (collision.gameObject.CompareTag(SpikeTag)) {
+            
+            Debug.Log("Spike Collision");
         }
     }
 }
