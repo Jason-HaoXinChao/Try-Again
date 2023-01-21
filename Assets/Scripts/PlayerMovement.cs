@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerBody;
     private bool isGrounded;
     private string GroundTag = "Ground";
-    private string SpikeTag = "Spike";
-    
+    private DeathAndRespawn deathRespawnScript;
+    public GameObject player;    
 
     private void Awake() {
         playerBody = GetComponent<Rigidbody2D>();
@@ -20,15 +20,18 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        // playerBody = GetComponent<RigidBody2D>();
+        deathRespawnScript = player.GetComponent<DeathAndRespawn>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerMoveKeyboard();
-        PlayerJump();
-        
+        if (!deathRespawnScript.isDead) {
+            playerMoveKeyboard();
+            PlayerJump();
+        }
     }
 
     private void FixedUpdate() {
@@ -51,11 +54,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag(GroundTag)) {
             isGrounded = true;
             Debug.Log("Ground Collision");
-        }
-
-        if (collision.gameObject.CompareTag(SpikeTag)) {
-            
-            Debug.Log("Spike Collision");
         }
     }
 }
