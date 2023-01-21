@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveForce = 10f;
     private float jumpForce = 10f;
     private float moveX;
-    // private RigidBody2D playerBody;  
+    private Rigidbody2D playerBody;  
     
 
     private void Awake() {
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // playerBody = GetComponent<RigidBody2D>();   
+        
     }
 
     // Update is called once per frame
