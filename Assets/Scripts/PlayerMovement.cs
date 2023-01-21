@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     
 
     private void Awake() {
-        // playerBody = GetComponent<RigidBody2D>();
+        playerBody = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
@@ -24,11 +24,23 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         playerMoveKeyboard();
+        PlayerJump();
         
+    }
+
+    private void FixedUpdate() {
+        // PlayerJump();
     }
 
     void playerMoveKeyboard() {
         moveX = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(moveX, 0f, 0f) * Time.deltaTime * moveForce;
+    }
+
+    void PlayerJump() {
+        if (Input.GetButtonDown("Jump")) {
+            Debug.Log("Jump pressed");
+            playerBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        }
     }
 }
