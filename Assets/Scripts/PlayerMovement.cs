@@ -7,7 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private float moveForce = 10f;
     private float jumpForce = 10f;
     private float moveX;
-    private Rigidbody2D playerBody;  
+    private Rigidbody2D playerBody;
+    private bool isGrounded;
+    private string GroundTag = "Ground";
     
 
     private void Awake() {
@@ -38,9 +40,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void PlayerJump() {
-        if (Input.GetButtonDown("Jump")) {
-            Debug.Log("Jump pressed");
+        if (Input.GetButtonDown("Jump") && isGrounded) {
+            isGrounded = false;
             playerBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag(GroundTag)) {
+            isGrounded = true;
+            Debug.Log("Landed");
         }
     }
 }
