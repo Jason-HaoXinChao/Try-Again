@@ -12,6 +12,7 @@ public class DeathAndRespawn : MonoBehaviour
     public GameObject corpse;
     public AudioSource impaleSound;
     public AudioSource spawnSound;
+    public AudioSource[] deathSounds;
 
     private void Awake()
     {   
@@ -33,6 +34,8 @@ public class DeathAndRespawn : MonoBehaviour
         renderer.enabled = false;
         Instantiate(corpse, player.transform.position, Quaternion.identity);
         impaleSound.Play();
+        yield return new WaitForSeconds(0.5f);
+        deathSounds[Random.Range(0, 3)].Play();
 
         yield return new WaitForSeconds(2.5f);
 
