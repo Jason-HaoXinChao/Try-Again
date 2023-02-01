@@ -21,7 +21,7 @@ public class DeathAndRespawn : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.transform.tag == "Spike")
+        if (other.transform.tag == "Spike" && !isDead)
         {
             isDead = true;
             StartCoroutine(DieAndRespawn());
@@ -35,7 +35,8 @@ public class DeathAndRespawn : MonoBehaviour
         Instantiate(corpse, player.transform.position, Quaternion.identity);
         impaleSound.Play();
         yield return new WaitForSeconds(0.5f);
-        deathSounds[Random.Range(0, 3)].Play();
+
+        deathSounds[Random.Range(0, 4)].Play();
 
         yield return new WaitForSeconds(2.5f);
 
