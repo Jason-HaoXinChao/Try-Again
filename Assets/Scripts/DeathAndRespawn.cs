@@ -48,4 +48,9 @@ public class DeathAndRespawn : MonoBehaviour
         renderer.enabled = true;
         isDead = false;
     }
+
+    public void SetRespawnPoint(Transform newLocation)
+    {
+        this.respawnPoint = newLocation;
+    }
 }

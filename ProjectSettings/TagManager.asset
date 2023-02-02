@@ -7,6 +7,7 @@ TagManager:
   - Spike
   - Corpse
   - Ground
+  - SpawnCheckpoint
   layers:
   - Default
   - TransparentFX
