@@ -6,9 +6,9 @@ public class PlayerMovementBruce : MonoBehaviour
 {
     private Vector3 moveVector;
     private Vector3 lastMove;
-    private float speed = 9;
-    private float jumpForce = 10;
-    private float gravity = 25;
+    [SerializeField] private float speed = 15;
+    [SerializeField] private float jumpForce = 15;
+    [SerializeField] private float gravity = 25;
     private float verticalVelocity;
     private bool wallHopLock = false;
     private CharacterController controller;
@@ -26,7 +26,7 @@ public class PlayerMovementBruce : MonoBehaviour
     void Update()
     {
         moveVector = Vector3.zero;
-        moveVector.x = Input.GetAxis("Horizontal");
+        moveVector.x = Input.GetAxisRaw("Horizontal");
 
         if(controller.isGrounded)
         {
@@ -40,6 +40,13 @@ public class PlayerMovementBruce : MonoBehaviour
         else
         {
             verticalVelocity -= gravity * Time.deltaTime;
+            moveVector = lastMove;
+
+            if(Input.GetAxisRaw("Horizontal") != 0)
+            {
+                moveVector.x = Input.GetAxisRaw("Horizontal");
+            }
+
             if(wallHopLock){moveVector = lastMove;}
         }
 
@@ -48,6 +55,7 @@ public class PlayerMovementBruce : MonoBehaviour
         moveVector *= speed;
         moveVector.y = verticalVelocity;
 
+        moveVector.z = 0;
         controller.Move(moveVector * Time.deltaTime);
         lastMove = moveVector;
     }
@@ -130,10 +138,5 @@ public class PlayerMovementBruce : MonoBehaviour
     //     playerVelocity.y += gravityValue * Time.deltaTime;
     //     controller.Move(playerVelocity * Time.deltaTime);
     // }
-
-
-
-
-
 
 }
