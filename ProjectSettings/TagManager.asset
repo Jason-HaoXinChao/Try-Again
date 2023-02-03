@@ -10,6 +10,7 @@ TagManager:
   - Item
   - SpawnCheckpoint
   - Wall
+  - AudioManager
   layers:
   - Default
   - TransparentFX
