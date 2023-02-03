@@ -25,8 +25,9 @@ public class KillPlayer : MonoBehaviour
 
     IEnumerator RespawnTimer()
     {
-        yield return new WaitForSeconds(0.5f);
         GameObject audioManager = GameObject.FindWithTag("AudioManager");
+        audioManager.GetComponent<PlayerAudioManager>().impale();
+        yield return new WaitForSeconds(0.5f);
         audioManager.GetComponent<PlayerAudioManager>().respawn();
         yield return new WaitForSeconds(0.8f);
         player.GetComponent<PlayerMovementBruce>().RespawnCall();

@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerAudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource respawnSound;
+    [SerializeField] private AudioSource impaleSound;
+    [SerializeField] private AudioSource deathSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +25,14 @@ public class PlayerAudioManager : MonoBehaviour
         respawnSound.Play();
     }
 
-    public IEnumerator playRespawnSound()
+    public void impale()
     {
-        respawnSound.Play();
-        yield return new WaitForSeconds(1);
+        impaleSound.Play();
     }
+
+    public void die()
+    {
+        deathSound.Play();
+    }
+
 }

@@ -23,8 +23,9 @@ public class EvaporatePlayer : MonoBehaviour
 
     IEnumerator RespawnTimer()
     {
-        yield return new WaitForSeconds(0.5f);
         GameObject audioManager = GameObject.FindWithTag("AudioManager");
+        audioManager.GetComponent<PlayerAudioManager>().die();
+        yield return new WaitForSeconds(0.5f);
         audioManager.GetComponent<PlayerAudioManager>().respawn();
         yield return new WaitForSeconds(0.8f);
         player.GetComponent<PlayerMovementBruce>().RespawnCall();
