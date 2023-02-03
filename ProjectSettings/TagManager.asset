@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Item
   - SpawnCheckpoint
+  - Wall
   layers:
   - Default
   - TransparentFX
