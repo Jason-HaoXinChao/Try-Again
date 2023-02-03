@@ -8,7 +8,7 @@ public class EvaporatePlayer : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("BlockPlayer");
     }
     
     void OnTriggerEnter (Collider other)
