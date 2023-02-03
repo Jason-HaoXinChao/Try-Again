@@ -6,21 +6,23 @@ public class PlayerMovementBruce : MonoBehaviour
 {
     private Vector3 moveVector;
     private Vector3 lastMove;
-    [SerializeField] private float speed = 15;
-    [SerializeField] private float jumpForce = 15;
-    [SerializeField] private float gravity = 25;
+
+    [SerializeField] private float speed = 5;
+    [SerializeField] private float jumpForce = 10;
+    [SerializeField] private float gravity = 40;
+
     private float verticalVelocity;
     private bool wallHopLock = false;
-    private CharacterController controller;
+    public CharacterController controller;
 
     // Save and update the transform of new respawn points to this var
-    private Transform respawnPoint;
+    public Transform respawnPoint;
 
     void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>();
+        // controller = gameObject.AddComponent<CharacterController>();
         //Testing Line, Remove Later
-        respawnPoint = GameObject.Find("Temp Respawn Point").GetComponent<Transform>();
+        // respawnPoint = GameObject.Find("Temp Respawn Point").GetComponent<Transform>();
     }
 
     void Update()
@@ -86,8 +88,13 @@ public class PlayerMovementBruce : MonoBehaviour
 
     public void RespawnCall()
     {
-        this.gameObject.GetComponent<Transform>().position = respawnPoint.position;
+        this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
         this.gameObject.SetActive(true);
+    }
+
+    public void SetRespawnPoint(Transform newLocation)
+    {
+        this.respawnPoint = newLocation;
     }
 
     // Old Script =============================================================
