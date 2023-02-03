@@ -15,14 +15,14 @@ public class PlayerInventory : MonoBehaviour
     void Start()
     {
         itemInHand = String.Empty;
-        player = GameObject.Find("Player");
+        player = GameObject.Find("BlockPlayer");
     }
 
     void Update()
     {
         if(!String.IsNullOrEmpty(itemInHand))
         {
-            if(Input.GetButtonDown("Fire2"))
+            if(Input.GetButtonDown("Drop"))
             {
                 for (int i = 0; i < itemList.Count; i++) 
                 {

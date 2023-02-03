@@ -24,15 +24,16 @@ public class ItemInRange : MonoBehaviour
 
     void HoverIconUpdate()
     {
-        Vector3 offset = new Vector3 (0f, 2f, 0f);
+        Vector3 offset = new Vector3 (0f, 1f, 0f);
         pressKeyToPickUp.GetComponent<Transform>().position = 
             this.gameObject.transform.parent.position + offset;
     }
 
     void PlayerPickUp()
     {
-        if(inPickUpRange && Input.GetButtonDown("Fire1"))
+        if(inPickUpRange && Input.GetButtonDown("Confirm"))
         {
+            //Debug.Log("Confirm Key Pressed");
             GameObject playerInventory = GameObject.Find("Inventory");
             playerInventory.GetComponent<PlayerInventory>().itemInHand = thisItem;
 
@@ -42,8 +43,9 @@ public class ItemInRange : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.transform.tag == "Player")
+        if(other.tag == "Player")
         {
+            //Debug.Log("Enter Hitbox");
             pressKeyToPickUp.SetActive(true);
             inPickUpRange = true;
         }
@@ -51,8 +53,9 @@ public class ItemInRange : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if(other.transform.tag == "Player")
+        if(other.tag == "Player")
         {
+            //Debug.Log("Leave Hitbox");
             pressKeyToPickUp.SetActive(false);
             inPickUpRange = false;
         }
