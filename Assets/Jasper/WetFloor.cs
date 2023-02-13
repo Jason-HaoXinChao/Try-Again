@@ -7,21 +7,33 @@ public class WetFloor : MonoBehaviour
     private GameObject player;
     private GameObject slidingPlayer;
     [SerializeField] private GameObject deadPlayer;
+
     private bool sliding = false;
-    float speed = 0.002f;
+    private float speed = 0.05f;
     private int segmentCount = 0;
+    private Vector3 direction = new Vector3(100, 0, 0);
+    private Quaternion bodyRotation;
 
     void Start()
     {
         player = GameObject.Find("BlockPlayer");
+        bodyRotation = deadPlayer.GetComponent<Transform>().rotation;
     }
 
     void Update()
-    {
+    {   
         if(sliding)
-        {
-            slidingPlayer.transform.position = Vector3.Lerp(slidingPlayer.transform.position, transform.forward * speed * Time.deltaTime, speed);
-            player.transform.position = Vector3.Lerp(slidingPlayer.transform.position, transform.forward * speed * Time.deltaTime, speed);
+        {   
+            slidingPlayer.transform.position = Vector3.Lerp(slidingPlayer.transform.position, slidingPlayer.transform.position + direction, speed * Time.deltaTime);
+            player.transform.position = Vector3.Lerp(slidingPlayer.transform.position,slidingPlayer.transform.position + direction, speed * Time.deltaTime);
+        } else {
+            if (Input.GetAxisRaw("Horizontal") == -1) {
+                direction *= -1;
+                bodyRotation = Quaternion.Inverse(deadPlayer.GetComponent<Transform>().rotation);
+            } else if (Input.GetAxisRaw("Horizontal") == 1) {
+                direction *= -1;
+                bodyRotation = deadPlayer.GetComponent<Transform>().rotation;
+            }
         }
     }
 
@@ -29,7 +41,7 @@ public class WetFloor : MonoBehaviour
     {
         if(other.transform == player.GetComponent<Transform>())
         {
-            slidingPlayer = Instantiate(deadPlayer, other.GetComponent<Transform>().position, deadPlayer.GetComponent<Transform>().rotation);
+            slidingPlayer = Instantiate(deadPlayer, other.GetComponent<Transform>().position, bodyRotation);
 
             other.gameObject.SetActive(false);
             sliding = true;
