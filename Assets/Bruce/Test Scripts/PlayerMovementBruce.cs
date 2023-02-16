@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovementBruce : MonoBehaviour
 {
+    private bool dialogueActive;
     private Vector3 moveVector;
     private Vector3 lastMove;
 
@@ -27,14 +28,20 @@ public class PlayerMovementBruce : MonoBehaviour
 
     void Update()
     {
+        // Disable input if in Dialogue Sequence
+        dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
+
         moveVector = Vector3.zero;
-        moveVector.x = Input.GetAxisRaw("Horizontal");
+        if (!dialogueActive)
+        {
+            moveVector.x = Input.GetAxisRaw("Horizontal");
+        }
 
         if(controller.isGrounded)
         {
             verticalVelocity = -1.1f;
 
-            if(Input.GetButtonDown("Jump"))
+            if(!dialogueActive && Input.GetButtonDown("Jump"))
             {
                 verticalVelocity = jumpForce;
             }
@@ -44,7 +51,7 @@ public class PlayerMovementBruce : MonoBehaviour
             verticalVelocity -= gravity * Time.deltaTime;
             moveVector = lastMove;
 
-            if(Input.GetAxisRaw("Horizontal") != 0)
+            if(!dialogueActive && Input.GetAxisRaw("Horizontal") != 0)
             {
                 moveVector.x = Input.GetAxisRaw("Horizontal");
             }
