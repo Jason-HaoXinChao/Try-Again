@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="KeycardDoor" ID="{41F15771-B922-4704-8A15-B293A19AB2D1}">
+					<ChildrenList>
+						<Action Name="" ID="{A9C52A6A-4F0C-4F9E-94DA-F8B496DFF779}" ShortID="120589800">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_door_keycard" ID="{6CDC87F9-6C2C-4B83-89E9-483EA5AE3D4D}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F6A577FC-6A9F-4CD1-A656-3A8A98E0CFF6}" ShortID="344174330">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_door_open" ID="{9FE63215-27C5-4246-B6E2-7E706E6FE0FE}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SpikesImpale" ID="{93D82971-7F4C-47A9-8876-377785AF5301}">
+					<ChildrenList>
+						<Action Name="" ID="{07F23264-B96B-429B-A58D-3298A58271FF}" ShortID="133845">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Impale" ID="{ACBA065D-9286-499A-ADD9-7FCDCD8C8677}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TempMusic" ID="{DE1C1161-F926-4D85-8BE5-B293BFE4D655}">
+					<ChildrenList>
+						<Action Name="" ID="{BA71026C-502E-4631-9BCC-F5579F9C25FA}" ShortID="719639744">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_level_music01" ID="{D065FC80-2EA6-4DFA-93F2-E087804EC8A5}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
     private GameObject player;
+    public AK.Wwise.Event getImpaled;
     [SerializeField] private GameObject deadPlayer;
 
     void Start()
@@ -16,6 +17,7 @@ public class KillPlayer : MonoBehaviour
     {
         if(other.transform == player.GetComponent<Transform>())
         {
+            getImpaled.Post(gameObject);
             Instantiate(deadPlayer, other.GetComponent<Transform>().position, other.GetComponent<Transform>().rotation);
             other.gameObject.SetActive(false);
 
