@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a0c55319fba88fd44849831df931e848, type: 2}
+  - {fileID: 2100000, guid: 91a207f647d218244a21fb996e2e5e90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,7 +94,7 @@ BoxCollider:
   m_GameObject: {fileID: 3280345751565054962}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8288445128500275097}
   m_Layer: 0
-  m_Name: RedKeycard
+  m_Name: BlueKeycard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,8 +188,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 22.081001, y: 2.017065, z: 3.866447}
-  m_Center: {x: -0.13809861, y: -0.015805006, z: 0.40572262}
+  m_Size: {x: 12.761442, y: 1.4896622, z: 3.866447}
+  m_Center: {x: -0.26668668, y: -0.27950644, z: 0.40572262}
 --- !u!114 &8906706303276352476
 MonoBehaviour:
   m_ObjectHideFlags: 0

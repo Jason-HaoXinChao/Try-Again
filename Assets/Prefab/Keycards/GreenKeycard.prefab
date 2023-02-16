@@ -94,7 +94,7 @@ BoxCollider:
   m_GameObject: {fileID: 3280345751565054962}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -188,8 +188,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 22.081001, y: 2.017065, z: 3.866447}
-  m_Center: {x: -0.13809861, y: -0.015805006, z: 0.40572262}
+  m_Size: {x: 14.604721, y: 1.4664958, z: 3.866447}
+  m_Center: {x: -0.3472662, y: -0.29108965, z: 0.40572262}
 --- !u!114 &8906706303276352476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 6908913031993604518}
-  itemName: BlueKeycard
+  itemName: GreenKeycard
 --- !u!1 &6908913031993604518
 GameObject:
   m_ObjectHideFlags: 0

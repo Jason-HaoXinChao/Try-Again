@@ -25,7 +25,7 @@ public class CollectItemScript : MonoBehaviour
     {
         if(inPickUpRange && Input.GetButtonDown("Confirm"))
         {
-            //Debug.Log("Confirm Key Pressed");
+            Debug.Log("Confirm Key Pressed");
             GameObject playerInventory = GameObject.Find("Inventory");
             playerInventory.GetComponent<PlayerInventory>().collectItem(itemName);
 
