@@ -5,10 +5,11 @@ using System;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField]
-    private List<GameObject> itemList;
+    [SerializeField] private List<GameObject> itemList;
+    [SerializeField] private List<GameObject> itemSpriteHUD;
 
-    public string itemInHand;
+    public string itemInHand;   // physical items
+    public List<string> collectedItems;   // non-physical items
 
     private GameObject player;
 
@@ -44,5 +45,10 @@ public class PlayerInventory : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void collectItem(string itemName)
+    {
+        this.collectedItems.Add(itemName);
     }
 }
