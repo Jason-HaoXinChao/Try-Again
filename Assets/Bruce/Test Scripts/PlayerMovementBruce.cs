@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerMovementBruce : MonoBehaviour
@@ -14,12 +15,15 @@ public class PlayerMovementBruce : MonoBehaviour
     private float verticalVelocity;
     private bool wallHopLock = false;
     public CharacterController controller;
+    public GameObject score;
+    private int deathCount;
 
     // Save and update the transform of new respawn points to this var
     public Transform respawnPoint;
 
     void Start()
     {
+        deathCount = 0;
         // controller = gameObject.AddComponent<CharacterController>();
         //Testing Line, Remove Later
         // respawnPoint = GameObject.Find("Temp Respawn Point").GetComponent<Transform>();
@@ -90,6 +94,8 @@ public class PlayerMovementBruce : MonoBehaviour
     {
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
         this.gameObject.SetActive(true);
+        deathCount++;
+        score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
     }
 
     public void SetRespawnPoint(Transform newLocation)
