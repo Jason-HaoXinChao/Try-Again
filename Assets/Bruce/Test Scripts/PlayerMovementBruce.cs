@@ -8,6 +8,7 @@ public class PlayerMovementBruce : MonoBehaviour
     // Lock Player Input
     private bool dialogueActive;
     private bool wetfloorOverride;
+    public bool playerInvincible { get; private set; }
 
     // Player Movement
     [Header("Player Movement")]
@@ -112,6 +113,7 @@ public class PlayerMovementBruce : MonoBehaviour
         }
         controller.height = 1f;
         wetfloorOverride = true;
+        playerInvincible = true;
         StartCoroutine(WetFloorDuration());
     }
 
@@ -119,6 +121,7 @@ public class PlayerMovementBruce : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         wetfloorOverride = false;
+        playerInvincible = false;
 
         GameObject.Find("WetFloorWithSign").transform.GetChild(1).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
