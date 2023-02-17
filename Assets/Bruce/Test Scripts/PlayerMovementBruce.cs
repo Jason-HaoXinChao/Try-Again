@@ -5,15 +5,21 @@ using UnityEngine;
 
 public class PlayerMovementBruce : MonoBehaviour
 {
+    // Lock Player Input
+    private bool dialogueActive;
+    private bool wetfloorOverride;
+
+    // Player Movement
+    [Header("Player Movement")]
     private Vector3 moveVector;
     private Vector3 lastMove;
-
     [SerializeField] private float speed = 5;
     [SerializeField] private float jumpForce = 10;
     [SerializeField] private float gravity = 40;
-
     private float verticalVelocity;
     private bool wallHopLock = false;
+
+    // Character Controller
     public CharacterController controller;
     public GameObject score;
     private int deathCount;
@@ -31,14 +37,25 @@ public class PlayerMovementBruce : MonoBehaviour
 
     void Update()
     {
+        // Disable input if in Dialogue Sequence
+        dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
+
         moveVector = Vector3.zero;
-        moveVector.x = Input.GetAxisRaw("Horizontal");
+        if (!dialogueActive && !wetfloorOverride)
+        {
+            moveVector.x = Input.GetAxisRaw("Horizontal");
+        }
+
+        if(wetfloorOverride)
+        {
+            moveVector.x = lastMove.x;
+        }
 
         if(controller.isGrounded)
         {
             verticalVelocity = -1.1f;
 
-            if(Input.GetButtonDown("Jump"))
+            if(!dialogueActive && Input.GetButtonDown("Jump") && !wetfloorOverride)
             {
                 verticalVelocity = jumpForce;
             }
@@ -48,7 +65,7 @@ public class PlayerMovementBruce : MonoBehaviour
             verticalVelocity -= gravity * Time.deltaTime;
             moveVector = lastMove;
 
-            if(Input.GetAxisRaw("Horizontal") != 0)
+            if(!dialogueActive && Input.GetAxisRaw("Horizontal") != 0 && !wetfloorOverride)
             {
                 moveVector.x = Input.GetAxisRaw("Horizontal");
             }
@@ -81,6 +98,39 @@ public class PlayerMovementBruce : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void WetFloor()
+    {
+        if(lastMove.x > 0)
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        }
+        controller.height = 1f;
+        wetfloorOverride = true;
+        StartCoroutine(WetFloorDuration());
+    }
+
+    IEnumerator WetFloorDuration()
+    {
+        yield return new WaitForSeconds(2);
+        wetfloorOverride = false;
+
+        GameObject.Find("Wet Floor Trap").transform.GetChild(0).GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
+
+        if(lastMove.x > 0)
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        }
+        controller.height = 3f;
     }
 
     IEnumerator SetWallHopLock()
