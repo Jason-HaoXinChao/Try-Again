@@ -31,6 +31,8 @@ public class PlayerMovementBruce : MonoBehaviour
     void Start()
     {
         deathCount = 0;
+        playerInvincible = false;
+        wetfloorOverride = false;
         // controller = gameObject.AddComponent<CharacterController>();
         //Testing Line, Remove Later
         // respawnPoint = GameObject.Find("Temp Respawn Point").GetComponent<Transform>();
