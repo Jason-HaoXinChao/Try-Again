@@ -120,7 +120,7 @@ public class PlayerMovementBruce : MonoBehaviour
         yield return new WaitForSeconds(2);
         wetfloorOverride = false;
 
-        GameObject.Find("Wet Floor Trap").transform.GetChild(0).GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
+        GameObject.Find("WetFloorWithSign").transform.GetChild(1).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
         if(lastMove.x > 0)
         {

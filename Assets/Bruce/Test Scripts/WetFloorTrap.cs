@@ -15,7 +15,8 @@ public class WetFloorTrap : MonoBehaviour
     
     void OnTriggerEnter (Collider other)
     {
-        if(other.transform == player.GetComponent<Transform>())
+        Debug.Log(other);
+        if(other.name == "leg") // checks if the player's feet is on the floor
         {
             if(!delay)
             {
