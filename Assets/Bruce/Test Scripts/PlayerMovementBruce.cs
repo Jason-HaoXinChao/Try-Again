@@ -136,7 +136,7 @@ public class PlayerMovementBruce : MonoBehaviour
     IEnumerator SetWallHopLock()
     {
         wallHopLock = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         wallHopLock = false;
     }
 
