@@ -29,7 +29,7 @@ public class WetFloorTrap : MonoBehaviour
     IEnumerator TrapDelay()
     {
         delay = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         delay = false;
     }
 
