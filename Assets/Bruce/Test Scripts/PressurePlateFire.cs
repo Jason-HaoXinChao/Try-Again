@@ -21,7 +21,7 @@ public class PressurePlateFire : MonoBehaviour
         pressurePlateOrgin = pressurePlateSystem.GetComponent<Transform>().position;
     }
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerStay (Collider other)
     {
         if(!triggerLockEnter)
         {
@@ -33,6 +33,19 @@ public class PressurePlateFire : MonoBehaviour
             StartCoroutine(SetTriggerLockEnter());
         }
     }
+
+    // void OnTriggerEnter (Collider other)
+    // {
+    //     if(!triggerLockEnter)
+    //     {
+    //         fireModel.SetActive(false);
+    //         fireHitbox.SetActive(false);
+    //         smokeModel.SetActive(true);
+    //         pressurePlateSystem.GetComponent<Transform>().position = pressurePlateOrgin - new Vector3(0,0.25f,0);
+
+    //         StartCoroutine(SetTriggerLockEnter());
+    //     }
+    // }
 
     void OnTriggerExit (Collider other)
     {

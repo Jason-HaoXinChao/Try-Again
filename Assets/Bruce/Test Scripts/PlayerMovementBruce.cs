@@ -68,7 +68,7 @@ public class PlayerMovementBruce : MonoBehaviour
             verticalVelocity -= gravity * Time.deltaTime;
             moveVector = lastMove;
 
-            if(!dialogueActive && Input.GetAxisRaw("Horizontal") != 0 && !wetfloorOverride)
+            if(!dialogueActive && (Input.GetAxisRaw("Horizontal") != 0) && !wetfloorOverride)
             {
                 moveVector.x = Input.GetAxisRaw("Horizontal");
             }
