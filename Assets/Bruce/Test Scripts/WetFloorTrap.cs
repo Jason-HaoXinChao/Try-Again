@@ -15,7 +15,7 @@ public class WetFloorTrap : MonoBehaviour
     
     void OnTriggerEnter (Collider other)
     {
-        Debug.Log(other);
+        // Debug.Log(other);
         if(other.name == "leg") // checks if the player's feet is on the floor
         {
             if(!delay)
@@ -35,8 +35,12 @@ public class WetFloorTrap : MonoBehaviour
 
     public void SpawnDeadBody()
     {
-        Instantiate(deadPlayer, player.GetComponent<Transform>().position, player.GetComponent<Transform>().rotation);
+        Vector3 position = player.transform.position;
+        Quaternion rotation = player.transform.rotation;
         player.gameObject.SetActive(false);
+
+        GameObject corpse = Instantiate(deadPlayer, position, rotation) as GameObject;
+        corpse.transform.localScale = player.transform.localScale;
 
         StartCoroutine(RespawnTimer());
     }

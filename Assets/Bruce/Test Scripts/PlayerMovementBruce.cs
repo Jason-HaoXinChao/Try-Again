@@ -124,10 +124,11 @@ public class PlayerMovementBruce : MonoBehaviour
         yield return new WaitForSeconds(2);
         wetfloorOverride = false;
         playerInvincible = false;
-
+        
+        
         GameObject.Find("WetFloorWithSign").transform.GetChild(1).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
-        if(lastMove.x > 0)
+        if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
         {
             this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
         }
@@ -156,6 +157,11 @@ public class PlayerMovementBruce : MonoBehaviour
     public void SetRespawnPoint(Transform newLocation)
     {
         this.respawnPoint = newLocation;
+    }
+
+    public void RemoveHorizontalInertia()
+    {
+        this.lastMove.x = 0;
     }
 
     // Old Script =============================================================
