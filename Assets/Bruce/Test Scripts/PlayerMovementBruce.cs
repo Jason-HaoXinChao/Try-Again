@@ -114,6 +114,7 @@ public class PlayerMovementBruce : MonoBehaviour
             this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
         }
         controller.height = 1f;
+        controller.center = new Vector3(0, 0, 0);
         wetfloorOverride = true;
         playerInvincible = true;
         StartCoroutine(WetFloorDuration());
@@ -137,6 +138,7 @@ public class PlayerMovementBruce : MonoBehaviour
             this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
         }
         controller.height = 3f;
+        controller.center = new Vector3(0, 1.26f, 0);
     }
 
     IEnumerator SetWallHopLock()
