@@ -23,14 +23,13 @@ public class PlayerMovementBruce : MonoBehaviour
     // Character Controller
     public CharacterController controller;
     public GameObject score;
-    private int deathCount;
+    public int deathCount;
 
     // Save and update the transform of new respawn points to this var
     public Transform respawnPoint;
 
     void Start()
     {
-        deathCount = 0;
         playerInvincible = false;
         wetfloorOverride = false;
         // controller = gameObject.AddComponent<CharacterController>();
