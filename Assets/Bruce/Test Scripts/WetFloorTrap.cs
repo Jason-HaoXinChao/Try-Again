@@ -40,7 +40,6 @@ public class WetFloorTrap : MonoBehaviour
         player.gameObject.SetActive(false);
 
         GameObject corpse = Instantiate(deadPlayer, position, rotation) as GameObject;
-        corpse.transform.localScale = player.transform.localScale;
 
         StartCoroutine(RespawnTimer());
     }

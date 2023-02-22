@@ -18,7 +18,6 @@ public class KillPlayer : MonoBehaviour
         {
             if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
                 GameObject corpse = Instantiate(deadPlayer, other.transform.position, other.transform.rotation) as GameObject;
-                corpse.transform.localScale = player.transform.localScale;
                 
                 other.gameObject.SetActive(false);
 
