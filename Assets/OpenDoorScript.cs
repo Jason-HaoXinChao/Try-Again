@@ -8,11 +8,12 @@ public class OpenDoorScript : MonoBehaviour
     private bool inOpenRange;
     public GameObject tooltip;
     public string keycardName;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("BlockPlayer");
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class OpenDoorScript : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {   
-        if(other.tag == "Player")
+        if(other.tag == "Player" && player.activeSelf && !player.GetComponent<PlayerMovementBruce>().wetfloorOverride)
         {
             // Debug.Log("Enter Hitbox");
             tooltip.SetActive(true);

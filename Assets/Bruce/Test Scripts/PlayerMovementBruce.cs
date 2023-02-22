@@ -7,7 +7,7 @@ public class PlayerMovementBruce : MonoBehaviour
 {
     // Lock Player Input
     private bool dialogueActive;
-    private bool wetfloorOverride;
+    public bool wetfloorOverride;
 
     // Player Movement
     [Header("Player Movement")]
