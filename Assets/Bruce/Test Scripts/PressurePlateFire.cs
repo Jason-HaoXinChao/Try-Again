@@ -10,7 +10,7 @@ public class PressurePlateFire : MonoBehaviour
     [SerializeField] private GameObject pressurePlateSystem;
 
     private bool triggerLockEnter, triggerLockExit;
-    private Vector3 pressurePlateOrgin;
+    private Vector3 pressurePlateOrgin, pressurePlateSinked;
     private List<int> objectsInRange;
     private bool fireOn;
 
@@ -19,14 +19,15 @@ public class PressurePlateFire : MonoBehaviour
         objectsInRange = new List<int>();
         updateFire(true);
         pressurePlateOrgin = pressurePlateSystem.GetComponent<Transform>().position;
+        pressurePlateSinked = pressurePlateOrgin - new Vector3(0,0.25f,0);
     }
 
     void Update()
     {
         if (!fireOn) {
-            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin - new Vector3(0,0.25f,0), 0.05f);
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateSinked, 0.025f);
         } else {
-            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.05f);
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.025f);
         }
     }
 
@@ -75,9 +76,7 @@ public class PressurePlateFire : MonoBehaviour
             if (index >= 0) {
                 objectsInRange.RemoveAt(index);
                 if (objectsInRange.Count == 0) {
-                    Debug.Log("exited");
                     updateFire(true);
-                    // pressurePlateSystem.GetComponent<Transform>().position = pressurePlateOrgin;
                 }
             }
             
