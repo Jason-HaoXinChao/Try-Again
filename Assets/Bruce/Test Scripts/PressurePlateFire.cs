@@ -12,6 +12,7 @@ public class PressurePlateFire : MonoBehaviour
     private bool triggerLockEnter, triggerLockExit;
     private Vector3 pressurePlateOrgin;
     private List<int> objectsInRange;
+    private bool fireOn;
 
     void Start()
     {
@@ -20,18 +21,24 @@ public class PressurePlateFire : MonoBehaviour
         pressurePlateOrgin = pressurePlateSystem.GetComponent<Transform>().position;
     }
 
+    void Update()
+    {
+        if (!fireOn) {
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin - new Vector3(0,0.25f,0), 0.05f);
+        } else {
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.05f);
+        }
+    }
+
     void OnTriggerStay (Collider other)
     {
-        if(!triggerLockEnter)
+        if (!triggerLockEnter)
         {
             int count = objectsInRange.Count;
             int id = other.gameObject.GetInstanceID();
             if (!objectsInRange.Contains(id)) {
                 objectsInRange.Add(id);
                 updateFire(false);
-                if (count == 0) {
-                    pressurePlateSystem.GetComponent<Transform>().position = pressurePlateOrgin - new Vector3(0,0.25f,0);
-                }
             }
 
             StartCoroutine(SetTriggerLockEnter());
@@ -43,6 +50,7 @@ public class PressurePlateFire : MonoBehaviour
         fireModel.SetActive(on);
         fireHitbox.SetActive(on);
         smokeModel.SetActive(!on);
+        fireOn = on;
     }
 
     // void OnTriggerEnter (Collider other)
@@ -67,8 +75,9 @@ public class PressurePlateFire : MonoBehaviour
             if (index >= 0) {
                 objectsInRange.RemoveAt(index);
                 if (objectsInRange.Count == 0) {
+                    Debug.Log("exited");
                     updateFire(true);
-                    pressurePlateSystem.GetComponent<Transform>().position = pressurePlateOrgin;
+                    // pressurePlateSystem.GetComponent<Transform>().position = pressurePlateOrgin;
                 }
             }
             
@@ -87,7 +96,7 @@ public class PressurePlateFire : MonoBehaviour
     IEnumerator SetTriggerLockExit()
     {
         triggerLockExit = true;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.23f);
         triggerLockExit = false;
     }
 }
