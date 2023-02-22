@@ -49,14 +49,16 @@ public class OpenDoorScript : MonoBehaviour
         {
             // Debug.Log("Enter Hitbox");
             player = other.gameObject;
-            tooltip.SetActive(true);
-            GameObject playerInventory = GameObject.Find("Inventory");
-            if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
-                tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "Press F to use keycard";
-            } else {
-                tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "You need a keycard to open this door";
+            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
+                tooltip.SetActive(true);
+                GameObject playerInventory = GameObject.Find("Inventory");
+                if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
+                    tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "Press F to use keycard";
+                } else {
+                    tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "You need a keycard to open this door";
+                }
+                inOpenRange = true;
             }
-            inOpenRange = true;
         }
     }
 
