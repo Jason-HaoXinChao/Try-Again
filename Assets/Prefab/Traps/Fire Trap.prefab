@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437490599434649558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5446, z: 0}
+  m_LocalScale: {x: 0.45539758, y: 0.45539758, z: 0.45539758}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1437490600457662999}
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireModel: {fileID: 1437490600138655260}
-  smokeModel: {fileID: 1437490599900016236}
   fireHitbox: {fileID: 1437490600457662998}
+  smokeModel: {fileID: 1437490599900016236}
   pressurePlateSystem: {fileID: 1437490599870012667}
 --- !u!1 &1437490599870012667
 GameObject:

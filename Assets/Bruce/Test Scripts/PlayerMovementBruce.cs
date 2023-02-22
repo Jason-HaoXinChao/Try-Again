@@ -8,6 +8,7 @@ public class PlayerMovementBruce : MonoBehaviour
     // Lock Player Input
     private bool dialogueActive;
     public bool wetfloorOverride;
+    public bool playerInvincible { get; private set; }
 
     // Player Movement
     [Header("Player Movement")]
@@ -22,14 +23,15 @@ public class PlayerMovementBruce : MonoBehaviour
     // Character Controller
     public CharacterController controller;
     public GameObject score;
-    private int deathCount;
+    public int deathCount;
 
     // Save and update the transform of new respawn points to this var
     public Transform respawnPoint;
 
     void Start()
     {
-        deathCount = 0;
+        playerInvincible = false;
+        wetfloorOverride = false;
         // controller = gameObject.AddComponent<CharacterController>();
         //Testing Line, Remove Later
         // respawnPoint = GameObject.Find("Temp Respawn Point").GetComponent<Transform>();
@@ -65,7 +67,7 @@ public class PlayerMovementBruce : MonoBehaviour
             verticalVelocity -= gravity * Time.deltaTime;
             moveVector = lastMove;
 
-            if(!dialogueActive && Input.GetAxisRaw("Horizontal") != 0 && !wetfloorOverride)
+            if(!dialogueActive && (Input.GetAxisRaw("Horizontal") != 0) && !wetfloorOverride)
             {
                 moveVector.x = Input.GetAxisRaw("Horizontal");
             }
@@ -111,7 +113,9 @@ public class PlayerMovementBruce : MonoBehaviour
             this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
         }
         controller.height = 1f;
+        controller.center = new Vector3(0, 0, 0);
         wetfloorOverride = true;
+        playerInvincible = true;
         StartCoroutine(WetFloorDuration());
     }
 
@@ -119,10 +123,12 @@ public class PlayerMovementBruce : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         wetfloorOverride = false;
-
+        playerInvincible = false;
+        
+        
         GameObject.Find("WetFloorWithSign").transform.GetChild(1).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
-        if(lastMove.x > 0)
+        if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
         {
             this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
         }
@@ -131,12 +137,13 @@ public class PlayerMovementBruce : MonoBehaviour
             this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
         }
         controller.height = 3f;
+        controller.center = new Vector3(0, 1.26f, 0);
     }
 
     IEnumerator SetWallHopLock()
     {
         wallHopLock = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         wallHopLock = false;
     }
 
@@ -151,6 +158,11 @@ public class PlayerMovementBruce : MonoBehaviour
     public void SetRespawnPoint(Transform newLocation)
     {
         this.respawnPoint = newLocation;
+    }
+
+    public void RemoveHorizontalInertia()
+    {
+        this.lastMove.x = 0;
     }
 
     // Old Script =============================================================

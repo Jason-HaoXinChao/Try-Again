@@ -13,7 +13,7 @@ public class EvaporatePlayer : MonoBehaviour
     
     void OnTriggerEnter (Collider other)
     {
-        if(other.transform == player.GetComponent<Transform>())
+        if(other.transform == player.GetComponent<Transform>() && !player.GetComponent<PlayerMovementBruce>().playerInvincible)
         {
             other.gameObject.SetActive(false);
             

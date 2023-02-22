@@ -13,13 +13,19 @@ public class OpenDoorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("BlockPlayer");
+        inOpenRange = false;
+        player = null;
     }
 
     // Update is called once per frame
     void Update()
     {
         OpenDoor();
+        if (player != null) {
+            if (!player.activeSelf) {
+                DisableOpen();
+            }
+        }
     }
 
     void OpenDoor()
@@ -42,6 +48,7 @@ public class OpenDoorScript : MonoBehaviour
         if(other.tag == "Player" && player.activeSelf && !player.GetComponent<PlayerMovementBruce>().wetfloorOverride)
         {
             // Debug.Log("Enter Hitbox");
+            player = other.gameObject;
             tooltip.SetActive(true);
             GameObject playerInventory = GameObject.Find("Inventory");
             if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
@@ -55,11 +62,16 @@ public class OpenDoorScript : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             //Debug.Log("Leave Hitbox");
-            tooltip.SetActive(false);
-            inOpenRange = false;
+            DisableOpen();
         }
+    }
+
+    private void DisableOpen() {
+        player = null;
+        tooltip.SetActive(false);
+        inOpenRange = false;
     }
 }
