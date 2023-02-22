@@ -11,7 +11,7 @@ public class RestartLevel : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.R) && !restart) {
+        if (Input.GetKeyDown(KeyCode.R) && !restart && !this.GetComponent<PlayerMovementBruce>().wetfloorOverride) {
             restart = true;  
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
