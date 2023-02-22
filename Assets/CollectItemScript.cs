@@ -46,9 +46,10 @@ public class CollectItemScript : MonoBehaviour
         if(other.tag == "Player")
         {   
             player = other.gameObject;
-            //Debug.Log("Enter Hitbox");
-            tooltip.SetActive(true);
-            inPickUpRange = true;
+            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
+                tooltip.SetActive(true);
+                inPickUpRange = true;
+            }
         }
     }
 
