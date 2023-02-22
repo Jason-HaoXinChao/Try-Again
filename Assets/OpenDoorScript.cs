@@ -32,11 +32,8 @@ public class OpenDoorScript : MonoBehaviour
     {
         if(inOpenRange && Input.GetButtonDown("Confirm"))
         {
-            // Debug.Log("Confirm Key Pressed");
             GameObject playerInventory = GameObject.Find("Inventory");
-            // Debug.Log(keycardName);
             if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
-                // Debug.Log("Consuming item");
                 playerInventory.GetComponent<PlayerInventory>().consumeItem(keycardName);
                 transform.parent.gameObject.SetActive(false);
             }
