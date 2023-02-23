@@ -43,8 +43,8 @@ public class CollectItemScript : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.tag == "Player")
-        {   
+        if(other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
+        {  
             player = other.gameObject;
             if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
                 tooltip.SetActive(true);

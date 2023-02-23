@@ -42,20 +42,11 @@ public class OpenDoorScript : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {   
-        if(other.tag == "Player")
+        if (other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
         {
-            // Debug.Log("Enter Hitbox");
-            player = other.gameObject;
-            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
-                tooltip.SetActive(true);
-                GameObject playerInventory = GameObject.Find("Inventory");
-                if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
-                    tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "Press F to use keycard";
-                } else {
-                    tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "You need a keycard to open this door";
-                }
-                inOpenRange = true;
-            }
+            tooltip.SetActive(true);
+            inOpenRange = true;
+
         }
     }
 
@@ -63,7 +54,6 @@ public class OpenDoorScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //Debug.Log("Leave Hitbox");
             DisableOpen();
         }
     }

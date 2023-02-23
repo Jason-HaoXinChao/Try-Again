@@ -44,10 +44,10 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
+    // void Awake()
+    // {
+    //     DontDestroyOnLoad(this.gameObject);
+    // }
 
     public void collectItem(string itemName)
     {
