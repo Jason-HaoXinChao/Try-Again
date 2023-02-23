@@ -231,28 +231,6 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
-				<Sound Name="amb_room" ID="{2D22D5F7-7C89-4D17-A1E5-DDF79692423B}" ShortID="506235919">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="amb_room" ID="{1370ABA6-EB9C-4106-90B0-B832E415C5D6}">
-							<Language>SFX</Language>
-							<AudioFile>amb_room.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="966185582"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="amb_room" ID="{1370ABA6-EB9C-4106-90B0-B832E415C5D6}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Folder Name="Dialogue" ID="{05A0B21D-0260-4973-841A-64918252739C}" ShortID="688527823">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="4"/>
