@@ -94,8 +94,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f2540b937b63884b8e5e7acc5918f394
     GuidInternal: 
-    m_lastTime: -8585246854640681435
+    m_lastTime: -8585246144045965567
     List:
+    - name: DialogueMale_End
+      guid: 58a63c7914d83d479f9385195d875d36
+      id: 2398287214
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: DialogueMale_End
+        ObjectType: 3
+        guid: 58a63c7914d83d479f9385195d875d36
+      Path: Events\Default Work Unit\DialogueMale_End
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: DialogueMale_Start
+      guid: 883c0bc48d012b4ea30223f8defe6151
+      id: 309398149
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: DialogueMale_Start
+        ObjectType: 3
+        guid: 883c0bc48d012b4ea30223f8defe6151
+      Path: Events\Default Work Unit\DialogueMale_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: KeycardDoor
       guid: 7157f14122b904478a15b293a19ab2d1
       id: 2230797588
@@ -204,7 +238,7 @@ MonoBehaviour:
     m_lastTime: -8585246854637958723
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
