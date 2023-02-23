@@ -36,6 +36,7 @@ public class OpenDoorScript : MonoBehaviour
             GameObject playerInventory = GameObject.Find("Inventory");
             // Debug.Log(keycardName);
             if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
+                // this.GetComponent<NPCInteractTrigger>().enabled = true;
                 // Debug.Log("Consuming item");
                 playerInventory.GetComponent<PlayerInventory>().consumeItem(keycardName);
                 transform.parent.gameObject.SetActive(false);
@@ -45,17 +46,17 @@ public class OpenDoorScript : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {   
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
         {
             // Debug.Log("Enter Hitbox");
             player = other.gameObject;
             tooltip.SetActive(true);
             GameObject playerInventory = GameObject.Find("Inventory");
-            if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
-                tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "Press F to use keycard";
-            } else {
-                tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "You need a keycard to open this door";
-            }
+            // if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
+            //     tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "Press F to use keycard";
+            // } else {
+            //     tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "You need a keycard to open this door";
+            // }
             inOpenRange = true;
         }
     }
