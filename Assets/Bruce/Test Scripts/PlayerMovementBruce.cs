@@ -5,25 +5,33 @@ using UnityEngine;
 
 public class PlayerMovementBruce : MonoBehaviour
 {
+    // Lock Player Input
+    private bool dialogueActive;
+    private bool wetfloorOverride;
+    public bool playerInvincible { get; private set; }
+
+    // Player Movement
+    [Header("Player Movement")]
     private Vector3 moveVector;
     private Vector3 lastMove;
-
     [SerializeField] private float speed = 5;
     [SerializeField] private float jumpForce = 10;
     [SerializeField] private float gravity = 40;
-
     private float verticalVelocity;
     private bool wallHopLock = false;
+
+    // Character Controller
     public CharacterController controller;
     public GameObject score;
-    private int deathCount;
+    public int deathCount;
 
     // Save and update the transform of new respawn points to this var
     public Transform respawnPoint;
 
     void Start()
     {
-        deathCount = 0;
+        playerInvincible = false;
+        wetfloorOverride = false;
         // controller = gameObject.AddComponent<CharacterController>();
         //Testing Line, Remove Later
         // respawnPoint = GameObject.Find("Temp Respawn Point").GetComponent<Transform>();
@@ -31,14 +39,25 @@ public class PlayerMovementBruce : MonoBehaviour
 
     void Update()
     {
+        // Disable input if in Dialogue Sequence
+        dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
+
         moveVector = Vector3.zero;
-        moveVector.x = Input.GetAxisRaw("Horizontal");
+        if (!dialogueActive && !wetfloorOverride)
+        {
+            moveVector.x = Input.GetAxisRaw("Horizontal");
+        }
+
+        if(wetfloorOverride)
+        {
+            moveVector.x = lastMove.x;
+        }
 
         if(controller.isGrounded)
         {
             verticalVelocity = -1.1f;
 
-            if(Input.GetButtonDown("Jump"))
+            if(!dialogueActive && Input.GetButtonDown("Jump") && !wetfloorOverride)
             {
                 verticalVelocity = jumpForce;
             }
@@ -48,7 +67,7 @@ public class PlayerMovementBruce : MonoBehaviour
             verticalVelocity -= gravity * Time.deltaTime;
             moveVector = lastMove;
 
-            if(Input.GetAxisRaw("Horizontal") != 0)
+            if(!dialogueActive && (Input.GetAxisRaw("Horizontal") != 0) && !wetfloorOverride)
             {
                 moveVector.x = Input.GetAxisRaw("Horizontal");
             }
@@ -60,7 +79,6 @@ public class PlayerMovementBruce : MonoBehaviour
         moveVector.Normalize();
         moveVector *= speed;
         moveVector.y = verticalVelocity;
-
         moveVector.z = 0;
         controller.Move(moveVector * Time.deltaTime);
         lastMove = moveVector;
@@ -83,10 +101,48 @@ public class PlayerMovementBruce : MonoBehaviour
         }
     }
 
+    public void WetFloor()
+    {
+        if(lastMove.x > 0)
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        }
+        controller.height = 1f;
+        controller.center = new Vector3(0, 0, 0);
+        wetfloorOverride = true;
+        playerInvincible = true;
+        StartCoroutine(WetFloorDuration());
+    }
+
+    IEnumerator WetFloorDuration()
+    {
+        yield return new WaitForSeconds(2);
+        wetfloorOverride = false;
+        playerInvincible = false;
+        
+        
+        GameObject.Find("WetFloorWithSign").transform.GetChild(1).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
+
+        if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        }
+        controller.height = 3f;
+        controller.center = new Vector3(0, 1.26f, 0);
+    }
+
     IEnumerator SetWallHopLock()
     {
         wallHopLock = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         wallHopLock = false;
     }
 
@@ -101,6 +157,11 @@ public class PlayerMovementBruce : MonoBehaviour
     public void SetRespawnPoint(Transform newLocation)
     {
         this.respawnPoint = newLocation;
+    }
+
+    public void RemoveHorizontalInertia()
+    {
+        this.lastMove.x = 0;
     }
 
     // Old Script =============================================================

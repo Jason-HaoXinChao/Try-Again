@@ -17,11 +17,21 @@ public class KillPlayer : MonoBehaviour
     {
         if(other.transform == player.GetComponent<Transform>())
         {
-            getImpaled.Post(gameObject);
-            Instantiate(deadPlayer, other.GetComponent<Transform>().position, other.GetComponent<Transform>().rotation);
-            other.gameObject.SetActive(false);
+            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
 
-            StartCoroutine(RespawnTimer());
+                Vector3 position = other.gameObject.transform.position;
+                Quaternion rotation = other.gameObject.transform.rotation;
+                getImpaled.Post(gameObject);
+                other.gameObject.SetActive(false);
+                Instantiate(deadPlayer, position, rotation);
+                
+                
+
+                StartCoroutine(RespawnTimer());
+            } else {
+                player.GetComponent<PlayerMovementBruce>().RemoveHorizontalInertia();
+            }
+
         }
     }
 
