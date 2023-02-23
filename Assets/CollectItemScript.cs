@@ -43,7 +43,7 @@ public class CollectItemScript : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.tag == "Player" && player.activeSelf && !player.GetComponent<PlayerMovementBruce>().wetfloorOverride)
+        if(other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
         {  
             player = other.gameObject;
             //Debug.Log("Enter Hitbox");
