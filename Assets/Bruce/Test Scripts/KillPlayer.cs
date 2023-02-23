@@ -17,9 +17,14 @@ public class KillPlayer : MonoBehaviour
         if(other.transform == player.GetComponent<Transform>())
         {
             if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
-                GameObject corpse = Instantiate(deadPlayer, other.transform.position, other.transform.rotation) as GameObject;
+
+                Vector3 position = other.gameObject.transform.position;
+                Quaternion rotation = other.gameObject.transform.rotation;
                 
                 other.gameObject.SetActive(false);
+                Instantiate(deadPlayer, position, rotation);
+                
+                
 
                 StartCoroutine(RespawnTimer());
             } else {
