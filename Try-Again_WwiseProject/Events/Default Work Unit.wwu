@@ -46,6 +46,32 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="DialogueMale_Start" ID="{C40B3C88-018D-4E2B-A302-23F8DEFE6151}">
+					<ChildrenList>
+						<Action Name="" ID="{DFE3C6E2-7A20-4B11-A000-6F7E69B377AA}" ShortID="643469508">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MaleLow" ID="{6DA8F6CA-E29E-47B0-94EA-2337E1950C90}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DialogueMale_End" ID="{793CA658-D814-473D-9F93-85195D875D36}">
+					<ChildrenList>
+						<Action Name="" ID="{CD6B5CB5-77AF-4142-9B4E-4C9A37E808AA}" ShortID="664885639">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MaleLow" ID="{6DA8F6CA-E29E-47B0-94EA-2337E1950C90}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
