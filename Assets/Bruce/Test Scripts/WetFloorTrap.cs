@@ -39,8 +39,7 @@ public class WetFloorTrap : MonoBehaviour
         Quaternion rotation = player.transform.rotation;
         player.gameObject.SetActive(false);
 
-        GameObject corpse = Instantiate(deadPlayer, position, rotation) as GameObject;
-        corpse.transform.localScale = player.transform.localScale;
+        Instantiate(deadPlayer, position, rotation);
 
         StartCoroutine(RespawnTimer());
     }

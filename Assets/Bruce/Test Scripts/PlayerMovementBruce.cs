@@ -79,7 +79,6 @@ public class PlayerMovementBruce : MonoBehaviour
         moveVector.Normalize();
         moveVector *= speed;
         moveVector.y = verticalVelocity;
-
         moveVector.z = 0;
         controller.Move(moveVector * Time.deltaTime);
         lastMove = moveVector;

@@ -36,7 +36,6 @@ public class NPCInteractTrigger : MonoBehaviour
     {
         if(inDetectRange && !GlobalDialogueSystem.GetInstance().dialogueIsPlaying && Input.GetButtonDown("Confirm"))
         {
-            Debug.Log("Confirm Key Pressed");
             GlobalDialogueSystem.GetInstance().EnterDialogueMode(inkJSON);
         }
     }
@@ -44,10 +43,12 @@ public class NPCInteractTrigger : MonoBehaviour
     void OnTriggerEnter (Collider other)
     {
         if(other.tag == "Player")
-        {
-            //Debug.Log("Enter Hitbox");
-            pressKeyToInteract.SetActive(true);
-            inDetectRange = true;
+        {   
+            GameObject player = other.gameObject;
+            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
+                pressKeyToInteract.SetActive(true);
+                inDetectRange = true;
+            }
         }
     }
 
@@ -55,7 +56,6 @@ public class NPCInteractTrigger : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            //Debug.Log("Leave Hitbox");
             pressKeyToInteract.SetActive(false);
             inDetectRange = false;
         }
