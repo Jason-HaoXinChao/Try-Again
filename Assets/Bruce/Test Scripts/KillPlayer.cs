@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
     private GameObject player;
+    public AK.Wwise.Event getImpaled;
     [SerializeField] private GameObject deadPlayer;
 
     void Start()
@@ -20,7 +21,7 @@ public class KillPlayer : MonoBehaviour
 
                 Vector3 position = other.gameObject.transform.position;
                 Quaternion rotation = other.gameObject.transform.rotation;
-                
+                getImpaled.Post(gameObject);
                 other.gameObject.SetActive(false);
                 Instantiate(deadPlayer, position, rotation);
                 

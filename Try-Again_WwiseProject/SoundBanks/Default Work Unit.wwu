@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8E4A6B13-17FA-4609-8370-BD91E5310CB4}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{8E4A6B13-17FA-4609-8370-BD91E5310CB4}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{FD900DD3-A707-4086-8714-2BA3219AEC7C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="KeycardDoor" ID="{41F15771-B922-4704-8A15-B293A19AB2D1}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SpikesImpale" ID="{93D82971-7F4C-47A9-8876-377785AF5301}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="TempMusic" ID="{DE1C1161-F926-4D85-8BE5-B293BFE4D655}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

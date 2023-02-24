@@ -8,6 +8,7 @@ public class OpenDoorScript : MonoBehaviour
     private bool inOpenRange;
     public GameObject tooltip;
     public string keycardName;
+    public AK.Wwise.Event doorSounds;
     private GameObject player;
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class OpenDoorScript : MonoBehaviour
             if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
                 playerInventory.GetComponent<PlayerInventory>().consumeItem(keycardName);
                 transform.parent.gameObject.SetActive(false);
+                doorSounds.Post(gameObject);
             }
         }
     }

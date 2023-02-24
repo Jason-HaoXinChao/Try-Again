@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Level" ID="{4E6301FF-A92A-4A28-9392-629BD1D490BC}" ShortID="22380453">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="sfx_door_keycard" ID="{6CDC87F9-6C2C-4B83-89E9-483EA5AE3D4D}" ShortID="631220958">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_door_keycard" ID="{3A2593F4-BC34-489B-ABA0-31CF17C2CEB5}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_door_keycard.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="113432090"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_door_keycard" ID="{3A2593F4-BC34-489B-ABA0-31CF17C2CEB5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_door_open" ID="{9FE63215-27C5-4246-B6E2-7E706E6FE0FE}" ShortID="753658239">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_door_open" ID="{40B627BD-D22C-42A1-ACC2-DBCBF650C3B6}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_door_open.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="115940102"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_door_open" ID="{40B627BD-D22C-42A1-ACC2-DBCBF650C3B6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Folder Name="Traps" ID="{C5E7AF55-F2AD-4E53-9937-448371A147CE}" ShortID="11604128">
+							<ChildrenList>
+								<Sound Name="sfx_trap_light_amb" ID="{C6781643-6865-4375-848E-21F407864C43}" ShortID="706424716">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_trap_light_amb" ID="{B8B2F952-276F-425E-8B86-2C6FC537067A}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_trap_light_amb.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="566863628"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_trap_light_amb" ID="{B8B2F952-276F-425E-8B86-2C6FC537067A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{F70EF5AF-7DD2-409E-8770-30E8C072C384}" ShortID="990993271">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="Death" ID="{8A985325-6B81-4CE6-B0FE-A99E27CB0FB0}" ShortID="856920161">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Impale" ID="{ACBA065D-9286-499A-ADD9-7FCDCD8C8677}" ShortID="754750246">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_player_Impale_01" ID="{6454A7AF-4713-4ADC-8E60-2EB980C1F90C}" ShortID="965324549">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{90F733E5-0B21-4F32-A0FB-963062DDE8F4}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="300"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_Impale_01" ID="{A8313F80-D0B2-40F7-92E8-7D4FCB4051C6}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_Impale_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="342085208"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_Impale_01" ID="{A8313F80-D0B2-40F7-92E8-7D4FCB4051C6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_Impale_02" ID="{6FBA2A5A-C4CE-48CE-9306-20160D1E8614}" ShortID="1059745022">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{86D37375-4439-4413-AA4F-41B7AA9B069E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="300"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{083C1A35-6615-46D1-8838-648164846605}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="10"/>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_Impale_02" ID="{C72201AD-9278-470E-A4F6-2A1247287C91}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_Impale_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="420335803"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_Impale_02" ID="{C72201AD-9278-470E-A4F6-2A1247287C91}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{C8C7371B-D5E1-42A2-8BF9-52B28F84BC87}" ShortID="114699272">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="mus_level_music01" ID="{D065FC80-2EA6-4DFA-93F2-E087804EC8A5}" ShortID="374725577">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="mus_level_music01" ID="{4B7B1E3E-A416-407D-8EC8-EE6E0CBB9BC1}">
+									<Language>SFX</Language>
+									<AudioFile>mus_level_music01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="104933937"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="mus_level_music01" ID="{4B7B1E3E-A416-407D-8EC8-EE6E0CBB9BC1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Dialogue" ID="{05A0B21D-0260-4973-841A-64918252739C}" ShortID="688527823">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="MaleLow" ID="{6DA8F6CA-E29E-47B0-94EA-2337E1950C90}" ShortID="774177610">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="1.5">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CEB7E937-B7DB-42A7-970A-B7073CFA1728}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_phonemes_lowvoice_about" ID="{8D602F43-8DF9-4028-9FF5-46AF79D45BEE}" ShortID="37794720">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_about" ID="{5261BCCF-43CF-460B-9E02-96CCE1C25F94}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_about.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1027824676"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_about" ID="{5261BCCF-43CF-460B-9E02-96CCE1C25F94}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_bay" ID="{FCC599A8-A247-415E-83F1-CDF6969A5A3D}" ShortID="199725362">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_bay" ID="{82AA3BEA-2DF8-4B2A-A799-AA8F9F0D4925}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_bay.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="198329098"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_bay" ID="{82AA3BEA-2DF8-4B2A-A799-AA8F9F0D4925}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_bee" ID="{3FAA870E-BD21-4725-81BD-AA0164FA9C85}" ShortID="569803198">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_bee" ID="{934169C5-37C9-4953-A906-DEA32D0FFAB8}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_bee.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="109687344"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_bee" ID="{934169C5-37C9-4953-A906-DEA32D0FFAB8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_bird" ID="{55A3E79F-A101-4FB1-AD04-A246EED6971A}" ShortID="214869597">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_bird" ID="{1CB88E78-3472-4C43-8BE1-EC9D31DACAC7}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_bird.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="628669976"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_bird" ID="{1CB88E78-3472-4C43-8BE1-EC9D31DACAC7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_cat" ID="{DBF3F1C3-76E7-480E-A4F4-507156D3ED06}" ShortID="198716122">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_cat" ID="{4A0DBAF4-669F-4668-BE26-05AE3A20AEE0}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_cat.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="58923651"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_cat" ID="{4A0DBAF4-669F-4668-BE26-05AE3A20AEE0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_chair" ID="{43870BB7-D973-48C7-9619-EF3ED412080C}" ShortID="431785144">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_chair" ID="{0EED84EA-5123-4745-ADD5-C4700422440B}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_chair.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="287279307"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_chair" ID="{0EED84EA-5123-4745-ADD5-C4700422440B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_cure" ID="{AC29BCD3-3368-497E-9394-E494F58B80A7}" ShortID="513157499">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_cure" ID="{977CB011-365C-4B1B-8F9E-849AA2D1222F}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_cure.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="728876282"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_cure" ID="{977CB011-365C-4B1B-8F9E-849AA2D1222F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_ear" ID="{FBEC1C52-29B6-4D1B-8C9D-27CE8F53061C}" ShortID="106410366">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_ear" ID="{6F7C45C9-21BB-4D3D-B61F-B9EF4A8F4277}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_ear.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="208036280"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_ear" ID="{6F7C45C9-21BB-4D3D-B61F-B9EF4A8F4277}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_end" ID="{BC236369-0CD4-4E9A-ACA5-747481A0B9BB}" ShortID="958742349">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_end" ID="{0AF6E6F1-D57D-433E-886C-D68D58FAD2CC}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_end.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="489787794"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_end" ID="{0AF6E6F1-D57D-433E-886C-D68D58FAD2CC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_it" ID="{3AB82FA9-B6C0-4C56-8244-04688F7DDC64}" ShortID="782047921">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_it" ID="{27E0D634-9504-4DC8-85F2-C6C1FFD353C3}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_it.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="640990006"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_it" ID="{27E0D634-9504-4DC8-85F2-C6C1FFD353C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_join" ID="{4D7545BD-131B-4BD6-A9B7-86C166BD60EE}" ShortID="879360947">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_join" ID="{E8935025-BAF4-46C5-B9BE-594F66D3198F}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_join.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="301144359"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_join" ID="{E8935025-BAF4-46C5-B9BE-594F66D3198F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_now" ID="{6F3233F3-4843-414D-8C74-54857CE6CC77}" ShortID="155038753">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_now" ID="{F628B2B0-ABD6-4036-A746-B7E7F7643175}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_now.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="535712261"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_now" ID="{F628B2B0-ABD6-4036-A746-B7E7F7643175}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_open" ID="{2E44DA64-6A84-4FA7-A118-C9864F8AB330}" ShortID="970863300">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_open" ID="{A76730FE-D890-4710-ABCB-EB4346111293}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_open.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="102406198"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_open" ID="{A76730FE-D890-4710-ABCB-EB4346111293}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_sky" ID="{150B048E-8631-4F64-BE50-A9855EDDE0E7}" ShortID="174412149">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_sky" ID="{40A33AB0-4ED4-4848-AFE2-5DCA6C16AA25}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_sky.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="358845744"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_sky" ID="{40A33AB0-4ED4-4848-AFE2-5DCA6C16AA25}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_who" ID="{B7038A64-0B93-4D16-A495-68C18326671A}" ShortID="555468804">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_who" ID="{CC2F49BC-ABE3-41F6-B588-40CB1F26F6AA}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_who.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="404381212"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_who" ID="{CC2F49BC-ABE3-41F6-B588-40CB1F26F6AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_lowvoice_wolf" ID="{9FCB8AF2-0BC1-4B07-8573-EFA2C1126D8B}" ShortID="601274279">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_lowvoice_wolf" ID="{D1DDC7B2-583C-476E-87FA-AD0D585197AF}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_lowvoice_wolf.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="483697947"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_lowvoice_wolf" ID="{D1DDC7B2-583C-476E-87FA-AD0D585197AF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
