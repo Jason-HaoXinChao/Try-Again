@@ -234,7 +234,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 24c5b0a832b07604697fff7f913c5db5, type: 2}
+  - {fileID: 2100000, guid: e499f3c207ba2a949abb8458abf8e5e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -279,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6771246012981691897}
   m_Layer: 0
-  m_Name: WhiteDoor
+  m_Name: BrownDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 1969119933874033507}
-  keycardName: WhiteKeycard
+  keycardName: BrownKeycard
   doorSounds:
     idInternal: 0
     valueGuidInternal: 
