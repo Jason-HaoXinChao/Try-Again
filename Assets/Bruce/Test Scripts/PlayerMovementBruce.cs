@@ -145,6 +145,8 @@ public class PlayerMovementBruce : MonoBehaviour
         wetfloorOverride = false;
         playerInvincible = false;
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
+        this.lastMove = Vector3.zero;
+        this.verticalVelocity = 0;
         this.gameObject.SetActive(true);
         deathCount++;
         score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
