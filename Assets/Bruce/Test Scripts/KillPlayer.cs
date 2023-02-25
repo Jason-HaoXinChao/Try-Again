@@ -21,12 +21,14 @@ public class KillPlayer : MonoBehaviour
 
                 Vector3 position = other.gameObject.transform.position;
                 Quaternion rotation = other.gameObject.transform.rotation;
+                // Debug.Log("object in hitbox" + other.gameObject.name);
+                // Debug.Log("player" + position);
+                // Debug.Log("local" + other.transform.position);
                 getImpaled.Post(gameObject);
                 other.gameObject.SetActive(false);
                 Instantiate(deadPlayer, position, rotation);
                 
-                
-
+            
                 StartCoroutine(RespawnTimer());
             } else {
                 player.GetComponent<PlayerMovementBruce>().RemoveHorizontalInertia();
@@ -37,11 +39,7 @@ public class KillPlayer : MonoBehaviour
 
     IEnumerator RespawnTimer()
     {
-        GameObject audioManager = GameObject.FindWithTag("AudioManager");
-        audioManager.GetComponent<PlayerAudioManager>().impale();
-        yield return new WaitForSeconds(0.5f);
-        audioManager.GetComponent<PlayerAudioManager>().respawn();
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1.3f);
         player.GetComponent<PlayerMovementBruce>().RespawnCall();
     }
 }
