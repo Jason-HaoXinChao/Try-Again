@@ -26,6 +26,8 @@ public class OpenDoorScript : MonoBehaviour
             if (!player.activeSelf) {
                 DisableOpen();
             }
+        } else {
+            DisableOpen();
         }
     }
 
