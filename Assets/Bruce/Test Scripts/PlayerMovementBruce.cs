@@ -119,7 +119,7 @@ public class PlayerMovementBruce : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         
-        GameObject.Find("WetFloorWithSign").transform.GetChild(1).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
+        GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
         if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
         { 
