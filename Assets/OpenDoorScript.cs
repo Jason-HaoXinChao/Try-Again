@@ -15,6 +15,7 @@ public class OpenDoorScript : MonoBehaviour
     void Start()
     {
         inOpenRange = false;
+        tooltip.SetActive(false);
         player = null;
     }
 
@@ -26,8 +27,6 @@ public class OpenDoorScript : MonoBehaviour
             if (!player.activeSelf) {
                 DisableOpen();
             }
-        } else {
-            DisableOpen();
         }
     }
 
@@ -46,16 +45,20 @@ public class OpenDoorScript : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {   
-        if (other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
+        if (other.tag == "Player")
         {
-            tooltip.SetActive(true);
-            inOpenRange = true;
-
+            GameObject playerObj = other.gameObject;
+            if (playerObj.activeSelf && !playerObj.GetComponent<PlayerMovementBruce>().playerInvincible) {
+                player = playerObj;
+                tooltip.SetActive(true);
+                inOpenRange = true;
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
+        Debug.Log(other);
         if (other.tag == "Player")
         {
             DisableOpen();

@@ -122,7 +122,7 @@ public class PlayerMovementBruce : MonoBehaviour
         GameObject.Find("WetFloorWithSign").transform.GetChild(1).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
         if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
-        {
+        { 
             this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
         }
         else
@@ -142,12 +142,12 @@ public class PlayerMovementBruce : MonoBehaviour
 
     public void RespawnCall()
     {
-        wetfloorOverride = false;
-        playerInvincible = false;
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
         this.lastMove = Vector3.zero;
         this.verticalVelocity = 0;
         this.gameObject.SetActive(true);
+        wetfloorOverride = false;
+        playerInvincible = false;
         deathCount++;
         score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
     }
