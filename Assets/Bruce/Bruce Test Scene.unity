@@ -513,6 +513,8 @@ MonoBehaviour:
   _jumpApexThreshold: 10
   _coyoteTimeThreshold: 0.1
   _jumpBuffer: 0.1
+  _wallJumpBonus: 2
+  _wallJumpClamp: 27
 --- !u!4 &374611653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b50d6dff484dae944b83e8bcb109a5ff, type: 3}
