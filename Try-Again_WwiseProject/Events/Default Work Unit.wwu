@@ -112,7 +112,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="RoomAmbience" ID="{65D365D8-8C9C-48D9-8BBD-FD66F8F0BCE4}"/>
+				<Event Name="RoomAmbience" ID="{65D365D8-8C9C-48D9-8BBD-FD66F8F0BCE4}">
+					<ChildrenList>
+						<Action Name="" ID="{2B31BC9C-B02E-4607-BB13-CB776371121B}" ShortID="566638695">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="amb_room_01" ID="{48C0B6B6-35DD-41C6-A32D-96905A4CE221}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="KeycardPickup" ID="{B630143A-B710-4977-A441-705F99E1134B}">
 					<ChildrenList>
 						<Action Name="" ID="{433412B2-AD26-44CB-9169-71F75EF220DA}" ShortID="1036848920">
@@ -130,6 +140,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_trap_fire" ID="{F9BC7009-0967-46A6-A676-DDC355DF72C3}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayerRespawn" ID="{DC71A652-D2C4-4EE8-9282-4E07767959F9}">
+					<ChildrenList>
+						<Action Name="" ID="{4EDDC54A-E93E-4B58-992C-692A1485F17C}" ShortID="836859226">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_player_respawn" ID="{826AF7FB-7A79-4C1D-9C38-55C2445C3F7F}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

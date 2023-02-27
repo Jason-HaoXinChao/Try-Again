@@ -248,6 +248,28 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
+						<Sound Name="amb_room_01" ID="{48C0B6B6-35DD-41C6-A32D-96905A4CE221}" ShortID="118528653">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_room_01" ID="{D8238D4A-D117-4DAE-84F9-677429EE6091}">
+									<Language>SFX</Language>
+									<AudioFile>amb_room_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="58714284"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_room_01" ID="{D8238D4A-D117-4DAE-84F9-677429EE6091}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{F70EF5AF-7DD2-409E-8770-30E8C072C384}" ShortID="990993271">
@@ -359,6 +381,50 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<Sound Name="sfx_player_respawn" ID="{826AF7FB-7A79-4C1D-9C38-55C2445C3F7F}" ShortID="207461217">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_player_respawn" ID="{DFDF58E4-38E5-48AF-9040-1E7AE48D8C37}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_player_respawn.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="105227380"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_player_respawn" ID="{DFDF58E4-38E5-48AF-9040-1E7AE48D8C37}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_player_electrocuted" ID="{D859149D-16C7-4A4F-A9AB-EBE2AA51A7DB}" ShortID="996187395">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_player_electrocuted" ID="{5CB5C7AD-8032-4BFF-A7E4-4EBD252D48AE}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_player_electrocuted.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="744600462"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_player_electrocuted" ID="{5CB5C7AD-8032-4BFF-A7E4-4EBD252D48AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Movement" ID="{040C1AB6-2AAD-4BB5-972C-02EC0CD561E3}" ShortID="467166246">
