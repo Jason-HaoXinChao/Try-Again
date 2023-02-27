@@ -156,6 +156,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="LightElectrocute" ID="{F2A33303-9640-4A7C-8B3E-A4C5BA0E59AF}">
+					<ChildrenList>
+						<Action Name="" ID="{8023E208-E304-4E48-8B77-F083C5DBB30C}" ShortID="360462240">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_player_electrocuted" ID="{D859149D-16C7-4A4F-A9AB-EBE2AA51A7DB}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
