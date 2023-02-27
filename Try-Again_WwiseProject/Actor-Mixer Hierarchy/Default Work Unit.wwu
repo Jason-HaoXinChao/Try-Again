@@ -28,6 +28,9 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Object_Attenuation" ID="{8BB06274-10C1-49B8-9751-17B3E4331B4A}" WorkUnitID="{E774CBDC-3849-4985-901E-F945AECCCC07}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
 												</Reference>
@@ -53,6 +56,9 @@
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Object_Attenuation" ID="{8BB06274-10C1-49B8-9751-17B3E4331B4A}" WorkUnitID="{E774CBDC-3849-4985-901E-F945AECCCC07}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
 												</Reference>
@@ -71,6 +77,60 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="sfx_trap_light_buzz" ID="{C4AF9156-CCEF-4841-8107-EB33395ACC78}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Fire" ID="{929CBEB7-FEB6-43E4-8F91-BEE131576DC6}" ShortID="263238747">
+									<ChildrenList>
+										<Sound Name="sfx_trap_fire" ID="{F9BC7009-0967-46A6-A676-DDC355DF72C3}" ShortID="289960040">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Object_Attenuation" ID="{8BB06274-10C1-49B8-9751-17B3E4331B4A}" WorkUnitID="{E774CBDC-3849-4985-901E-F945AECCCC07}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_trap_fire" ID="{165969F8-1973-4CE4-8713-2C6AE2DC1A99}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_trap_fire.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="610463159"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_trap_fire" ID="{165969F8-1973-4CE4-8713-2C6AE2DC1A99}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_trap_fire_extinguish" ID="{F9D3ACDB-DFD3-4839-866E-2BD807EBAC3B}" ShortID="964244850">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_trap_fire_extinguish" ID="{9221D284-5B6A-4D42-BEC2-509B84F390E4}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_trap_fire_extinguish.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="983634712"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_trap_fire_extinguish" ID="{9221D284-5B6A-4D42-BEC2-509B84F390E4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -188,28 +248,6 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
-						<Sound Name="amb_room" ID="{D6530997-7165-484D-A805-4E06D5659321}" ShortID="196989502">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="SFX" ID="{1A335F27-CBAD-4509-B3EF-923ADC519A85}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="amb_room" ID="{3298686C-625E-45F1-80B5-7CF905739B5A}">
-									<Language>SFX</Language>
-									<AudioFile>amb_room.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="390261643"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="amb_room" ID="{3298686C-625E-45F1-80B5-7CF905739B5A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{F70EF5AF-7DD2-409E-8770-30E8C072C384}" ShortID="990993271">

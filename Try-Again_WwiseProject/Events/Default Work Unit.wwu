@@ -124,6 +124,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="PlayAmbientFire" ID="{D98DE63A-CD41-4F73-A57E-96B3F91C78C1}">
+					<ChildrenList>
+						<Action Name="" ID="{C02348B8-0D00-49E7-8741-7A62C67C6F27}" ShortID="85662103">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_trap_fire" ID="{F9BC7009-0967-46A6-A676-DDC355DF72C3}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
