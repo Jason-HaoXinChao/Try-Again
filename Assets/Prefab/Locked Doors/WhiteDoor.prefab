@@ -367,7 +367,7 @@ MonoBehaviour:
   doorSounds:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 1d0d6c5482334dd42b70d1791e9df7d4, type: 2}
 --- !u!114 &9113751874098947451
 MonoBehaviour:
   m_ObjectHideFlags: 0

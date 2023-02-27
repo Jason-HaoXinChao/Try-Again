@@ -5,9 +5,18 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{FD900DD3-A707-4086-8714-2BA3219AEC7C}">
 					<ObjectInclusionList>
+						<ObjectRef Name="LightAmbience" ID="{32785D73-A62E-4545-B643-C5938B3A3547}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="KeycardDoor" ID="{41F15771-B922-4704-8A15-B293A19AB2D1}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="DialogueMale_End" ID="{793CA658-D814-473D-9F93-85195D875D36}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SpikesImpale" ID="{93D82971-7F4C-47A9-8876-377785AF5301}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="RoomAmbience" ID="{65D365D8-8C9C-48D9-8BBD-FD66F8F0BCE4}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Footsteps" ID="{D80BA6FE-3A43-496E-9AE1-6B7B0CF379C8}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="KeycardPickup" ID="{B630143A-B710-4977-A441-705F99E1134B}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="LightElectrocute" ID="{F2A33303-9640-4A7C-8B3E-A4C5BA0E59AF}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TempMusic" ID="{DE1C1161-F926-4D85-8BE5-B293BFE4D655}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="DialogueMale_Start" ID="{C40B3C88-018D-4E2B-A302-23F8DEFE6151}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PlayerRespawn" ID="{DC71A652-D2C4-4EE8-9282-4E07767959F9}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PlayAmbientFire" ID="{D98DE63A-CD41-4F73-A57E-96B3F91C78C1}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

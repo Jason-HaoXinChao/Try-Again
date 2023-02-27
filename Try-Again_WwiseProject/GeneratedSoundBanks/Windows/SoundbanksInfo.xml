@@ -22,13 +22,37 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{35CAB861-05E5-C4D0-B705-6D6CF61C3695}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A233C65E-1379-2E76-5EBB-D5C3E90F10F1}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="16069325" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_squeak_01.wav</ShortName>
+					<CachePath>SFX/sfx_player_squeak_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="58714284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_room_01.wav</ShortName>
+					<CachePath>SFX/amb_room_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="58923651" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_cat.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_cat_10C4C929.wem</CachePath>
+				</File>
+				<File Id="102406198" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_open.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_open_10C4C929.wem</CachePath>
+				</File>
 				<File Id="104933937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_level_music01.wav</ShortName>
 					<CachePath>SFX/mus_level_music01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="105227380" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_respawn.wav</ShortName>
+					<CachePath>SFX/sfx_player_respawn_10C4C929.wem</CachePath>
+				</File>
+				<File Id="109687344" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_bee.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_bee_10C4C929.wem</CachePath>
 				</File>
 				<File Id="113432090" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_door_keycard.wav</ShortName>
@@ -38,20 +62,169 @@
 					<ShortName>sfx_door_open.wav</ShortName>
 					<CachePath>SFX/sfx_door_open_10C4C929.wem</CachePath>
 				</File>
+				<File Id="198329098" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_bay.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_bay_10C4C929.wem</CachePath>
+				</File>
+				<File Id="208036280" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_ear.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_ear_10C4C929.wem</CachePath>
+				</File>
+				<File Id="270127892" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_keycard_02.wav</ShortName>
+					<CachePath>SFX/sfx_keycard_02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="287279307" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_chair.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_chair_10C4C929.wem</CachePath>
+				</File>
+				<File Id="301144359" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_join.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_join_10C4C929.wem</CachePath>
+				</File>
 				<File Id="342085208" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_Impale_01.wav</ShortName>
 					<CachePath>SFX/sfx_player_Impale_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="358845744" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_sky.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_sky_10C4C929.wem</CachePath>
+				</File>
+				<File Id="404381212" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_who.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_who_10C4C929.wem</CachePath>
 				</File>
 				<File Id="420335803" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_Impale_02.wav</ShortName>
 					<CachePath>SFX/sfx_player_Impale_02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="483697947" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_wolf.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_wolf_10C4C929.wem</CachePath>
+				</File>
+				<File Id="489787794" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_end.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_end_10C4C929.wem</CachePath>
+				</File>
+				<File Id="535712261" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_now.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_now_10C4C929.wem</CachePath>
+				</File>
+				<File Id="561756807" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_step_01.wav</ShortName>
+					<CachePath>SFX/sfx_player_step_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="566863628" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_trap_light_amb.wav</ShortName>
+					<CachePath>SFX/sfx_trap_light_amb_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="610463159" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_trap_fire.wav</ShortName>
+					<CachePath>SFX/sfx_trap_fire_10C4C929.wem</CachePath>
+				</File>
+				<File Id="628669976" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_bird.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_bird_10C4C929.wem</CachePath>
+				</File>
+				<File Id="640990006" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_it.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_it_10C4C929.wem</CachePath>
+				</File>
+				<File Id="698748773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_step_02.wav</ShortName>
+					<CachePath>SFX/sfx_player_step_02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="728876282" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_cure.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_cure_10C4C929.wem</CachePath>
+				</File>
+				<File Id="744600462" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_electrocuted.wav</ShortName>
+					<CachePath>SFX/sfx_player_electrocuted_10C4C929.wem</CachePath>
+				</File>
+				<File Id="754902247" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_squeak_02.wav</ShortName>
+					<CachePath>SFX/sfx_player_squeak_02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="901860459" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_keycard_01.wav</ShortName>
+					<CachePath>SFX/sfx_keycard_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="994376627" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_trap_light_buzz.wav</ShortName>
+					<CachePath>SFX/sfx_trap_light_buzz_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1027824676" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_lowvoice_about.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_lowvoice_about_10C4C929.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="2398287214" Name="DialogueMale_End" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="309398149" Name="DialogueMale_Start" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="58923651"/>
+						<MediaRef Id="102406198"/>
+						<MediaRef Id="109687344"/>
+						<MediaRef Id="198329098"/>
+						<MediaRef Id="208036280"/>
+						<MediaRef Id="287279307"/>
+						<MediaRef Id="301144359"/>
+						<MediaRef Id="358845744"/>
+						<MediaRef Id="404381212"/>
+						<MediaRef Id="483697947"/>
+						<MediaRef Id="489787794"/>
+						<MediaRef Id="535712261"/>
+						<MediaRef Id="628669976"/>
+						<MediaRef Id="640990006"/>
+						<MediaRef Id="728876282"/>
+						<MediaRef Id="1027824676"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2385628198" Name="Footsteps" DurationType="OneShot" DurationMin="0.46715224" DurationMax="0.70028126">
+					<MediaRefs>
+						<MediaRef Id="16069325"/>
+						<MediaRef Id="561756807"/>
+						<MediaRef Id="698748773"/>
+						<MediaRef Id="754902247"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2230797588" Name="KeycardDoor" DurationType="OneShot" DurationMin="2.742854" DurationMax="2.742854">
 					<MediaRefs>
 						<MediaRef Id="113432090"/>
 						<MediaRef Id="115940102"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1514899416" Name="KeycardPickup" DurationType="OneShot" DurationMin="0.039895833" DurationMax="0.12925">
+					<MediaRefs>
+						<MediaRef Id="270127892"/>
+						<MediaRef Id="901860459"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2186217851" Name="LightAmbience" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="566863628"/>
+						<MediaRef Id="994376627"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1250595908" Name="LightElectrocute" DurationType="OneShot" DurationMin="28.825895" DurationMax="28.825895">
+					<MediaRefs>
+						<MediaRef Id="744600462"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2423635109" Name="PlayAmbientFire" MaxAttenuation="100" DurationType="OneShot" DurationMin="87.509094" DurationMax="87.509094">
+					<MediaRefs>
+						<MediaRef Id="610463159"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="667982098" Name="PlayerRespawn" DurationType="OneShot" DurationMin="3.4134583" DurationMax="3.4134583">
+					<MediaRefs>
+						<MediaRef Id="105227380"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="539467320" Name="RoomAmbience" DurationType="OneShot" DurationMin="92.95535" DurationMax="92.95535">
+					<MediaRefs>
+						<MediaRef Id="58714284"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4181842614" Name="SpikesImpale" DurationType="OneShot" DurationMin="1.8435078" DurationMax="3.241729">
@@ -68,5 +241,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B3C7DFB1-A374-F2C8-E9EB-A7D7FE6A20BE}</FileHash>
+	<FileHash>{F7BE1078-21D1-8507-0596-423F14A565FB}</FileHash>
 </SoundBanksInfo>
