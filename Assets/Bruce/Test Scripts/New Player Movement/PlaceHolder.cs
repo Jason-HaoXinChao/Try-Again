@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class PlayerMovementBruce : MonoBehaviour
+public class PlayerMovementX : MonoBehaviour
 {
     Animator _Animator;
     
