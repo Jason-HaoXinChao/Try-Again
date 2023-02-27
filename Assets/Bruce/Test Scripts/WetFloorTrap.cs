@@ -15,8 +15,7 @@ public class WetFloorTrap : MonoBehaviour
     
     void OnTriggerEnter (Collider other)
     {
-        // Debug.Log(other);
-        if(other.tag == "Player") // checks if the player's feet is on the floor
+        if(other.gameObject.name == "PlayerHitbox") // checks if the player's feet is on the floor
         {
             if(!delay && !player.GetComponent<PlayerMovementBruce>().playerInvincible)
             {
@@ -38,7 +37,6 @@ public class WetFloorTrap : MonoBehaviour
         Vector3 position = player.transform.position;
         Quaternion rotation = player.transform.rotation;
         player.gameObject.SetActive(false);
-
         Instantiate(deadPlayer, position, rotation);
 
         StartCoroutine(RespawnTimer());

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovementBruce : MonoBehaviour
 {
-    // Animator _Animator;
+    Animator _Animator;
     
     // Lock Player Input
     private bool dialogueActive;
@@ -29,12 +29,12 @@ public class PlayerMovementBruce : MonoBehaviour
     // Save and update the transform of new respawn points to this var
     public Transform respawnPoint;
 
-    // [Header("Animations")]
-    // bool isJumping;
+    [Header("Animations")]
+    bool isJumping;
 
     void Start()
     {
-        // _Animator = GetComponent<Animator>();
+        _Animator = GetComponent<Animator>();
         playerInvincible = false;
         wetfloorOverride = false;
     }
@@ -62,7 +62,7 @@ public class PlayerMovementBruce : MonoBehaviour
             if (!dialogueActive && Input.GetButtonDown("Jump") && !wetfloorOverride)
             {
                 verticalVelocity = jumpForce;
-                // isJumping = true;
+                isJumping = true;
             }
         }
         else
@@ -84,38 +84,39 @@ public class PlayerMovementBruce : MonoBehaviour
         moveVector.y = verticalVelocity;
         moveVector.z = 0;
 
-        // CharacterRotation();
+        CharacterRotation();
 
-        //=== Animations ===
-        // bool isWalking = moveVector.x != 0;
+        // === Animations ===
+        bool isWalking = moveVector.x != 0;
 
-        // _Animator.SetBool("IsWalking", isWalking);
-        // _Animator.SetBool("IsJumping", isJumping);
+        _Animator.SetBool("IsWalking", isWalking);
+        _Animator.SetBool("IsJumping", isJumping);
+        _Animator.SetBool("IsSliding", wetfloorOverride);
 
-        // isJumping  = false;
+        isJumping  = false;
         //=== End ===
 
         controller.Move(moveVector * Time.deltaTime);
         lastMove = moveVector;
     }
 
-    // void CharacterRotation()
-    // {
-    //     /// <summary>
-    //     /// Changes the direction that player faces when moving
-    //     /// </summary>
+    void CharacterRotation()
+    {
+        /// <summary>
+        /// Changes the direction that player faces when moving
+        /// </summary>
 
-    //     if (moveVector.x < 0 /*&& !wallHopLock*/)
-    //     {
-    //         Quaternion target = Quaternion.Euler(0, 0, 0);
-    //         _Animator.transform.rotation = target;
-    //     }
-    //     else if (moveVector.x > 0)
-    //     {
-    //         Quaternion target = Quaternion.Euler(0, 180, 0);
-    //         _Animator.transform.rotation = target;
-    //     }
-    // }
+        if (moveVector.x < 0 /*&& !wallHopLock*/)
+        {
+            Quaternion target = Quaternion.Euler(0, 0, 0);
+            _Animator.transform.rotation = target;
+        }
+        else if (moveVector.x > 0)
+        {
+            Quaternion target = Quaternion.Euler(0, 180, 0);
+            _Animator.transform.rotation = target;
+        }
+    }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -126,7 +127,7 @@ public class PlayerMovementBruce : MonoBehaviour
                 // Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
                 verticalVelocity = jumpForce;
                 moveVector = hit.normal * speed;
-                // isJumping = true;
+                isJumping = true;
                 if(!wallHopLock)
                 {
                     StartCoroutine(SetWallHopLock());
@@ -137,16 +138,16 @@ public class PlayerMovementBruce : MonoBehaviour
 
     public void WetFloor()
     {
-        if(lastMove.x > 0)
-        {
-            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
-        }
-        else
-        {
-            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
-        }
-        controller.height = 0.5f;
-        controller.center = new Vector3(0, 0, 0);
+        // if(lastMove.x > 0)
+        // {
+        //     this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        // }
+        // else
+        // {
+        //     this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        // }
+        // controller.height = 0.01f;
+        // controller.center = new Vector3(0, 0, 0);
         wetfloorOverride = true;
         playerInvincible = true;
         StartCoroutine(WetFloorDuration());
@@ -158,16 +159,14 @@ public class PlayerMovementBruce : MonoBehaviour
         
         GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
-        if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
-        { 
-            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
-        }
-        else
-        {
-            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
-        }
-        controller.height = 1.6f;
-        controller.center = new Vector3(0, 0.55f, 0);
+        // if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
+        // { 
+        //     this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        // }
+        // else
+        // {
+        //     this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        // }
     }
 
     IEnumerator SetWallHopLock()
@@ -179,7 +178,10 @@ public class PlayerMovementBruce : MonoBehaviour
 
     public void RespawnCall()
     {
-        this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
+        this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,1,0);
+        // reset player height
+        // controller.height = 0.56f;
+        // controller.center = new Vector3(0, 0.013f, 0);
         this.lastMove = Vector3.zero;
         this.verticalVelocity = 0;
         this.gameObject.SetActive(true);
