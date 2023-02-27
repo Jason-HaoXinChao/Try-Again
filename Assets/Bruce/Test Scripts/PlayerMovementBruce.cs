@@ -54,7 +54,7 @@ public class PlayerMovementBruce : MonoBehaviour
         if (wetfloorOverride)
         {
             moveVector.x = lastMove.x;
-            if (lastMove.x == 0) {
+            if (lastMove.x == 0 && !wetfloorOverride) {
                 if (_Animator.transform.rotation.y == 0) {
                     // go left
                     moveVector.x = -1;
@@ -167,14 +167,7 @@ public class PlayerMovementBruce : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         
-        float rotation;
-        if (_Animator.transform.rotation.y == 0) {
-            // go left
-            rotation = -90f;
-        } else {
-            rotation = 90f;
-        }
-        GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody(rotation);
+        GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
         // if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
         // { 
