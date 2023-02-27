@@ -404,6 +404,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="sfx_player_electrocuted" ID="{D859149D-16C7-4A4F-A9AB-EBE2AA51A7DB}" ShortID="996187395">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
