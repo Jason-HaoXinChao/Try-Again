@@ -72,6 +72,58 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="LightAmbience" ID="{32785D73-A62E-4545-B643-C5938B3A3547}">
+					<ChildrenList>
+						<Action Name="" ID="{C9D9D142-1E3A-40CE-A5CD-99D2E3310321}" ShortID="909393615">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_trap_light_amb" ID="{C6781643-6865-4375-848E-21F407864C43}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6D7F2742-E9FF-4E9D-9254-6FE0E14DD52A}" ShortID="624610839">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_trap_light_buzz" ID="{D51698A5-321D-47F0-9DE8-4445443972CC}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Footsteps" ID="{D80BA6FE-3A43-496E-9AE1-6B7B0CF379C8}">
+					<ChildrenList>
+						<Action Name="" ID="{6AE74A3F-E88C-44D3-9FD7-D61D6BB1964E}" ShortID="42869949">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Foosteps" ID="{44795E8E-0B0E-4D18-94B1-E0E65BB52466}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{022FB562-804D-4E77-A1A2-E070B337DC64}" ShortID="338593252">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.05"/>
+								<Property Name="Probability" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Squeaks" ID="{3667B992-9B9D-4CC5-AA29-91C56441992A}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="RoomAmbience" ID="{65D365D8-8C9C-48D9-8BBD-FD66F8F0BCE4}"/>
+				<Event Name="KeycardPickup" ID="{B630143A-B710-4977-A441-705F99E1134B}">
+					<ChildrenList>
+						<Action Name="" ID="{433412B2-AD26-44CB-9169-71F75EF220DA}" ShortID="1036848920">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Keycard" ID="{3CD0EF55-ECDC-4540-975A-D33BCFD6CFA0}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
