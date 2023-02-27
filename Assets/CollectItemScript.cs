@@ -9,6 +9,7 @@ public class CollectItemScript : MonoBehaviour
     public GameObject tooltip;
     public string itemName;
     public GameObject player;
+    public AK.Wwise.Event pickUpCard;
     
 
     // Start is called before the first frame update
@@ -38,6 +39,7 @@ public class CollectItemScript : MonoBehaviour
             playerInventory.GetComponent<PlayerInventory>().collectItem(itemName);
 
             transform.parent.gameObject.SetActive(false);
+            pickUpCard.Post(gameObject);
         }
     }
 

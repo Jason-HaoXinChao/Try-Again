@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A233C65E-1379-2E76-5EBB-D5C3E90F10F1}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5FA68E8C-FE9A-00B8-93A5-B1D76353E1B6}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -82,6 +82,10 @@
 					<ShortName>sfx_phonemes_lowvoice_join.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_join_10C4C929.wem</CachePath>
 				</File>
+				<File Id="313365090" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_trap_fire_woosh.wav</ShortName>
+					<CachePath>SFX/sfx_trap_fire_woosh_10C4C929.wem</CachePath>
+				</File>
 				<File Id="342085208" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_Impale_01.wav</ShortName>
 					<CachePath>SFX/sfx_player_Impale_01_10C4C929.wem</CachePath>
@@ -130,6 +134,10 @@
 					<ShortName>sfx_phonemes_lowvoice_it.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_it_10C4C929.wem</CachePath>
 				</File>
+				<File Id="659278889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_music02.wav</ShortName>
+					<CachePath>SFX/mus_level_music02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="698748773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_step_02.wav</ShortName>
 					<CachePath>SFX/sfx_player_step_02_10C4C929.wem</CachePath>
@@ -140,7 +148,7 @@
 				</File>
 				<File Id="744600462" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_electrocuted.wav</ShortName>
-					<CachePath>SFX/sfx_player_electrocuted_10C4C929.wem</CachePath>
+					<CachePath>SFX/sfx_player_electrocuted_DEF4906D.wem</CachePath>
 				</File>
 				<File Id="754902247" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_squeak_02.wav</ShortName>
@@ -181,6 +189,11 @@
 						<MediaRef Id="1027824676"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3609565814" Name="FireBurn" DurationType="OneShot" DurationMin="1.4174112" DurationMax="2.25">
+					<MediaRefs>
+						<MediaRef Id="313365090"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2385628198" Name="Footsteps" DurationType="OneShot" DurationMin="0.46715224" DurationMax="0.70028126">
 					<MediaRefs>
 						<MediaRef Id="16069325"/>
@@ -201,13 +214,18 @@
 						<MediaRef Id="901860459"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="663442949" Name="Level01Music" DurationType="OneShot" DurationMin="90" DurationMax="90">
+					<MediaRefs>
+						<MediaRef Id="659278889"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2186217851" Name="LightAmbience" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="566863628"/>
 						<MediaRef Id="994376627"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1250595908" Name="LightElectrocute" DurationType="OneShot" DurationMin="28.825895" DurationMax="28.825895">
+				<Event Id="1250595908" Name="LightElectrocute" DurationType="OneShot" DurationMin="2.123" DurationMax="2.123">
 					<MediaRefs>
 						<MediaRef Id="744600462"/>
 					</MediaRefs>
@@ -241,5 +259,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F7BE1078-21D1-8507-0596-423F14A565FB}</FileHash>
+	<FileHash>{A4227D0A-DA6E-08DB-AD3F-355CAC41E1AB}</FileHash>
 </SoundBanksInfo>

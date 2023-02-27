@@ -4907,6 +4907,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9479470f581d8734786abdfb3cd1875c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  evaporateplayer:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7b007a62134d3f142a87ba7f05b3c1f4, type: 2}
 --- !u!1 &5652711682024371514
 GameObject:
   m_ObjectHideFlags: 0
