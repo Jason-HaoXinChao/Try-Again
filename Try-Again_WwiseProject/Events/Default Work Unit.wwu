@@ -167,6 +167,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Level01Music" ID="{2A87AED3-A07B-452E-912C-9A2103E49334}">
+					<ChildrenList>
+						<Action Name="" ID="{4DA35B9F-3343-450C-8EC7-38F95C3DB883}" ShortID="252418155">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_level_music02" ID="{C0D53276-BDC8-4B8E-B887-91C66E249041}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FireBurn" ID="{1AA99881-AFF8-4A03-814F-E763C4793496}">
+					<ChildrenList>
+						<Action Name="" ID="{7089055D-5BEF-4926-A59F-EF6A6D4C3F84}" ShortID="585619978">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_trap_fire_woosh" ID="{9A02404E-3FA2-4684-A23F-C19CCA2B58F9}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

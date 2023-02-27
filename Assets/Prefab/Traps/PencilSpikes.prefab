@@ -58,6 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18eb4fdb263bb404cb2ae35429704690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  getImpaled:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1198724a846e64c49820cbb4df2173c4, type: 2}
   deadPlayer: {fileID: 4752519532890048103, guid: c9f15c65a883c6643ae21f39e9997124, type: 3}
 --- !u!1 &7117079249832794253
 GameObject:
