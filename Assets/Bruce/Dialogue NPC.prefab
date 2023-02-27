@@ -361,6 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5278a0a316e6440930df714e9c033d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltip: {fileID: 0}
+  tooltip: {fileID: 3881031796625942584}
   inkJSON: {fileID: 4900000, guid: 1e4283ab66598f945977ba86ae0a41b2, type: 3}
   player: {fileID: 0}

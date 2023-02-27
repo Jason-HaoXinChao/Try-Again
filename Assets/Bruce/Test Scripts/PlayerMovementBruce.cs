@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovementBruce : MonoBehaviour
 {
-    Animator _Animator;
+    // Animator _Animator;
     
     // Lock Player Input
     private bool dialogueActive;
@@ -29,12 +29,12 @@ public class PlayerMovementBruce : MonoBehaviour
     // Save and update the transform of new respawn points to this var
     public Transform respawnPoint;
 
-    [Header("Animations")]
-    bool isJumping;
+    // [Header("Animations")]
+    // bool isJumping;
 
     void Start()
     {
-        _Animator = GetComponent<Animator>();
+        // _Animator = GetComponent<Animator>();
         playerInvincible = false;
         wetfloorOverride = false;
     }
@@ -62,7 +62,7 @@ public class PlayerMovementBruce : MonoBehaviour
             if (!dialogueActive && Input.GetButtonDown("Jump") && !wetfloorOverride)
             {
                 verticalVelocity = jumpForce;
-                isJumping = true;
+                // isJumping = true;
             }
         }
         else
@@ -84,38 +84,38 @@ public class PlayerMovementBruce : MonoBehaviour
         moveVector.y = verticalVelocity;
         moveVector.z = 0;
 
-        CharacterRotation();
+        // CharacterRotation();
 
         //=== Animations ===
-        bool isWalking = moveVector.x != 0;
+        // bool isWalking = moveVector.x != 0;
 
-        _Animator.SetBool("IsWalking", isWalking);
-        _Animator.SetBool("IsJumping", isJumping);
+        // _Animator.SetBool("IsWalking", isWalking);
+        // _Animator.SetBool("IsJumping", isJumping);
 
-        isJumping  = false;
+        // isJumping  = false;
         //=== End ===
 
         controller.Move(moveVector * Time.deltaTime);
         lastMove = moveVector;
     }
 
-    void CharacterRotation()
-    {
-        /// <summary>
-        /// Changes the direction that player faces when moving
-        /// </summary>
+    // void CharacterRotation()
+    // {
+    //     /// <summary>
+    //     /// Changes the direction that player faces when moving
+    //     /// </summary>
 
-        if (moveVector.x < 0 /*&& !wallHopLock*/)
-        {
-            Quaternion target = Quaternion.Euler(0, 0, 0);
-            _Animator.transform.rotation = target;
-        }
-        else if (moveVector.x > 0)
-        {
-            Quaternion target = Quaternion.Euler(0, 180, 0);
-            _Animator.transform.rotation = target;
-        }
-    }
+    //     if (moveVector.x < 0 /*&& !wallHopLock*/)
+    //     {
+    //         Quaternion target = Quaternion.Euler(0, 0, 0);
+    //         _Animator.transform.rotation = target;
+    //     }
+    //     else if (moveVector.x > 0)
+    //     {
+    //         Quaternion target = Quaternion.Euler(0, 180, 0);
+    //         _Animator.transform.rotation = target;
+    //     }
+    // }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -123,10 +123,10 @@ public class PlayerMovementBruce : MonoBehaviour
         {
             if(Input.GetButtonDown("Jump"))
             {
-                Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
+                // Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
                 verticalVelocity = jumpForce;
                 moveVector = hit.normal * speed;
-                isJumping = true;
+                // isJumping = true;
                 if(!wallHopLock)
                 {
                     StartCoroutine(SetWallHopLock());

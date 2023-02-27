@@ -220,6 +220,33 @@ public class PlayerController : MonoBehaviour, IPlayerController
     }
     #endregion
 
+    // #region Wall Jump
+    // bool wallJumpLock;
+    // void OnControllerColliderHit(ControllerColliderHit hit)
+    // {
+    //     if(!controller.isGrounded && hit.normal.y < 0.1f)
+    //     {
+    //         if(Input.GetButtonDown("Jump"))
+    //         {
+    //             Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
+    //             verticalVelocity = jumpForce;
+    //             moveVector = hit.normal * speed;
+    //             if(!wallHopLock)
+    //             {
+    //                 StartCoroutine(SetWallHopLock());
+    //             }
+    //         }
+    //     }
+    // }
+
+    // IEnumerator SetWallHopLock()
+    // {
+    //     wallHopLock = true;
+    //     yield return new WaitForSeconds(0.2f);
+    //     wallHopLock = false;
+    // }
+    // #endregion
+
     #region Move
     // [Header("MOVE")] [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
     // private int _freeColliderIterations = 10;

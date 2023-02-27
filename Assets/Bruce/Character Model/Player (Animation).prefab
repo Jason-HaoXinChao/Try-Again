@@ -157,6 +157,51 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.013751134, y: 0.005616815, z: -0.0009149816}
     m_Extent: {x: 0.029529598, y: 0.022218034, z: 0.009197233}
   m_DirtyAABB: 0
+--- !u!1 &122804789029900901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417266679509513726}
+  - component: {fileID: 3675143533311417517}
+  m_Layer: 0
+  m_Name: Hitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &417266679509513726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122804789029900901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5628420561098894598}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3675143533311417517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122804789029900901}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0106131025, y: 0.044630133, z: 0.02073803}
+  m_Center: {x: -0.0006340538, y: 0.010177182, z: -0}
 --- !u!1 &334787648254896325
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +398,7 @@ Transform:
   - {fileID: 763536586215782570}
   - {fileID: 8673815255900650771}
   - {fileID: 2174349933303120966}
+  - {fileID: 417266679509513726}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
