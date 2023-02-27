@@ -1598,7 +1598,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.6927447
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1437490600457663000, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+      propertyPath: evaporateplayer.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b84153e46528b744194d1832e03ffded, type: 2}
+    m_RemovedComponents:
+    - {fileID: 4741671260677929011, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+    - {fileID: 2393102556271939582, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+    - {fileID: 4355741771799425553, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
 --- !u!4 &98402252 stripped
 Transform:
@@ -2272,6 +2279,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8906706303276352476, guid: f5c5a93ff354ffa49b026b4e6b7e9eb8, type: 3}
+      propertyPath: pickUpCard.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7038ba4cddcab7b4e8066c358712ab71, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c5a93ff354ffa49b026b4e6b7e9eb8, type: 3}
 --- !u!1001 &174602926
@@ -3880,6 +3891,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6563039915352421220, guid: 66e3c552747766040834d05bc4011e07, type: 3}
+      propertyPath: doorSounds.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d0d6c5482334dd42b70d1791e9df7d4, type: 2}
     - target: {fileID: 6771246012981691897, guid: 66e3c552747766040834d05bc4011e07, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4787,6 +4802,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8906706303276352476, guid: bcb6426c30cb767419b0231e90f8b985, type: 3}
+      propertyPath: pickUpCard.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7038ba4cddcab7b4e8066c358712ab71, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb6426c30cb767419b0231e90f8b985, type: 3}
 --- !u!4 &346894471 stripped
@@ -13657,6 +13676,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.4635478
       objectReference: {fileID: 0}
+    - target: {fileID: 6563039915352421220, guid: a1dc7021621f2c64f92a9a3c632fa227, type: 3}
+      propertyPath: doorSounds.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d0d6c5482334dd42b70d1791e9df7d4, type: 2}
     - target: {fileID: 6771246012981691897, guid: a1dc7021621f2c64f92a9a3c632fa227, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -21706,6 +21729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6563039915352421220, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: doorSounds.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d0d6c5482334dd42b70d1791e9df7d4, type: 2}
     - target: {fileID: 6771246012981691897, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -28484,7 +28511,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e542615ad11533541900bd04590c78a0, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6fca3b873bb54c9449ecc3b3dd3fde7b, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -30264,6 +30291,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6563039915352421220, guid: 62ceada806c54ad40b0a575adbcbf5fb, type: 3}
+      propertyPath: doorSounds.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d0d6c5482334dd42b70d1791e9df7d4, type: 2}
     - target: {fileID: 6771246012981691897, guid: 62ceada806c54ad40b0a575adbcbf5fb, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -31628,6 +31659,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8906706303276352476, guid: eed346feb75e0384582202945a236989, type: 3}
+      propertyPath: pickUpCard.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7038ba4cddcab7b4e8066c358712ab71, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eed346feb75e0384582202945a236989, type: 3}
 --- !u!1001 &2135966473

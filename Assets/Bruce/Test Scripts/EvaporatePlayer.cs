@@ -5,6 +5,7 @@ using UnityEngine;
 public class EvaporatePlayer : MonoBehaviour
 {
     private GameObject player;
+    public AK.Wwise.Event evaporateplayer;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class EvaporatePlayer : MonoBehaviour
             other.gameObject.SetActive(false);
             
             StartCoroutine(RespawnTimer());
+            evaporateplayer.Post(gameObject);
         }
     }
 

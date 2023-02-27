@@ -377,6 +377,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 2732081163308950470}
   itemName: YellowKeycard
+  player: {fileID: 0}
+  pickUpCard:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7038ba4cddcab7b4e8066c358712ab71, type: 2}
 --- !u!1 &6908913031993604518
 GameObject:
   m_ObjectHideFlags: 0

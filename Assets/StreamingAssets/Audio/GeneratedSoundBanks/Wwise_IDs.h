@@ -15,9 +15,11 @@ namespace AK
     {
         static const AkUniqueID DIALOGUEMALE_END = 2398287214U;
         static const AkUniqueID DIALOGUEMALE_START = 309398149U;
+        static const AkUniqueID FIREBURN = 3609565814U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID KEYCARDDOOR = 2230797588U;
         static const AkUniqueID KEYCARDPICKUP = 1514899416U;
+        static const AkUniqueID LEVEL01MUSIC = 663442949U;
         static const AkUniqueID LIGHTAMBIENCE = 2186217851U;
         static const AkUniqueID LIGHTELECTROCUTE = 1250595908U;
         static const AkUniqueID PLAYAMBIENTFIRE = 2423635109U;
