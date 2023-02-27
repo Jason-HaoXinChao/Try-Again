@@ -36,7 +36,7 @@ public class DoorDialogueTrigger : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !other.gameObject.GetComponent<PlayerMovementBruce>().playerInvincible)
         {
             //Debug.Log("Enter Hitbox");
             inDetectRange = true;
@@ -53,7 +53,7 @@ public class DoorDialogueTrigger : MonoBehaviour
     }
 
     void OnTriggerStay(Collider other) {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !other.gameObject.GetComponent<PlayerMovementBruce>().playerInvincible)
         {
             if (!GlobalDialogueSystem.GetInstance().dialogueIsPlaying && !this.GetComponent<OpenDoorScript>().tooltip.activeSelf) {
                 this.GetComponent<OpenDoorScript>().tooltip.SetActive(true);

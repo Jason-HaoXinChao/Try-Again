@@ -41,12 +41,14 @@ public class NPCInteractTrigger : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
-        {
-            player = other.gameObject;
+        if(other.tag == "Player")
+        {   
             //Debug.Log("Enter Hitbox");
-            tooltip.SetActive(true);
-            inDetectRange = true;
+            player = other.gameObject;
+            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
+                tooltip.SetActive(true);
+                inDetectRange = true;
+            }
         }
     }
 

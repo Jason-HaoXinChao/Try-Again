@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{35CAB861-05E5-C4D0-B705-6D6CF61C3695}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="104933937" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_music01.wav</ShortName>
+					<CachePath>SFX/mus_level_music01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="113432090" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_door_keycard.wav</ShortName>
+					<CachePath>SFX/sfx_door_keycard_10C4C929.wem</CachePath>
+				</File>
+				<File Id="115940102" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_door_open.wav</ShortName>
+					<CachePath>SFX/sfx_door_open_10C4C929.wem</CachePath>
+				</File>
+				<File Id="342085208" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_Impale_01.wav</ShortName>
+					<CachePath>SFX/sfx_player_Impale_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="420335803" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_Impale_02.wav</ShortName>
+					<CachePath>SFX/sfx_player_Impale_02_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2230797588" Name="KeycardDoor" DurationType="OneShot" DurationMin="2.742854" DurationMax="2.742854">
+					<MediaRefs>
+						<MediaRef Id="113432090"/>
+						<MediaRef Id="115940102"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4181842614" Name="SpikesImpale" DurationType="OneShot" DurationMin="1.8435078" DurationMax="3.241729">
+					<MediaRefs>
+						<MediaRef Id="342085208"/>
+						<MediaRef Id="420335803"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2622437216" Name="TempMusic" DurationType="OneShot" DurationMin="64" DurationMax="64">
+					<MediaRefs>
+						<MediaRef Id="104933937"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{29320E6B-E49F-3D7A-3E9C-642EA8B91771}</FileHash>
+</SoundBanksInfo>

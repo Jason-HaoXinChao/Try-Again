@@ -18,7 +18,7 @@ public class WetFloorTrap : MonoBehaviour
         // Debug.Log(other);
         if(other.name == "leg") // checks if the player's feet is on the floor
         {
-            if(!delay)
+            if(!delay && !player.GetComponent<PlayerMovementBruce>().playerInvincible)
             {
                 player.GetComponent<PlayerMovementBruce>().WetFloor();
                 StartCoroutine(TrapDelay());
@@ -39,8 +39,7 @@ public class WetFloorTrap : MonoBehaviour
         Quaternion rotation = player.transform.rotation;
         player.gameObject.SetActive(false);
 
-        GameObject corpse = Instantiate(deadPlayer, position, rotation) as GameObject;
-        corpse.transform.localScale = player.transform.localScale;
+        Instantiate(deadPlayer, position, rotation);
 
         StartCoroutine(RespawnTimer());
     }

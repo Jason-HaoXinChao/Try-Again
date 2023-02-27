@@ -8,12 +8,14 @@ public class OpenDoorScript : MonoBehaviour
     private bool inOpenRange;
     public GameObject tooltip;
     public string keycardName;
+    public AK.Wwise.Event doorSounds;
     private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         inOpenRange = false;
+        tooltip.SetActive(false);
         player = null;
     }
 
@@ -32,40 +34,33 @@ public class OpenDoorScript : MonoBehaviour
     {
         if(inOpenRange && Input.GetButtonDown("Confirm"))
         {
-            // Debug.Log("Confirm Key Pressed");
             GameObject playerInventory = GameObject.Find("Inventory");
-            // Debug.Log(keycardName);
             if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
-                // this.GetComponent<NPCInteractTrigger>().enabled = true;
-                // Debug.Log("Consuming item");
                 playerInventory.GetComponent<PlayerInventory>().consumeItem(keycardName);
                 transform.parent.gameObject.SetActive(false);
+                doorSounds.Post(gameObject);
             }
         }
     }
 
     void OnTriggerEnter (Collider other)
     {   
-        if(other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
+        if (other.tag == "Player")
         {
-            // Debug.Log("Enter Hitbox");
-            player = other.gameObject;
-            tooltip.SetActive(true);
-            GameObject playerInventory = GameObject.Find("Inventory");
-            // if (playerInventory.GetComponent<PlayerInventory>().collectedItems.Contains(keycardName)) {
-            //     tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "Press F to use keycard";
-            // } else {
-            //     tooltip.GetComponent<TMPro.TextMeshProUGUI>().text = "You need a keycard to open this door";
-            // }
-            inOpenRange = true;
+            GameObject playerObj = other.gameObject;
+            if (playerObj.activeSelf && !playerObj.GetComponent<PlayerMovementBruce>().playerInvincible) {
+                player = playerObj;
+                tooltip.SetActive(true);
+                inOpenRange = true;
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
+        Debug.Log(other);
         if (other.tag == "Player")
         {
-            //Debug.Log("Leave Hitbox");
             DisableOpen();
         }
     }
