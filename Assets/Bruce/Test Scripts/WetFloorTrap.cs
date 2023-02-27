@@ -32,10 +32,24 @@ public class WetFloorTrap : MonoBehaviour
         delay = false;
     }
 
-    public void SpawnDeadBody()
+        public void SpawnDeadBody()
     {
         Vector3 position = player.transform.position;
         Quaternion rotation = player.transform.rotation;
+        player.gameObject.SetActive(false);
+        Instantiate(deadPlayer, position, rotation);
+
+        StartCoroutine(RespawnTimer());
+    }
+
+    public void SpawnDeadBody(float zRotation)
+    {
+        Vector3 position = player.transform.position;
+        Quaternion rotation = player.transform.rotation;
+        if (zRotation > 0) {
+            rotation.x = 180f;
+        }
+        rotation = Quaternion.Euler(rotation.x, rotation.y, zRotation);
         player.gameObject.SetActive(false);
         Instantiate(deadPlayer, position, rotation);
 

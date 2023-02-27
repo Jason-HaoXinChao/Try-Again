@@ -4952,7 +4952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 77380562505831561, guid: 26444421ad68c74429b4d115cdefdeb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.09
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 77380562505831561, guid: 26444421ad68c74429b4d115cdefdeb8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6578,6 +6578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes
@@ -9889,7 +9893,7 @@ PrefabInstance:
     - target: {fileID: 607130195832478665, guid: a578cdd7d3d9af2449f60f374ceb6a80, type: 3}
       propertyPath: deadPlayer
       value: 
-      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
+      objectReference: {fileID: 5551051461191506794, guid: 824b432aa905e2f4998e45d78df19e2a, type: 3}
     - target: {fileID: 607130195832478665, guid: a578cdd7d3d9af2449f60f374ceb6a80, type: 3}
       propertyPath: getImpaled.WwiseObjectReference
       value: 
@@ -15034,6 +15038,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (2)
@@ -16312,6 +16320,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (1)
@@ -22696,7 +22708,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1532700484
 PrefabInstance:
@@ -25206,6 +25218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (1)
@@ -27526,6 +27542,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes
@@ -30931,7 +30951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6228181731144261804, guid: e91c078897d74084f9728a7978374eef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e91c078897d74084f9728a7978374eef, type: 3}
@@ -31139,7 +31159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5628420561098894598, guid: e687afba6ec5c224d81fea07ba75a247, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5628420561098894598, guid: e687afba6ec5c224d81fea07ba75a247, type: 3}
       propertyPath: m_LocalScale.x

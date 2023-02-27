@@ -25,14 +25,15 @@ public class PressurePlateFire : MonoBehaviour
     void Update()
     {
         if (!fireOn) {
-            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateSinked, 0.025f);
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateSinked, 0.05f);
         } else {
-            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.025f);
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.05f);
         }
     }
 
     void OnTriggerStay (Collider other)
     {
+        Debug.Log(other);
         if (!triggerLockEnter)
         {
             int count = objectsInRange.Count;

@@ -50,9 +50,19 @@ public class PlayerMovementBruce : MonoBehaviour
             moveVector.x = Input.GetAxisRaw("Horizontal");
         }
 
+        // in case of landing on puddle with 0 x velocity
         if (wetfloorOverride)
         {
             moveVector.x = lastMove.x;
+            if (lastMove.x == 0) {
+                if (_Animator.transform.rotation.y == 0) {
+                    // go left
+                    moveVector.x = -1;
+                } else {
+                    // go right
+                    moveVector.x = 1;
+                }
+            }
         }
 
         if (controller.isGrounded)
@@ -146,8 +156,8 @@ public class PlayerMovementBruce : MonoBehaviour
         // {
         //     this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
         // }
-        // controller.height = 0.01f;
-        // controller.center = new Vector3(0, 0, 0);
+        controller.height = 0.01f;
+        controller.center = new Vector3(0, 0, 0);
         wetfloorOverride = true;
         playerInvincible = true;
         StartCoroutine(WetFloorDuration());
@@ -157,7 +167,14 @@ public class PlayerMovementBruce : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         
-        GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
+        float rotation;
+        if (_Animator.transform.rotation.y == 0) {
+            // go left
+            rotation = -90f;
+        } else {
+            rotation = 90f;
+        }
+        GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody(rotation);
 
         // if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
         // { 
@@ -180,8 +197,8 @@ public class PlayerMovementBruce : MonoBehaviour
     {
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,1,0);
         // reset player height
-        // controller.height = 0.56f;
-        // controller.center = new Vector3(0, 0.013f, 0);
+        controller.height = 0.056f;
+        controller.center = new Vector3(0, 0.013f, 0);
         this.lastMove = Vector3.zero;
         this.verticalVelocity = 0;
         this.gameObject.SetActive(true);

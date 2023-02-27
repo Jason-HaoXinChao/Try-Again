@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1855373269051489230}
-  - component: {fileID: 2844109947819263456}
+  - component: {fileID: 9215490736006240349}
   m_Layer: 0
-  m_Name: Corpse
+  m_Name: FrozenCorpse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,12 +29,11 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 32}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 3218438470709892142}
   - {fileID: 7249509198242098288}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2844109947819263456
+--- !u!54 &9215490736006240349
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,11 +43,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 999
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!1 &8787186969853329802
 GameObject:
@@ -74,13 +73,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8787186969853329802}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1855373269051489230}
-  m_RootOrder: 0
+  m_Father: {fileID: 7249509198242098288}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &206591240949208644
 BoxCollider:
@@ -93,8 +92,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01646429, y: 0.061804384, z: 0.032912202}
-  m_Center: {x: 0.0025679152, y: 0.012416974, z: 0.0024360195}
+  m_Size: {x: 0.014310871, y: 0.05752818, z: 0.032912202}
+  m_Center: {x: 0.0018692096, y: 0.012074811, z: 0.0024360195}
 --- !u!1001 &7138723595904666523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104,7 +103,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b50d6dff484dae944b83e8bcb109a5ff, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b50d6dff484dae944b83e8bcb109a5ff, type: 3}
       propertyPath: m_LocalPosition.x
