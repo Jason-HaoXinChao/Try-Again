@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="KeycardDoor" ID="{41F15771-B922-4704-8A15-B293A19AB2D1}">
+					<ChildrenList>
+						<Action Name="" ID="{A9C52A6A-4F0C-4F9E-94DA-F8B496DFF779}" ShortID="120589800">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_door_keycard" ID="{6CDC87F9-6C2C-4B83-89E9-483EA5AE3D4D}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F6A577FC-6A9F-4CD1-A656-3A8A98E0CFF6}" ShortID="344174330">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_door_open" ID="{9FE63215-27C5-4246-B6E2-7E706E6FE0FE}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SpikesImpale" ID="{93D82971-7F4C-47A9-8876-377785AF5301}">
+					<ChildrenList>
+						<Action Name="" ID="{07F23264-B96B-429B-A58D-3298A58271FF}" ShortID="133845">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Impale" ID="{ACBA065D-9286-499A-ADD9-7FCDCD8C8677}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TempMusic" ID="{DE1C1161-F926-4D85-8BE5-B293BFE4D655}">
+					<ChildrenList>
+						<Action Name="" ID="{BA71026C-502E-4631-9BCC-F5579F9C25FA}" ShortID="719639744">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_level_music01" ID="{D065FC80-2EA6-4DFA-93F2-E087804EC8A5}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DialogueMale_Start" ID="{C40B3C88-018D-4E2B-A302-23F8DEFE6151}">
+					<ChildrenList>
+						<Action Name="" ID="{DFE3C6E2-7A20-4B11-A000-6F7E69B377AA}" ShortID="643469508">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MaleLow" ID="{6DA8F6CA-E29E-47B0-94EA-2337E1950C90}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DialogueMale_End" ID="{793CA658-D814-473D-9F93-85195D875D36}">
+					<ChildrenList>
+						<Action Name="" ID="{CD6B5CB5-77AF-4142-9B4E-4C9A37E808AA}" ShortID="664885639">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MaleLow" ID="{6DA8F6CA-E29E-47B0-94EA-2337E1950C90}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -364,6 +364,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 1969119933874033507}
   keycardName: WhiteKeycard
+  doorSounds:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &9113751874098947451
 MonoBehaviour:
   m_ObjectHideFlags: 0

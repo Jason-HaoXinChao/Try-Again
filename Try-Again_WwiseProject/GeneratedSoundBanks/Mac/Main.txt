@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2230797588	KeycardDoor			\Default Work Unit\KeycardDoor	
+	2622437216	TempMusic			\Default Work Unit\TempMusic	
+	4181842614	SpikesImpale			\Default Work Unit\SpikesImpale	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	104933937	mus_level_music01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\mus_level_music01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_level_music01		11289696
+	113432090	sfx_door_keycard	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_door_keycard_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\sfx_door_keycard		329288
+	115940102	sfx_door_open	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_door_open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\sfx_door_open		507572
+	342085208	sfx_player_Impale_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_Impale_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Impale\sfx_player_Impale_01		421068
+	420335803	sfx_player_Impale_02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_Impale_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Impale\sfx_player_Impale_02		523528
+
