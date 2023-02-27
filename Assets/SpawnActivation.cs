@@ -19,10 +19,9 @@ public class SpawnActivation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
-            other.gameObject.GetComponent<PlayerMovementBruce>().SetRespawnPoint(spawnPoint.transform);
-            // other.transform.parent.gameObject.GetComponent<PlayerMovementBruce>().SetRespawnPoint(spawnPoint.transform);
-            // disable the checkpoint once it's been reached.
-            // this.gameObject.SetActive(false);
+            if (!other.gameObject.GetComponent<PlayerMovementBruce>().playerInvincible) {
+                other.gameObject.GetComponent<PlayerMovementBruce>().SetRespawnPoint(spawnPoint.transform);
+            }
         }
     }
 

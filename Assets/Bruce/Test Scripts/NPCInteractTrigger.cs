@@ -5,37 +5,36 @@ using UnityEngine;
 public class NPCInteractTrigger : MonoBehaviour
 {
     [Header("Visual Cue")]
-    private GameObject pressKeyToInteract;
+    [SerializeField] private GameObject tooltip;
     
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
     private bool inDetectRange;
+    public GameObject player;
 
-    void Awake()
+    void Start()
     {
-        pressKeyToInteract = this.gameObject.transform.parent.parent.GetChild(1).gameObject;
-        pressKeyToInteract.SetActive(false);
+        tooltip.SetActive(false);
         inDetectRange = false;
+        player = null;
     }
 
     void Update()
     {
-        HoverIconUpdate();
         PlayerInteract();
-    }
-
-    void HoverIconUpdate()
-    {
-        Vector3 offset = new Vector3 (0f, 1f, 0f);
-        pressKeyToInteract.GetComponent<Transform>().position = 
-            this.gameObject.transform.parent.position + offset;
+        if (player != null) {
+            if (!player.activeSelf) {
+                DisableInteract();
+            }
+        }
     }
 
     void PlayerInteract()
     {
         if(inDetectRange && !GlobalDialogueSystem.GetInstance().dialogueIsPlaying && Input.GetButtonDown("Confirm"))
         {
+            //Debug.Log("Confirm Key Pressed");
             GlobalDialogueSystem.GetInstance().EnterDialogueMode(inkJSON);
         }
     }
@@ -44,9 +43,10 @@ public class NPCInteractTrigger : MonoBehaviour
     {
         if(other.tag == "Player")
         {   
-            GameObject player = other.gameObject;
+            //Debug.Log("Enter Hitbox");
+            player = other.gameObject;
             if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
-                pressKeyToInteract.SetActive(true);
+                tooltip.SetActive(true);
                 inDetectRange = true;
             }
         }
@@ -56,8 +56,14 @@ public class NPCInteractTrigger : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            pressKeyToInteract.SetActive(false);
-            inDetectRange = false;
+            //Debug.Log("Leave Hitbox");
+            DisableInteract();
         }
+    }
+
+    void DisableInteract() {
+        player = null;
+        tooltip.SetActive(false);
+        inDetectRange = false;
     }
 }
