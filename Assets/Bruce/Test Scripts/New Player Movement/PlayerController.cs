@@ -231,7 +231,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         if(!_colDown && hit.normal.y < 0.1f)
         {
-            if(Input.Jumped)
+            if(Input.Jumped && !wallJumpLock)
             {
                 // Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
                 _currentVerticalSpeed = _jumpHeight;
@@ -245,12 +245,13 @@ public class PlayerController : MonoBehaviour, IPlayerController
         }
     }
 
+    [SerializeField] float jumpLockTime;
     IEnumerator SetWallJumpLock()
     {
         float clampOverride = _moveClamp;
         _moveClamp = _wallJumpClamp;
         wallJumpLock = true;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(jumpLockTime);
         wallJumpLock = false;
         _moveClamp = clampOverride;
     }
@@ -266,6 +267,43 @@ public class PlayerController : MonoBehaviour, IPlayerController
         var move = RawMovement * Time.deltaTime;
 
         controller.Move(move);
+    }
+    #endregion
+
+    #region Wet Floor Trap
+    public void WetFloor()
+    {
+        if(Input.X > 0)
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        }
+        controller.height = 0.027f;
+        controller.center = new Vector3(0, 0, 0);
+        wetfloorOverride = true;
+        playerInvincible = true;
+        StartCoroutine(WetFloorDuration());
+    }
+
+    IEnumerator WetFloorDuration()
+    {
+        yield return new WaitForSeconds(2);
+        
+        GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
+
+        if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
+        { 
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        }
+        controller.height = 0.055f;
+        controller.center = new Vector3(0, 0.01f, 0);
     }
     #endregion
 
