@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5FA68E8C-FE9A-00B8-93A5-B1D76353E1B6}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{94945F1C-5FAB-A0D5-430B-058A8A5AA6E3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -44,7 +44,7 @@
 				</File>
 				<File Id="104933937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_level_music01.wav</ShortName>
-					<CachePath>SFX/mus_level_music01_10C4C929.wem</CachePath>
+					<CachePath>SFX/mus_level_music01_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="105227380" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_respawn.wav</ShortName>
@@ -136,7 +136,7 @@
 				</File>
 				<File Id="659278889" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_level_music02.wav</ShortName>
-					<CachePath>SFX/mus_level_music02_10C4C929.wem</CachePath>
+					<CachePath>SFX/mus_level_music02_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="698748773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_step_02.wav</ShortName>
@@ -214,7 +214,7 @@
 						<MediaRef Id="901860459"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="663442949" Name="Level01Music" DurationType="OneShot" DurationMin="90" DurationMax="90">
+				<Event Id="663442949" Name="Level01Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="659278889"/>
 					</MediaRefs>
@@ -251,7 +251,7 @@
 						<MediaRef Id="420335803"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2622437216" Name="TempMusic" DurationType="OneShot" DurationMin="64" DurationMax="64">
+				<Event Id="2622437216" Name="TempMusic" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="104933937"/>
 					</MediaRefs>
@@ -259,5 +259,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6D32192E-2C79-9688-6B56-B5E51DA75617}</FileHash>
+	<FileHash>{CAA4AD0A-034C-EBC6-9BA4-30E83772D6AD}</FileHash>
 </SoundBanksInfo>
