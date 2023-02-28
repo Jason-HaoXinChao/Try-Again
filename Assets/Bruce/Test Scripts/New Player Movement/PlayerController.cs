@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #endregion
 
     #region Respawns
-    private Transform respawnPoint;
+    public Transform respawnPoint;
     #endregion
 
     #region Inputs
@@ -267,6 +267,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         var move = RawMovement * Time.deltaTime;
 
         controller.Move(move);
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
     }
     #endregion
 
@@ -310,8 +311,12 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #region RespawnCalls
     public void RespawnCall()
     {
+        _currentHorizontalSpeed = 0;
+        _currentVerticalSpeed = 0;
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
         this.gameObject.SetActive(true);
+        wetfloorOverride = false;
+        playerInvincible = false;
         deathCount++;
         score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
     }
@@ -330,3 +335,13 @@ public class PlayerController : MonoBehaviour, IPlayerController
         _lastPosition = transform.position;
     }
 }
+
+/// <Checks>
+///     [x] Spikes
+///     [x] Wall Spikes
+///     [x] Wet Floor
+///     [x] Fire + Pressure Plate
+///     [ ] Door + Keycard
+///     [x] Lights
+///     [x] NPC
+/// </Checks>
