@@ -6736,7 +6736,7 @@ PrefabInstance:
     - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: deadPlayer
       value: 
-      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes
@@ -11549,6 +11549,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1744602230071319710, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1744602230205146937, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11636,6 +11640,14 @@ PrefabInstance:
     - target: {fileID: 1744602230205146941, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
       propertyPath: m_Name
       value: Dialogue Temp UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744602231004409895, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744602231004409945, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
@@ -15202,6 +15214,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (2)
@@ -16487,7 +16503,7 @@ PrefabInstance:
     - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: deadPlayer
       value: 
-      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (1)
@@ -25453,6 +25469,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (1)
@@ -27780,7 +27800,7 @@ PrefabInstance:
     - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: deadPlayer
       value: 
-      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes
@@ -27854,6 +27874,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 77380562505831561, guid: 26444421ad68c74429b4d115cdefdeb8, type: 3}
   m_PrefabInstance: {fileID: 2096887480}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1907123300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907123303}
+  - component: {fileID: 1907123302}
+  - component: {fileID: 1907123301}
+  m_Layer: 0
+  m_Name: End Level Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1907123301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907123300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4037ea9bbb87c1240928fe2d6bcf4c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Alpha - End Screen
+--- !u!65 &1907123302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907123300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 20, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1907123303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907123300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -71.4, y: -6.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1910107657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 77380562505831561, guid: 26444421ad68c74429b4d115cdefdeb8, type: 3}

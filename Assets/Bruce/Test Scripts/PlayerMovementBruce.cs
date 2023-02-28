@@ -54,7 +54,7 @@ public class PlayerMovementBruce : MonoBehaviour
         if (wetfloorOverride)
         {
             moveVector.x = lastMove.x;
-            if (lastMove.x == 0 && !wetfloorOverride) {
+            if (lastMove.x == 0) {
                 if (_Animator.transform.rotation.y == 0) {
                     // go left
                     moveVector.x = -1;
@@ -165,7 +165,7 @@ public class PlayerMovementBruce : MonoBehaviour
 
     IEnumerator WetFloorDuration()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         
         GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
@@ -195,6 +195,7 @@ public class PlayerMovementBruce : MonoBehaviour
         this.lastMove = Vector3.zero;
         this.verticalVelocity = 0;
         this.gameObject.SetActive(true);
+        wallHopLock = false;
         wetfloorOverride = false;
         playerInvincible = false;
         deathCount++;

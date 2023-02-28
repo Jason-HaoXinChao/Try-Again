@@ -42,7 +42,6 @@ public class WetFloorTrap : MonoBehaviour
             rotation.z = 180f;
             rotation.x = 180f;
         }
-        
 
         rotation = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
         player.gameObject.SetActive(false);
