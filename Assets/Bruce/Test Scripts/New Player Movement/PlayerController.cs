@@ -30,6 +30,7 @@ using System.Linq;
 public class PlayerController : MonoBehaviour, IPlayerController
 {
     public CharacterController controller;
+    Animator _Animator;
 
     #region UI
     public GameObject score { get; private set; }
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
     void Start()
     {
+        _Animator = GetComponent<Animator>();
         playerInvincible = false;
         wetfloorOverride = false;
     }
