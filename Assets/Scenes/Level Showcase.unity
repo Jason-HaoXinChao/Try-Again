@@ -28506,6 +28506,7 @@ GameObject:
   - component: {fileID: 1952225878}
   - component: {fileID: 1952225877}
   - component: {fileID: 1952225879}
+  - component: {fileID: 1952225880}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -28699,7 +28700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf1c2421bda2174f8dc5febc43496bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
+  triggerList: 958ca0ea
   useOtherObject: 0
   actionOnEventType: 0
   curveInterpolation: 4
@@ -28707,7 +28708,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6fca3b873bb54c9449ecc3b3dd3fde7b, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 80b45f88b60e28c47b3cf603f3404a9d, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -28741,6 +28742,35 @@ MonoBehaviour:
   bankNameInternal: 
   valueGuidInternal: 
 --- !u!114 &1952225879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952225869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf1c2421bda2174f8dc5febc43496bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6fca3b873bb54c9449ecc3b3dd3fde7b, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+--- !u!114 &1952225880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -17,4 +17,3 @@ public class RestartLevel : MonoBehaviour
         }
     }
 }
-

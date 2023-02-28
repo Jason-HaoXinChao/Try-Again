@@ -97,10 +97,6 @@ MonoBehaviour:
   fireHitbox: {fileID: 1437490600457662998}
   smokeModel: {fileID: 1437490599900016236}
   pressurePlateSystem: {fileID: 1437490599870012667}
-  extinguish:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 97e59e47abc65f741a2329123cdeacc7, type: 2}
 --- !u!1 &1437490599870012667
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\crave\OneDrive\Desktop\University Classes\Game Composition\Try Again\Finished Sounds\"/>
 				<Property Name="Event Action List\{1AA99881-AFF8-4A03-814F-E763C4793496}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{27A625C4-7A18-4588-B3A9-D83BFEC31AB0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2A87AED3-A07B-452E-912C-9A2103E49334}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{32785D73-A62E-4545-B643-C5938B3A3547}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{41F15771-B922-4704-8A15-B293A19AB2D1}\x64_Expand States" Type="string" Value=""/>
@@ -18,6 +19,7 @@
 				<Property Name="Event Action List\{DC71A652-D2C4-4EE8-9282-4E07767959F9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{DCCDE69A-3525-432F-80E4-E5F626CA0406}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{DE1C1161-F926-4D85-8BE5-B293BFE4D655}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{EDB19075-1E90-424B-9A20-C3CC3C55E83F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{F2A33303-9640-4A7C-8B3E-A4C5BA0E59AF}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="EventView\FilterMode2" Type="int32" Value="2"/>

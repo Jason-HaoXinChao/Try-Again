@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{FD900DD3-A707-4086-8714-2BA3219AEC7C}">
 					<ObjectInclusionList>
+						<ObjectRef Name="StopMusic" ID="{EDB19075-1E90-424B-9A20-C3CC3C55E83F}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Level01Music" ID="{2A87AED3-A07B-452E-912C-9A2103E49334}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="LightAmbience" ID="{32785D73-A62E-4545-B643-C5938B3A3547}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="KeycardDoor" ID="{41F15771-B922-4704-8A15-B293A19AB2D1}" WorkUnitID="{930B54F2-637B-4B88-8E5E-7ACC5918F394}" Origin="Manual" Filter="7"/>

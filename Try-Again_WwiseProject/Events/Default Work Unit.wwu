@@ -37,27 +37,10 @@
 				</Event>
 				<Event Name="TempMusic" ID="{DE1C1161-F926-4D85-8BE5-B293BFE4D655}">
 					<ChildrenList>
-						<Action Name="" ID="{5ADA14F5-1BAE-4300-A8A2-42DEA7639449}" ShortID="504144619">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mus_level_music02" ID="{C0D53276-BDC8-4B8E-B887-91C66E249041}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{BA71026C-502E-4631-9BCC-F5579F9C25FA}" ShortID="719639744">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mus_level_music01" ID="{D065FC80-2EA6-4DFA-93F2-E087804EC8A5}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{AC9E9658-6D88-48EA-BD2B-ACFD58A16BD0}" ShortID="692509175">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="mus_level_music01" ID="{D065FC80-2EA6-4DFA-93F2-E087804EC8A5}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
@@ -189,27 +172,10 @@
 				</Event>
 				<Event Name="Level01Music" ID="{2A87AED3-A07B-452E-912C-9A2103E49334}">
 					<ChildrenList>
-						<Action Name="" ID="{7991842E-5C28-4904-A216-757F2F71ABA7}" ShortID="480664805">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mus_level_music01" ID="{D065FC80-2EA6-4DFA-93F2-E087804EC8A5}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{4DA35B9F-3343-450C-8EC7-38F95C3DB883}" ShortID="252418155">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mus_level_music02" ID="{C0D53276-BDC8-4B8E-B887-91C66E249041}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{28F31211-B37F-46D1-BBB8-C0EDD7E11A08}" ShortID="68391670">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="mus_level_music02" ID="{C0D53276-BDC8-4B8E-B887-91C66E249041}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
@@ -235,6 +201,30 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_trap_fire_extinguish" ID="{F9D3ACDB-DFD3-4839-866E-2BD807EBAC3B}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopMusic" ID="{EDB19075-1E90-424B-9A20-C3CC3C55E83F}">
+					<ChildrenList>
+						<Action Name="" ID="{4801B98E-30F2-4FDF-9F43-A3672C646048}" ShortID="623032895">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_level_music01" ID="{D065FC80-2EA6-4DFA-93F2-E087804EC8A5}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{79F5EB6B-2634-44DC-BC48-F2975FAF6BF3}" ShortID="1022565687">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_level_music02" ID="{C0D53276-BDC8-4B8E-B887-91C66E249041}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
