@@ -6728,7 +6728,7 @@ PrefabInstance:
     - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: deadPlayer
       value: 
-      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes
@@ -11537,6 +11537,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1744602230071319710, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1744602230205146937, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11624,6 +11628,14 @@ PrefabInstance:
     - target: {fileID: 1744602230205146941, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
       propertyPath: m_Name
       value: Dialogue Temp UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744602231004409895, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744602231004409945, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
@@ -15190,6 +15202,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (2)
@@ -16471,7 +16487,7 @@ PrefabInstance:
     - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: deadPlayer
       value: 
-      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (1)
@@ -25429,6 +25445,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
+      propertyPath: deadPlayer
+      value: 
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes (1)
@@ -27752,7 +27772,7 @@ PrefabInstance:
     - target: {fileID: 7066052365940263585, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: deadPlayer
       value: 
-      objectReference: {fileID: 5551051461191506794, guid: 45bf67a6d97b01144b5dbb66bdeee689, type: 3}
+      objectReference: {fileID: 2053892673688807678, guid: 743f0caef0e58574787853219a5168e1, type: 3}
     - target: {fileID: 7117079249832794253, guid: e9ed640add5228e46bdfab601c4f7e65, type: 3}
       propertyPath: m_Name
       value: PencilSpikes
