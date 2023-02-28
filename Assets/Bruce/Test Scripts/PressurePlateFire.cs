@@ -13,7 +13,6 @@ public class PressurePlateFire : MonoBehaviour
     private Vector3 pressurePlateOrgin, pressurePlateSinked;
     private List<int> objectsInRange;
     private bool fireOn;
-    public AK.Wwise.Event extinguish;
 
     void Start()
     {
