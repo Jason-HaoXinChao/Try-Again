@@ -13,15 +13,15 @@ using System.Linq;
 ///     Player Movement
 ///         - Coyote Time
 ///         - Queued Jump
-///         - TODO: Wall Hop
+///         - Wall Hop
 ///     
 ///     UI Score Update
-///         - death count
+///         - Death Counter
 ///
 ///     Dialogue System Override
 ///
 ///     Traps:
-///         - Wet Floor Override
+///         - Wet Floor Override (Sliding)
 ///
 ///     Animations
 ///         - TODO: everything
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #endregion
 
     #region Respawns
-    private Transform respawnPoint;
+    public Transform respawnPoint;
     #endregion
 
     #region Inputs
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         Velocity = (transform.position - _lastPosition) / Time.deltaTime;
         _lastPosition = transform.position;
 
-        if(!dialogueActive && !wetfloorOverride) GatherInput();
+        if(!dialogueActive && !wetfloorOverride && !wallJumpLock) GatherInput();
         RunCollisionChecks();
 
         CalculateWalk(); // Horizontal movement
@@ -136,7 +136,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
     private void CalculateWalk() 
     {
-        if (Input.X != 0) {
+        if (Input.X != 0) 
+        {
             // Set horizontal move speed
             _currentHorizontalSpeed += Input.X * _acceleration * Time.deltaTime;
 
@@ -147,7 +148,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
             var apexBonus = Mathf.Sign(Input.X) * _apexBonus * _apexPoint;
             _currentHorizontalSpeed += apexBonus * Time.deltaTime;
         }
-        else {
+        else 
+        {
             // No input. Let's slow the character down
             _currentHorizontalSpeed = Mathf.MoveTowards(_currentHorizontalSpeed, 0, _deceleration * Time.deltaTime);
         }
@@ -220,78 +222,101 @@ public class PlayerController : MonoBehaviour, IPlayerController
     }
     #endregion
 
-    // #region Wall Jump
-    // bool wallJumpLock;
-    // void OnControllerColliderHit(ControllerColliderHit hit)
-    // {
-    //     if(!controller.isGrounded && hit.normal.y < 0.1f)
-    //     {
-    //         if(Input.GetButtonDown("Jump"))
-    //         {
-    //             Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
-    //             verticalVelocity = jumpForce;
-    //             moveVector = hit.normal * speed;
-    //             if(!wallHopLock)
-    //             {
-    //                 StartCoroutine(SetWallHopLock());
-    //             }
-    //         }
-    //     }
-    // }
+    #region Wall Jump
+    bool wallJumpLock;
+    [Header("WALL JUMP")] [SerializeField] private float _wallJumpBonus;
+    [SerializeField] private float _wallJumpClamp;
 
-    // IEnumerator SetWallHopLock()
-    // {
-    //     wallHopLock = true;
-    //     yield return new WaitForSeconds(0.2f);
-    //     wallHopLock = false;
-    // }
-    // #endregion
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(!_colDown && hit.normal.y < 0.1f)
+        {
+            if(Input.Jumped && !wallJumpLock)
+            {
+                // Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
+                _currentVerticalSpeed = _jumpHeight;
+                _currentHorizontalSpeed = hit.normal.x * _jumpHeight * _wallJumpBonus;
+
+                if(!wallJumpLock)
+                {
+                    StartCoroutine(SetWallJumpLock());
+                }
+            }
+        }
+    }
+
+    [SerializeField] float jumpLockTime;
+    IEnumerator SetWallJumpLock()
+    {
+        float clampOverride = _moveClamp;
+        _moveClamp = _wallJumpClamp;
+        wallJumpLock = true;
+        yield return new WaitForSeconds(jumpLockTime);
+        wallJumpLock = false;
+        _moveClamp = clampOverride;
+    }
+    #endregion
 
     #region Move
     // [Header("MOVE")] [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
     // private int _freeColliderIterations = 10;
 
-    // We cast our bounds before moving to avoid future collisions
     private void MoveCharacter() 
     {
-        var pos = transform.position;
-        RawMovement = new Vector3(_currentHorizontalSpeed, _currentVerticalSpeed); // Used externally
+        RawMovement = new Vector3(_currentHorizontalSpeed, _currentVerticalSpeed);
         var move = RawMovement * Time.deltaTime;
-        var furthestPoint = pos + move;
 
-        // check furthest movement. If nothing hit, move and don't do extra checks
         controller.Move(move);
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
+    }
+    #endregion
 
-        // // otherwise increment away from current pos; see what closest position we can move to
-        // var positionToMoveTo = transform.position;
-        // for (int i = 1; i < _freeColliderIterations; i++) {
-        //     // increment to check all but furthestPoint - we did that already
-        //     var t = (float)i / _freeColliderIterations;
-        //     var posToTry = Vector2.Lerp(pos, furthestPoint, t);
+    #region Wet Floor Trap
+    public void WetFloor()
+    {
+        if(Input.X > 0)
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        }
+        controller.height = 0.027f;
+        controller.center = new Vector3(0, 0, 0);
+        wetfloorOverride = true;
+        playerInvincible = true;
+        StartCoroutine(WetFloorDuration());
+    }
 
-        //     if (Physics2D.OverlapBox(posToTry, _characterBounds.size, 0, _groundLayer)) {
-        //         transform.position = positionToMoveTo;
+    IEnumerator WetFloorDuration()
+    {
+        yield return new WaitForSeconds(2);
+        
+        GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
 
-        //         // We've landed on a corner or hit our head on a ledge. Nudge the player gently
-        //         if (i == 1) {
-        //             if (_currentVerticalSpeed < 0) _currentVerticalSpeed = 0;
-        //             var dir = transform.position - hit.transform.position;
-        //             transform.position += dir.normalized * move.magnitude;
-        //         }
-
-        //         return;
-        //     }
-
-        //     positionToMoveTo = posToTry;
-        // }
+        if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
+        { 
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
+        }
+        controller.height = 0.055f;
+        controller.center = new Vector3(0, 0.01f, 0);
     }
     #endregion
 
     #region RespawnCalls
     public void RespawnCall()
     {
+        _currentHorizontalSpeed = 0;
+        _currentVerticalSpeed = 0;
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
         this.gameObject.SetActive(true);
+        wetfloorOverride = false;
+        playerInvincible = false;
         deathCount++;
         score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
     }
@@ -306,7 +331,17 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         // this.lastMove.x = 0;
 
-        // TODO: Test This
+        // FIXME: Test This
         _lastPosition = transform.position;
     }
 }
+
+/// <Checks>
+///     [x] Spikes
+///     [x] Wall Spikes
+///     [x] Wet Floor
+///     [x] Fire + Pressure Plate
+///     [ ] Door + Keycard
+///     [x] Lights
+///     [x] NPC
+/// </Checks>
