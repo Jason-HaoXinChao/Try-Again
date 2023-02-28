@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{94945F1C-5FAB-A0D5-430B-058A8A5AA6E3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{72E8E14C-7FEA-32DE-197C-AEC3E3BF750B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -219,7 +219,7 @@
 						<MediaRef Id="659278889"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2186217851" Name="LightAmbience" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="2186217851" Name="LightAmbience" MaxAttenuation="15" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="566863628"/>
 						<MediaRef Id="994376627"/>
@@ -230,7 +230,7 @@
 						<MediaRef Id="744600462"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2423635109" Name="PlayAmbientFire" MaxAttenuation="100" DurationType="OneShot" DurationMin="87.509094" DurationMax="87.509094">
+				<Event Id="2423635109" Name="PlayAmbientFire" MaxAttenuation="15" DurationType="OneShot" DurationMin="87.509094" DurationMax="87.509094">
 					<MediaRefs>
 						<MediaRef Id="610463159"/>
 					</MediaRefs>
@@ -259,5 +259,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CAA4AD0A-034C-EBC6-9BA4-30E83772D6AD}</FileHash>
+	<FileHash>{664BFC30-9789-806E-5276-0241283F5D86}</FileHash>
 </SoundBanksInfo>

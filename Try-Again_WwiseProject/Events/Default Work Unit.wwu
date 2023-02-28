@@ -229,6 +229,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="FireExtinguish" ID="{27A625C4-7A18-4588-B3A9-D83BFEC31AB0}">
+					<ChildrenList>
+						<Action Name="" ID="{AD426398-AFC8-49CF-BA0E-FEEC57BD8A6A}" ShortID="198018984">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_trap_fire_extinguish" ID="{F9D3ACDB-DFD3-4839-866E-2BD807EBAC3B}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
