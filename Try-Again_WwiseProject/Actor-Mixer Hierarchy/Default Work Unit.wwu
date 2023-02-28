@@ -655,6 +655,7 @@
 					<ChildrenList>
 						<Sound Name="mus_level_music01" ID="{D065FC80-2EA6-4DFA-93F2-E087804EC8A5}" ShortID="374725577">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-17</Value>
@@ -684,6 +685,7 @@
 						</Sound>
 						<Sound Name="mus_level_music02" ID="{C0D53276-BDC8-4B8E-B887-91C66E249041}" ShortID="255047634">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-11</Value>
