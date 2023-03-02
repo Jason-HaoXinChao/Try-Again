@@ -1,0 +1,54 @@
+Event	ID	Name			Wwise Object Path	Notes
+	309398149	DialogueMale_Start			\Default Work Unit\DialogueMale_Start	
+	539467320	RoomAmbience			\Default Work Unit\RoomAmbience	
+	663442949	Level01Music			\Default Work Unit\Level01Music	
+	667982098	PlayerRespawn			\Default Work Unit\PlayerRespawn	
+	1250595908	LightElectrocute			\Default Work Unit\LightElectrocute	
+	1514899416	KeycardPickup			\Default Work Unit\KeycardPickup	
+	1917263390	StopMusic			\Default Work Unit\StopMusic	
+	2186217851	LightAmbience			\Default Work Unit\LightAmbience	
+	2230797588	KeycardDoor			\Default Work Unit\KeycardDoor	
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+	2398287214	DialogueMale_End			\Default Work Unit\DialogueMale_End	
+	2423635109	PlayAmbientFire			\Default Work Unit\PlayAmbientFire	
+	2622437216	TempMusic			\Default Work Unit\TempMusic	
+	3609565814	FireBurn			\Default Work Unit\FireBurn	
+	4181842614	SpikesImpale			\Default Work Unit\SpikesImpale	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	16069325	sfx_player_squeak_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_squeak_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Squeaks\sfx_player_squeak_01		71288
+	58714284	amb_room_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\amb_room_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\amb_room_01		17847572
+	58923651	sfx_phonemes_lowvoice_cat	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_cat_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_cat		72932
+	102406198	sfx_phonemes_lowvoice_open	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_open		64836
+	104933937	mus_level_music01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\mus_level_music01_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_level_music01		11289696
+	105227380	sfx_player_respawn	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_respawn_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\sfx_player_respawn		655528
+	109687344	sfx_phonemes_lowvoice_bee	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_bee_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_bee		61984
+	113432090	sfx_door_keycard	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_door_keycard_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Door and Keycard\sfx_door_keycard		329288
+	115940102	sfx_door_open	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_door_open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Door and Keycard\sfx_door_open		507572
+	198329098	sfx_phonemes_lowvoice_bay	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_bay_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_bay		81684
+	208036280	sfx_phonemes_lowvoice_ear	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_ear_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_ear		63928
+	270127892	sfx_keycard_02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_keycard_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Door and Keycard\Keycard\sfx_keycard_02		7756
+	287279307	sfx_phonemes_lowvoice_chair	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_chair_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_chair		55104
+	301144359	sfx_phonemes_lowvoice_join	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_join_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_join		56636
+	313365090	sfx_trap_fire_woosh	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_trap_fire_woosh_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\sfx_trap_fire_woosh		432096
+	342085208	sfx_player_Impale_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_Impale_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Impale\sfx_player_Impale_01		421068
+	358845744	sfx_phonemes_lowvoice_sky	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_sky_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_sky		80040
+	404381212	sfx_phonemes_lowvoice_who	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_who_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_who		55832
+	420335803	sfx_player_Impale_02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_Impale_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Impale\sfx_player_Impale_02		523528
+	483697947	sfx_phonemes_lowvoice_wolf	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_wolf_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_wolf		53016
+	489787794	sfx_phonemes_lowvoice_end	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_end_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_end		54484
+	535712261	sfx_phonemes_lowvoice_now	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_now_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_now		67648
+	561756807	sfx_player_step_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_step_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_step_01		134548
+	566863628	sfx_trap_light_amb	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_trap_light_amb_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Traps\LightFixture\sfx_trap_light_amb		17280096
+	610463159	sfx_trap_fire	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_trap_fire_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Traps\Fire\sfx_trap_fire		16801840
+	628669976	sfx_phonemes_lowvoice_bird	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_bird_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_bird		53656
+	640990006	sfx_phonemes_lowvoice_it	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_it_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_it		60476
+	659278889	mus_level_music02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\mus_level_music02_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_level_music02		15876208
+	698748773	sfx_player_step_02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_step_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_step_02		134484
+	728876282	sfx_phonemes_lowvoice_cure	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_cure_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_cure		65604
+	744600462	sfx_player_electrocuted	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_electrocuted_DEF4906D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\sfx_player_electrocuted		407760
+	754902247	sfx_player_squeak_02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_player_squeak_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Squeaks\sfx_player_squeak_02		55000
+	901860459	sfx_keycard_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_keycard_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Door and Keycard\Keycard\sfx_keycard_01		24912
+	994376627	sfx_trap_light_buzz	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_trap_light_buzz_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Traps\LightFixture\sfx_trap_light_buzz		860768
+	1027824676	sfx_phonemes_lowvoice_about	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Mac\SFX\sfx_phonemes_lowvoice_about_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_about		57836
+

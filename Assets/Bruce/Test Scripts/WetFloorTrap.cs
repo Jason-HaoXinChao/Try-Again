@@ -15,10 +15,9 @@ public class WetFloorTrap : MonoBehaviour
     
     void OnTriggerEnter (Collider other)
     {
-        Debug.Log(other);
-        if(other.name == "leg") // checks if the player's feet is on the floor
+        if(other.gameObject.name == "PlayerHitbox") // checks for player's hitbox
         {
-            if(!delay)
+            if(!delay && !player.GetComponent<PlayerMovementBruce>().playerInvincible)
             {
                 player.GetComponent<PlayerMovementBruce>().WetFloor();
                 StartCoroutine(TrapDelay());
@@ -29,14 +28,24 @@ public class WetFloorTrap : MonoBehaviour
     IEnumerator TrapDelay()
     {
         delay = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         delay = false;
     }
 
+
     public void SpawnDeadBody()
     {
-        Instantiate(deadPlayer, player.GetComponent<Transform>().position, player.GetComponent<Transform>().rotation);
+        Vector3 position = player.transform.position;
+        Quaternion rotation = player.transform.rotation;
+
+        if (rotation.y != 0) {
+            rotation.z = 180f;
+            rotation.x = 180f;
+        }
+
+        rotation = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
         player.gameObject.SetActive(false);
+        Instantiate(deadPlayer, position, rotation);
 
         StartCoroutine(RespawnTimer());
     }

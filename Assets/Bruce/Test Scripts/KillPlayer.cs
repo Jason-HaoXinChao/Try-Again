@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
     private GameObject player;
+    public AK.Wwise.Event getImpaled;
     [SerializeField] private GameObject deadPlayer;
 
     void Start()
@@ -16,20 +17,30 @@ public class KillPlayer : MonoBehaviour
     {
         if(other.transform == player.GetComponent<Transform>())
         {
-            Instantiate(deadPlayer, other.GetComponent<Transform>().position, other.GetComponent<Transform>().rotation);
-            other.gameObject.SetActive(false);
+            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
 
-            StartCoroutine(RespawnTimer());
+                Vector3 position = other.gameObject.transform.position;
+                Quaternion rotation = other.gameObject.transform.rotation;
+                // Debug.Log("object in hitbox" + other.gameObject.name);
+                // Debug.Log("player" + position);
+                // Debug.Log("local" + other.transform.position);
+                getImpaled.Post(gameObject);
+                other.gameObject.SetActive(false);
+                Instantiate(deadPlayer, position, rotation);
+                
+            
+                StartCoroutine(RespawnTimer());
+            } else {
+                Debug.Log("stopped sliding");
+                player.GetComponent<PlayerMovementBruce>().RemoveHorizontalInertia();
+            }
+
         }
     }
 
     IEnumerator RespawnTimer()
     {
-        GameObject audioManager = GameObject.FindWithTag("AudioManager");
-        audioManager.GetComponent<PlayerAudioManager>().impale();
-        yield return new WaitForSeconds(0.5f);
-        audioManager.GetComponent<PlayerAudioManager>().respawn();
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1.3f);
         player.GetComponent<PlayerMovementBruce>().RespawnCall();
     }
 }
