@@ -24,6 +24,7 @@ public class PlayerMovementBruce : MonoBehaviour
     public CharacterController controller;
     public GameObject score;
     public int deathCount;
+    private GameObject gameManager;
 
     // Save and update the transform of new respawn points to this var
     public Transform respawnPoint;
@@ -32,6 +33,7 @@ public class PlayerMovementBruce : MonoBehaviour
     {
         playerInvincible = false;
         wetfloorOverride = false;
+        gameManager = GameObject.Find("GameManager");
         // controller = gameObject.AddComponent<CharacterController>();
         //Testing Line, Remove Later
         // respawnPoint = GameObject.Find("Temp Respawn Point").GetComponent<Transform>();
@@ -153,6 +155,8 @@ public class PlayerMovementBruce : MonoBehaviour
         this.gameObject.SetActive(true);
         deathCount++;
         score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
+        gameManager.GetComponent<GameManager>().deathCount++;
+        gameManager.GetComponent<GameManager>().currDeathCount++;
     }
 
     public void SetRespawnPoint(Transform newLocation)
