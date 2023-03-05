@@ -43,10 +43,8 @@ public class CollectItemScript : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
+        if (other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
         {  
-            player = other.gameObject;
-            //Debug.Log("Enter Hitbox");
             tooltip.SetActive(true);
             inPickUpRange = true;
         }
@@ -56,7 +54,6 @@ public class CollectItemScript : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            //Debug.Log("Leave Hitbox");
             this.DisablePickup();
         }
     }
