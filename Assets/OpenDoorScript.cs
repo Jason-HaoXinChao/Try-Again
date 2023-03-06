@@ -48,7 +48,7 @@ public class OpenDoorScript : MonoBehaviour
         if (other.tag == "Player")
         {
             GameObject playerObj = other.gameObject;
-            if (playerObj.activeSelf && !playerObj.GetComponent<PlayerMovementBruce>().playerInvincible) {
+            if (playerObj.activeSelf && !playerObj.GetComponent<PlayerController>().playerInvincible) {
                 player = playerObj;
                 tooltip.SetActive(true);
                 inOpenRange = true;

@@ -19,8 +19,8 @@ public class SpawnActivation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
-            if (!other.gameObject.GetComponent<PlayerMovementBruce>().playerInvincible) {
-                other.gameObject.GetComponent<PlayerMovementBruce>().SetRespawnPoint(spawnPoint.transform);
+            if (!other.gameObject.GetComponent<PlayerController>().playerInvincible) {
+                other.gameObject.GetComponent<PlayerController>().SetRespawnPoint(spawnPoint.transform);
             }
         }
     }

@@ -24,16 +24,23 @@ using System.Linq;
 ///         - Wet Floor Override (Sliding)
 ///
 ///     Animations
-///         - TODO: everything
+///         - Idle
+///         - Walk
+///         - Jump
+///         - Slide
 /// </Contents>
 
 public class PlayerController : MonoBehaviour, IPlayerController
 {
     public CharacterController controller;
+
+    #region Animatior
     Animator _Animator;
+    bool isJumping;
+    #endregion
 
     #region UI
-    public GameObject score { get; private set; }
+    public GameObject score;
     public int deathCount { get; private set; }
     #endregion
 
@@ -41,6 +48,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     private bool dialogueActive;
     private bool wetfloorOverride;
     public bool playerInvincible { get; private set; }
+    private float clampOverride;
     #endregion
 
     #region Respawns
@@ -57,7 +65,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #endregion
 
     private Vector3 _lastPosition;
-    private float _currentHorizontalSpeed, _currentVerticalSpeed;
+    [SerializeField] private float _currentHorizontalSpeed, _currentVerticalSpeed;
 
     private bool _active;
     void Awake() => Invoke(nameof(Activate), 0.5f);
@@ -68,6 +76,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         _Animator = GetComponent<Animator>();
         playerInvincible = false;
         wetfloorOverride = false;
+        clampOverride = _moveClamp;
     }
 
     private void Update() 
@@ -92,7 +101,52 @@ public class PlayerController : MonoBehaviour, IPlayerController
         if(dialogueActive) _currentHorizontalSpeed = 0;
 
         MoveCharacter(); // Actually perform the axis movement
+
+        CharacterRotation(false, 0);
+        CharacterAnimation();
     }
+
+    #region Animation
+    void CharacterRotation(bool wallHoping, float dir)
+    {
+        /// Changes the direction that player faces when moving
+        if(!wallHoping)
+        {
+            if (Input.X < 0)
+            {
+                Quaternion target = Quaternion.Euler(0, 0, 0);
+                _Animator.transform.rotation = target;
+            }
+            else if (Input.X > 0)
+            {
+                Quaternion target = Quaternion.Euler(0, 180, 0);
+                _Animator.transform.rotation = target;
+            }
+        }
+        else
+        {
+            if (dir< 0)
+            {
+                Quaternion target = Quaternion.Euler(0, 0, 0);
+                _Animator.transform.rotation = target;
+            }
+            else if (dir > 0)
+            {
+                Quaternion target = Quaternion.Euler(0, 180, 0);
+                _Animator.transform.rotation = target;
+            }
+        }
+    }
+
+    void CharacterAnimation()
+    {
+        bool isWalking = Input.X != 0;
+        _Animator.SetBool("IsWalking", isWalking);
+        _Animator.SetBool("IsJumping", isJumping);
+        _Animator.SetBool("IsSliding", wetfloorOverride);
+        isJumping = false;
+    }
+    #endregion
 
     #region Gather Input
     private void GatherInput() 
@@ -109,7 +163,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
     #region Collisions
     [Header("COLLISION")]
-    private bool _colUp, _colRight, _colDown, _colLeft;
+    [SerializeField] private bool _colUp, _colRight, _colDown, _colLeft;
     private float _timeLeftGrounded;
 
     private void RunCollisionChecks() {
@@ -123,12 +177,22 @@ public class PlayerController : MonoBehaviour, IPlayerController
         }
 
         _colDown = groundedCheck;
+        _colUp = Physics.CheckSphere(transform.position + new Vector3(0, 1.3f, 0), 0.05f);
 
-        // FIXME: Collison Error with all hitbox
-        // TODO: Modify this to fit accurate hitbox
-        // _colUp = Physics.CheckSphere(transform.position + new Vector3(0, 2, 0), 0.2f);
+        // _colLeft = Physics.CheckBox(transform.position + new Vector3(-Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
+        // _colRight = Physics.CheckBox(transform.position + new Vector3(Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
     }
     #endregion
+
+    // TODO: Comment out for production build
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawSphere(transform.position + new Vector3(0, 1.3f, 0), 0.05f);
+        // Gizmos.DrawCube(transform.position + new Vector3(-Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
+        // Gizmos.DrawCube(transform.position + new Vector3(Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
+    }
+
+    // public float BoxX, BoxY, BoxZ, Dis, Tall;
 
     #region Walk
     [Header("WALKING")] [SerializeField] private float _acceleration = 90;
@@ -156,10 +220,14 @@ public class PlayerController : MonoBehaviour, IPlayerController
             _currentHorizontalSpeed = Mathf.MoveTowards(_currentHorizontalSpeed, 0, _deceleration * Time.deltaTime);
         }
 
-        // if (_currentHorizontalSpeed > 0 && _colRight || _currentHorizontalSpeed < 0 && _colLeft) {
-        //     // Don't walk through walls
-        //     _currentHorizontalSpeed = 0;
+        // if(wetfloorOverride && (_colLeft || _colRight))
+        // {
+        //     Input = new FrameInput {
+        //         Jumped = UnityEngine.Input.GetButtonDown("Jump"),
+        //         X = 0
+        //     };
         // }
+
     }
     #endregion
 
@@ -211,6 +279,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
             _coyoteUsable = false;
             _timeLeftGrounded = float.MinValue;
             JumpingThisFrame = true;
+
+            isJumping = true;
         }
         else 
         {
@@ -239,6 +309,11 @@ public class PlayerController : MonoBehaviour, IPlayerController
                 _currentVerticalSpeed = _jumpHeight;
                 _currentHorizontalSpeed = hit.normal.x * _jumpHeight * _wallJumpBonus;
 
+                isJumping = true;
+                CharacterRotation(true, hit.normal.x);
+
+                _moveClamp = _wallJumpClamp;
+                
                 if(!wallJumpLock)
                 {
                     StartCoroutine(SetWallJumpLock());
@@ -250,8 +325,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
     [SerializeField] float jumpLockTime;
     IEnumerator SetWallJumpLock()
     {
-        float clampOverride = _moveClamp;
-        _moveClamp = _wallJumpClamp;
         wallJumpLock = true;
         yield return new WaitForSeconds(jumpLockTime);
         wallJumpLock = false;
@@ -276,37 +349,21 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #region Wet Floor Trap
     public void WetFloor()
     {
-        if(Input.X > 0)
-        {
-            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
-        }
-        else
-        {
-            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
-        }
-        controller.height = 0.027f;
+        controller.height = 0.01f;
         controller.center = new Vector3(0, 0, 0);
         wetfloorOverride = true;
         playerInvincible = true;
+
+        _minFallSpeed = 5f;
+        _maxFallSpeed = 5f;
+        _currentVerticalSpeed += 10f;
         StartCoroutine(WetFloorDuration());
     }
 
     IEnumerator WetFloorDuration()
     {
-        yield return new WaitForSeconds(2);
-        
+        yield return new WaitForSeconds(1.5f);
         GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
-
-        if(this.gameObject.GetComponent<Transform>().rotation.z > 0)
-        { 
-            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, -90f, Space.Self);
-        }
-        else
-        {
-            this.gameObject.GetComponent<Transform>().Rotate(0f, 0f, 90f, Space.Self);
-        }
-        controller.height = 0.055f;
-        controller.center = new Vector3(0, 0.01f, 0);
     }
     #endregion
 
@@ -315,10 +372,22 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         _currentHorizontalSpeed = 0;
         _currentVerticalSpeed = 0;
+
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
+        
+        /// Reset Player Height
+        controller.height = 0.055f;
+        controller.center = new Vector3(0, 0.01f, 0);
+        
         this.gameObject.SetActive(true);
         wetfloorOverride = false;
         playerInvincible = false;
+        wallJumpLock = false;
+        _moveClamp = clampOverride;
+
+        _minFallSpeed = 80f;
+        _maxFallSpeed = 120f;
+        
         deathCount++;
         score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
     }
@@ -331,19 +400,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
     public void RemoveHorizontalInertia()
     {
-        // this.lastMove.x = 0;
-
-        // FIXME: Test This
         _lastPosition = transform.position;
     }
 }
-
-/// <Checks>
-///     [x] Spikes
-///     [x] Wall Spikes
-///     [x] Wet Floor
-///     [x] Fire + Pressure Plate
-///     [ ] Door + Keycard
-///     [x] Lights
-///     [x] NPC
-/// </Checks>

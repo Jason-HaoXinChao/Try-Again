@@ -17,7 +17,7 @@ public class KillPlayer : MonoBehaviour
     {
         if(other.transform == player.GetComponent<Transform>())
         {
-            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
+            if (!player.GetComponent<PlayerController>().playerInvincible) {
 
                 Vector3 position = other.gameObject.transform.position;
                 Quaternion rotation = other.gameObject.transform.rotation;
@@ -32,7 +32,7 @@ public class KillPlayer : MonoBehaviour
                 StartCoroutine(RespawnTimer());
             } else {
                 Debug.Log("stopped sliding");
-                player.GetComponent<PlayerMovementBruce>().RemoveHorizontalInertia();
+                player.GetComponent<PlayerController>().RemoveHorizontalInertia();
             }
 
         }
@@ -41,6 +41,6 @@ public class KillPlayer : MonoBehaviour
     IEnumerator RespawnTimer()
     {
         yield return new WaitForSeconds(1.3f);
-        player.GetComponent<PlayerMovementBruce>().RespawnCall();
+        player.GetComponent<PlayerController>().RespawnCall();
     }
 }

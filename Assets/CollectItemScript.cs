@@ -45,7 +45,7 @@ public class CollectItemScript : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if (other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerMovementBruce>().playerInvincible)
+        if (other.tag == "Player" && !GameObject.Find("BlockPlayer").GetComponent<PlayerController>().playerInvincible)
         {  
             tooltip.SetActive(true);
             inPickUpRange = true;

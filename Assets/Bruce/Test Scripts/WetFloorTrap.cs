@@ -15,11 +15,11 @@ public class WetFloorTrap : MonoBehaviour
     
     void OnTriggerEnter (Collider other)
     {
-        if(other.gameObject.name == "PlayerHitbox") // checks for player's hitbox
+        if(other.tag == "Player") // checks for player's hitbox
         {
-            if(!delay && !player.GetComponent<PlayerMovementBruce>().playerInvincible)
+            if(!delay && !player.GetComponent<PlayerController>().playerInvincible)
             {
-                player.GetComponent<PlayerMovementBruce>().WetFloor();
+                player.GetComponent<PlayerController>().WetFloor();
                 StartCoroutine(TrapDelay());
             }
         }
@@ -53,6 +53,6 @@ public class WetFloorTrap : MonoBehaviour
     IEnumerator RespawnTimer()
     {
         yield return new WaitForSeconds(0.1f);
-        player.GetComponent<PlayerMovementBruce>().RespawnCall();
+        player.GetComponent<PlayerController>().RespawnCall();
     }
 }
