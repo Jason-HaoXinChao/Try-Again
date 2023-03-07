@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 1ceeb84c3d82884caf211f3e95033d4e
     GuidInternal: 
-    m_lastTime: -8585243247265585319
+    m_lastTime: -8585246854637938778
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 148030ccd762924d8925dffbf7dab157
     GuidInternal: 
-    m_lastTime: -8585243247309501301
+    m_lastTime: -8585246854639125584
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 136b4a8efa1709468370bd91e5310cb4
     GuidInternal: 
-    m_lastTime: -8585243247265947066
+    m_lastTime: -8585240089400725562
     List:
     - name: Main
       guid: d30d90fd07a7864087142ba3219aec7c
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f2540b937b63884b8e5e7acc5918f394
     GuidInternal: 
-    m_lastTime: -8585243247316619557
+    m_lastTime: -8585240092174221843
     List:
     - name: DialogueMale_End
       guid: 58a63c7914d83d479f9385195d875d36
@@ -130,6 +130,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: FireBurn
+      guid: 8198a91af8af034a814fe763c4793496
+      id: 3609565814
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: FireBurn
+        ObjectType: 3
+        guid: 8198a91af8af034a814fe763c4793496
+      Path: Events\Default Work Unit\FireBurn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FireExtinguish
+      guid: c425a627187a8845b3a9d83bfec31ab0
+      id: 4107157221
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: FireExtinguish
+        ObjectType: 3
+        guid: c425a627187a8845b3a9d83bfec31ab0
+      Path: Events\Default Work Unit\FireExtinguish
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Footsteps
+      guid: fea60bd8433a6e499ae16b7b0cf379c8
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: Footsteps
+        ObjectType: 3
+        guid: fea60bd8433a6e499ae16b7b0cf379c8
+      Path: Events\Default Work Unit\Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: KeycardDoor
       guid: 7157f14122b904478a15b293a19ab2d1
       id: 2230797588
@@ -147,6 +198,125 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: KeycardPickup
+      guid: 3a1430b610b77749a441705f99e1134b
+      id: 1514899416
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: KeycardPickup
+        ObjectType: 3
+        guid: 3a1430b610b77749a441705f99e1134b
+      Path: Events\Default Work Unit\KeycardPickup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level01Music
+      guid: d3ae872a7ba02e45912c9a2103e49334
+      id: 663442949
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: Level01Music
+        ObjectType: 3
+        guid: d3ae872a7ba02e45912c9a2103e49334
+      Path: Events\Default Work Unit\Level01Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: LightAmbience
+      guid: 735d78322ea64545b643c5938b3a3547
+      id: 2186217851
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: LightAmbience
+        ObjectType: 3
+        guid: 735d78322ea64545b643c5938b3a3547
+      Path: Events\Default Work Unit\LightAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: LightElectrocute
+      guid: 0333a3f240967c4a8b3ea4c5ba0e59af
+      id: 1250595908
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: LightElectrocute
+        ObjectType: 3
+        guid: 0333a3f240967c4a8b3ea4c5ba0e59af
+      Path: Events\Default Work Unit\LightElectrocute
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlayAmbientFire
+      guid: 3ae68dd941cd734fa57e96b3f91c78c1
+      id: 2423635109
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: PlayAmbientFire
+        ObjectType: 3
+        guid: 3ae68dd941cd734fa57e96b3f91c78c1
+      Path: Events\Default Work Unit\PlayAmbientFire
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlayerRespawn
+      guid: 52a671dcc4d2e84e92824e07767959f9
+      id: 667982098
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: PlayerRespawn
+        ObjectType: 3
+        guid: 52a671dcc4d2e84e92824e07767959f9
+      Path: Events\Default Work Unit\PlayerRespawn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: RoomAmbience
+      guid: d865d3659c8cd9488bbdfd66f8f0bce4
+      id: 539467320
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: RoomAmbience
+        ObjectType: 3
+        guid: d865d3659c8cd9488bbdfd66f8f0bce4
+      Path: Events\Default Work Unit\RoomAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: SpikesImpale
       guid: 7129d8934c7fa9478876377785af5301
       id: 4181842614
@@ -161,6 +331,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7129d8934c7fa9478876377785af5301
       Path: Events\Default Work Unit\SpikesImpale
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: StopMusic
+      guid: 7590b1ed901e4b429a20c3cc3c55e83f
+      id: 1917263390
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: StopMusic
+        ObjectType: 3
+        guid: 7590b1ed901e4b429a20c3cc3c55e83f
+      Path: Events\Default Work Unit\StopMusic
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -193,7 +380,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: efd6fc2e4d3b9e4083f544da4a48a2f8
     GuidInternal: 
-    m_lastTime: -8585243247316579561
+    m_lastTime: -8585246854640681435
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -207,7 +394,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 1014c4a7b5814f43833794694c05933c
     GuidInternal: 
-    m_lastTime: -8585243247265865243
+    m_lastTime: -8585246854637968659
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -221,7 +408,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 507218e0943dfc4bb242dbb8b408f136
     GuidInternal: 
-    m_lastTime: -8585243247265815327
+    m_lastTime: -8585246854637968659
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -235,10 +422,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: b68836cce6b7c14c9e9968e2bd40b30d
     GuidInternal: 
-    m_lastTime: -8585243247265765343
+    m_lastTime: -8585246854637958723
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0100000005000000060000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

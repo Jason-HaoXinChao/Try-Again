@@ -25,9 +25,9 @@ public class PressurePlateFire : MonoBehaviour
     void Update()
     {
         if (!fireOn) {
-            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateSinked, 0.025f);
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateSinked, 0.01f);
         } else {
-            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.025f);
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.01f);
         }
     }
 

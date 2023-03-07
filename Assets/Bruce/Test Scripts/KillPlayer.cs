@@ -31,6 +31,7 @@ public class KillPlayer : MonoBehaviour
             
                 StartCoroutine(RespawnTimer());
             } else {
+                Debug.Log("stopped sliding");
                 player.GetComponent<PlayerMovementBruce>().RemoveHorizontalInertia();
             }
 

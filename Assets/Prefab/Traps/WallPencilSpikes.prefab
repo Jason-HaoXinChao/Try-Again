@@ -170,8 +170,8 @@ MonoBehaviour:
   getImpaled:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  deadPlayer: {fileID: 4752519532890048103, guid: 18c6a21d01389714e93d92c5abc444bc, type: 3}
+    WwiseObjectReference: {fileID: 11400000, guid: 1198724a846e64c49820cbb4df2173c4, type: 2}
+  deadPlayer: {fileID: 2053892673688807678, guid: 1e9c564293a7ff648b28b5978e03d892, type: 3}
 --- !u!1001 &482118328272662974
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,1 +1,1 @@
-I heard from someone that you can restart the entire day by pressing 'R'. #player_icon_1
+I heard from someone that you can restart the entire day by pressing 'R'. #Janitor_Icon
