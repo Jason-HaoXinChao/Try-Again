@@ -65,7 +65,6 @@ public class MenuManager : MonoBehaviour
         gameManager.GetComponent<GameManager>().currDeathCount = 0;
     }
 
-    // Start is called before the first frame update
     public void StartLevel()
     {
         if (gameManager.GetComponent<GameManager>().currentLevel == 0){
@@ -80,7 +79,6 @@ public class MenuManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     public void QuitGame()
     {
         Application.Quit();
@@ -88,5 +86,13 @@ public class MenuManager : MonoBehaviour
         #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
         #endif
+    }
+
+    public void RestartLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ResumeLevel() {
+        this.gameObject.SetActive(false);
     }
 }
