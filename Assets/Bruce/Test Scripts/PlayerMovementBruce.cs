@@ -25,6 +25,8 @@ public class PlayerMovementBruce : MonoBehaviour
     public CharacterController controller;
     public GameObject score;
     public int deathCount;
+    private GameObject gameManager;
+    private GameObject pauseMenu;
 
     // Save and update the transform of new respawn points to this var
     public Transform respawnPoint;
@@ -37,77 +39,81 @@ public class PlayerMovementBruce : MonoBehaviour
         _Animator = GetComponent<Animator>();
         playerInvincible = false;
         wetfloorOverride = false;
+        gameManager = GameObject.Find("GameManager");
+        pauseMenu = GameObject.Find("Pause Menu");
     }
 
     void Update()
-    {
-        // Disable input if in Dialogue Sequence
-        dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
+    { 
+        if (!pauseMenu.transform.GetChild(0).gameObject.active) {
+             // Disable input if in Dialogue Sequence
+            dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
 
-        moveVector = Vector3.zero;
-        if (!dialogueActive && !wetfloorOverride)
-        {
-            moveVector.x = Input.GetAxisRaw("Horizontal");
-        }
-
-        // in case of landing on puddle with 0 x velocity
-        if (wetfloorOverride)
-        {
-            moveVector.x = lastMove.x;
-            if (lastMove.x == 0) {
-                if (_Animator.transform.rotation.y == 0) {
-                    // go left
-                    moveVector.x = -1;
-                } else {
-                    // go right
-                    moveVector.x = 1;
-                }
-            }
-        }
-
-        if (controller.isGrounded)
-        {
-            verticalVelocity = -1.1f;
-
-            if (!dialogueActive && Input.GetButtonDown("Jump") && !wetfloorOverride)
-            {
-                verticalVelocity = jumpForce;
-                isJumping = true;
-            }
-        }
-        else
-        {
-            verticalVelocity -= gravity * Time.deltaTime;
-            moveVector = lastMove;
-
-            if(!dialogueActive && (Input.GetAxisRaw("Horizontal") != 0) && !wetfloorOverride)
+            moveVector = Vector3.zero;
+            if (!dialogueActive && !wetfloorOverride)
             {
                 moveVector.x = Input.GetAxisRaw("Horizontal");
             }
 
-            if(wallHopLock){moveVector = lastMove;}
+            // in case of landing on puddle with 0 x velocity
+            if (wetfloorOverride)
+            {
+                moveVector.x = lastMove.x;
+                if (lastMove.x == 0) {
+                    if (_Animator.transform.rotation.y == 0) {
+                        // go left
+                        moveVector.x = -1;
+                    } else {
+                        // go right
+                        moveVector.x = 1;
+                    }
+                }
+            }
+
+            if (controller.isGrounded)
+            {
+                verticalVelocity = -1.1f;
+
+                if (!dialogueActive && Input.GetButtonDown("Jump") && !wetfloorOverride)
+                {
+                    verticalVelocity = jumpForce;
+                    isJumping = true;
+                }
+            }
+            else
+            {
+                verticalVelocity -= gravity * Time.deltaTime;
+                moveVector = lastMove;
+
+                if(!dialogueActive && (Input.GetAxisRaw("Horizontal") != 0) && !wetfloorOverride)
+                {
+                    moveVector.x = Input.GetAxisRaw("Horizontal");
+                }
+
+                if(wallHopLock){moveVector = lastMove;}
+            }
+
+            moveVector.y = 0;
+            moveVector.Normalize();
+            moveVector *= speed;
+            moveVector.y = verticalVelocity;
+            moveVector.z = 0;
+
+            CharacterRotation();
+
+            // === Animations ===
+            bool isWalking = moveVector.x != 0;
+
+            _Animator.SetBool("IsWalking", isWalking);
+            _Animator.SetBool("IsJumping", isJumping);
+            _Animator.SetBool("IsSliding", wetfloorOverride);
+
+            isJumping  = false;
+            //=== End ===
+
+            controller.Move(moveVector * Time.deltaTime);
+            lastMove = moveVector;
         }
-
-        moveVector.y = 0;
-        moveVector.Normalize();
-        moveVector *= speed;
-        moveVector.y = verticalVelocity;
-        moveVector.z = 0;
-
-        CharacterRotation();
-
-        // === Animations ===
-        bool isWalking = moveVector.x != 0;
-
-        _Animator.SetBool("IsWalking", isWalking);
-        _Animator.SetBool("IsJumping", isJumping);
-        _Animator.SetBool("IsSliding", wetfloorOverride);
-
-        isJumping  = false;
-        //=== End ===
-
-        controller.Move(moveVector * Time.deltaTime);
-        lastMove = moveVector;
     }
 
     void CharacterRotation()
@@ -200,6 +206,8 @@ public class PlayerMovementBruce : MonoBehaviour
         playerInvincible = false;
         deathCount++;
         score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
+        gameManager.GetComponent<GameManager>().deathCount++;
+        gameManager.GetComponent<GameManager>().currDeathCount++;
     }
 
     public void SetRespawnPoint(Transform newLocation)
