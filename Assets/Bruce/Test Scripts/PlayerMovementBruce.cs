@@ -194,6 +194,9 @@ public class PlayerMovementBruce : MonoBehaviour
 
     public void RespawnCall()
     {
+        // reset highlighted corpse
+        this.transform.Find("PickUpBodyHitbox").GetComponent<DetectBodyPickUp>().Reset();
+        // update player location to spawnpoint
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,1,0);
         // reset player height
         controller.height = 0.056f;
