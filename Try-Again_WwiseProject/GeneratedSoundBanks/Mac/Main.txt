@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	667982098	PlayerRespawn			\Default Work Unit\PlayerRespawn	
 	1250595908	LightElectrocute			\Default Work Unit\LightElectrocute	
 	1514899416	KeycardPickup			\Default Work Unit\KeycardPickup	
+	1917263390	StopMusic			\Default Work Unit\StopMusic	
 	2186217851	LightAmbience			\Default Work Unit\LightAmbience	
 	2230797588	KeycardDoor			\Default Work Unit\KeycardDoor	
 	2385628198	Footsteps			\Default Work Unit\Footsteps	

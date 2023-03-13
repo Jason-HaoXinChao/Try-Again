@@ -11,6 +11,8 @@ TagManager:
   - SpawnCheckpoint
   - Wall
   - AudioManager
+  - MoveableCorpse
+  - MovableCorpse
   layers:
   - Default
   - TransparentFX

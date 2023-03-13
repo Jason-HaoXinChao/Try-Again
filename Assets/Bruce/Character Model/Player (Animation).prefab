@@ -582,6 +582,7 @@ MonoBehaviour:
   controller: {fileID: 5302588136848599436}
   score: {fileID: 0}
   deathCount: 0
+  pauseMenu: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!1 &5043478232552687583
 GameObject:

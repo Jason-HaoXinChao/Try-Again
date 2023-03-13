@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 1ceeb84c3d82884caf211f3e95033d4e
     GuidInternal: 
-    m_lastTime: -8585235404629551654
+    m_lastTime: -8585233587364245407
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 148030ccd762924d8925dffbf7dab157
     GuidInternal: 
-    m_lastTime: -8585235404643571598
+    m_lastTime: -8585233587469579579
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 136b4a8efa1709468370bd91e5310cb4
     GuidInternal: 
-    m_lastTime: -8585235404292033036
+    m_lastTime: -8585233587364670594
     List:
     - name: Main
       guid: d30d90fd07a7864087142ba3219aec7c
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f2540b937b63884b8e5e7acc5918f394
     GuidInternal: 
-    m_lastTime: -8585235404305191938
+    m_lastTime: -8585233587541816648
     List:
     - name: DialogueMale_End
       guid: 58a63c7914d83d479f9385195d875d36
@@ -144,6 +144,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8198a91af8af034a814fe763c4793496
       Path: Events\Default Work Unit\FireBurn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FireExtinguish
+      guid: c425a627187a8845b3a9d83bfec31ab0
+      id: 4107157221
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: FireExtinguish
+        ObjectType: 3
+        guid: c425a627187a8845b3a9d83bfec31ab0
+      Path: Events\Default Work Unit\FireExtinguish
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -317,6 +334,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: StopMusic
+      guid: 7590b1ed901e4b429a20c3cc3c55e83f
+      id: 1917263390
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: StopMusic
+        ObjectType: 3
+        guid: 7590b1ed901e4b429a20c3cc3c55e83f
+      Path: Events\Default Work Unit\StopMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: TempMusic
       guid: 61111cde26f9854d8be5b293bfe4d655
       id: 2622437216
@@ -346,7 +380,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: efd6fc2e4d3b9e4083f544da4a48a2f8
     GuidInternal: 
-    m_lastTime: -8585235404653235255
+    m_lastTime: -8585233587541766638
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -360,7 +394,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 1014c4a7b5814f43833794694c05933c
     GuidInternal: 
-    m_lastTime: -8585235404629581619
+    m_lastTime: -8585233587364570246
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -374,7 +408,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 507218e0943dfc4bb242dbb8b408f136
     GuidInternal: 
-    m_lastTime: -8585235404629581619
+    m_lastTime: -8585233587364530586
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -388,7 +422,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: b68836cce6b7c14c9e9968e2bd40b30d
     GuidInternal: 
-    m_lastTime: -8585235404629571650
+    m_lastTime: -8585233587364490559
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

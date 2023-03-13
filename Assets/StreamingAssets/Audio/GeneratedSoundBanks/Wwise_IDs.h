@@ -26,6 +26,7 @@ namespace AK
         static const AkUniqueID PLAYERRESPAWN = 667982098U;
         static const AkUniqueID ROOMAMBIENCE = 539467320U;
         static const AkUniqueID SPIKESIMPALE = 4181842614U;
+        static const AkUniqueID STOPMUSIC = 1917263390U;
         static const AkUniqueID TEMPMUSIC = 2622437216U;
     } // namespace EVENTS
 
