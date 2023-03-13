@@ -402,4 +402,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         _lastPosition = transform.position;
     }
+
+    public void FaceNPC()
+    {
+        Quaternion target = Quaternion.Euler(0, 90, 0);
+        _Animator.transform.rotation = target;
+    }
 }
