@@ -7,10 +7,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System;
+using Random=UnityEngine.Random;
 
 public class MenuManager : MonoBehaviour
 {   
     private GameObject gameManager;
+    [SerializeField] private GameObject corpse;
+
     private string[] ratings = {"Does Not Meet", "Meets Some", "Meets Most", "Meets All", "Exceeds", "Greatly Exceeds", "Redefines"};
     void Start()
     {
@@ -48,9 +51,25 @@ public class MenuManager : MonoBehaviour
         } else if (sceneName == "Level Complete") {
             int deathCount = gameManager.GetComponent<GameManager>().currDeathCount;
             GameObject.Find("Canvas/Details/Death Count").GetComponent<TMP_Text>().text = "Interns Fired: " + deathCount;
-            
             int rating = Math.Max(6 - deathCount / 10, 0);
             GameObject.Find("Canvas/Details/Rating").GetComponent<TMP_Text>().text = ratings[rating] + " Expectations";
+            StartCoroutine(SpawnCorpse(deathCount));
+        }
+    }
+
+    IEnumerator SpawnCorpse(int deathCount)
+    {
+        int bodyCount = 0;
+        while (bodyCount < deathCount)
+        {
+            Debug.Log("waiting");
+            yield return new WaitForSeconds(0.1f);
+            Debug.Log("done");
+            float x = Random.Range(-7.0f,7.0f);
+            Vector3 position = new Vector3(x, 6, 9);
+            Quaternion rotation = Random.rotation;
+            Instantiate(corpse, position, rotation);
+            bodyCount++;
         }
     }
 

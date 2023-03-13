@@ -20,7 +20,6 @@ public class EndLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
-            Debug.Log("test");
             SceneManager.LoadScene("Level Complete");
             gameManager.GetComponent<GameManager>().currentLevel++;
         }
