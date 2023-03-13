@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #region UI
     public GameObject score;
     public int deathCount { get; private set; }
+    private GameObject gameManager;
+    private GameObject pauseMenu;
     #endregion
 
     #region Overrides
@@ -77,33 +79,38 @@ public class PlayerController : MonoBehaviour, IPlayerController
         playerInvincible = false;
         wetfloorOverride = false;
         clampOverride = _moveClamp;
+        gameManager = GameObject.Find("GameManager");
+        pauseMenu = GameObject.Find("Pause Menu");
     }
 
     private void Update() 
     {
         if(!_active) return;
 
-        // Check if Dialogue Sequence is active
-        dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
+        if (!pauseMenu.transform.GetChild(0).gameObject.activeSelf)
+        {
+            // Check if Dialogue Sequence is active
+            dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
 
-        // Calculate velocity
-        Velocity = (transform.position - _lastPosition) / Time.deltaTime;
-        _lastPosition = transform.position;
+            // Calculate velocity
+            Velocity = (transform.position - _lastPosition) / Time.deltaTime;
+            _lastPosition = transform.position;
 
-        if(!dialogueActive && !wetfloorOverride && !wallJumpLock) GatherInput();
-        RunCollisionChecks();
+            if(!dialogueActive && !wetfloorOverride && !wallJumpLock) GatherInput();
+            RunCollisionChecks();
 
-        CalculateWalk(); // Horizontal movement
-        CalculateJumpApex(); // Affects fall speed, so calculate before gravity
-        CalculateGravity(); // Vertical movement
-        CalculateJump(); // Possibly overrides vertical
+            CalculateWalk(); // Horizontal movement
+            CalculateJumpApex(); // Affects fall speed, so calculate before gravity
+            CalculateGravity(); // Vertical movement
+            CalculateJump(); // Possibly overrides vertical
 
-        if(dialogueActive) _currentHorizontalSpeed = 0;
+            if(dialogueActive) _currentHorizontalSpeed = 0;
 
-        MoveCharacter(); // Actually perform the axis movement
+            MoveCharacter(); // Actually perform the axis movement
 
-        CharacterRotation(false, 0);
-        CharacterAnimation();
+            CharacterRotation(false, 0);
+            CharacterAnimation();
+        }
     }
 
     #region Animation
@@ -362,7 +369,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
     IEnumerator WetFloorDuration()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.75f);
         GameObject.Find("WetFloorWithSign").transform.GetChild(0).gameObject.GetComponent<WetFloorTrap>().SpawnDeadBody();
     }
     #endregion
@@ -370,6 +377,13 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #region RespawnCalls
     public void RespawnCall()
     {
+        // reset highlighted corpse
+        Transform pickupBodyHitbox = this.transform.Find("PickUpBodyHitbox");
+        // this if is here so scenes without the hitbox implemented can still run
+        if (pickupBodyHitbox != null) {
+            pickupBodyHitbox.GetComponent<DetectBodyPickUp>().Reset();
+        }
+
         _currentHorizontalSpeed = 0;
         _currentVerticalSpeed = 0;
 
@@ -390,6 +404,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
         
         deathCount++;
         score.GetComponent<Text>().text = "Employee Number UT069-0" + (deathCount + 1);
+        gameManager.GetComponent<GameManager>().deathCount++;
+        gameManager.GetComponent<GameManager>().currDeathCount++;
     }
 
     public void SetRespawnPoint(Transform newLocation)
