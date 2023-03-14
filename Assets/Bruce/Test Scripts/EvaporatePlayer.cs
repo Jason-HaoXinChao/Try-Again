@@ -14,7 +14,7 @@ public class EvaporatePlayer : MonoBehaviour
     
     void OnTriggerEnter (Collider other)
     {
-        if(other.transform == player.GetComponent<Transform>() && !player.GetComponent<PlayerMovementBruce>().playerInvincible)
+        if(other.transform == player.GetComponent<Transform>() && !player.GetComponent<PlayerController>().playerInvincible)
         {
             other.gameObject.SetActive(false);
             
@@ -26,6 +26,6 @@ public class EvaporatePlayer : MonoBehaviour
     IEnumerator RespawnTimer()
     {
         yield return new WaitForSeconds(1.3f);
-        player.GetComponent<PlayerMovementBruce>().RespawnCall();
+        player.GetComponent<PlayerController>().RespawnCall();
     }
 }

@@ -89,11 +89,11 @@ public class MenuManager : MonoBehaviour
         if (gameManager.GetComponent<GameManager>().currentLevel == 0){
             SceneManager.LoadScene("Tutorial");
         } else if (gameManager.GetComponent<GameManager>().currentLevel == 1) {
-            SceneManager.LoadScene("Level Showcase");
+            SceneManager.LoadScene("Main Game - Level 1");
         } else if (gameManager.GetComponent<GameManager>().currentLevel == 2) {
             SceneManager.LoadScene("Level Showcase");
         } else if (gameManager.GetComponent<GameManager>().currentLevel == 3) {
-            SceneManager.LoadScene("Level Showcase");
+            SceneManager.LoadScene("Alpha - End Screen");
         } 
 
     }

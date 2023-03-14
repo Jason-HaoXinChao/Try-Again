@@ -45,7 +45,7 @@ public class PlayerMovementBruce : MonoBehaviour
 
     void Update()
     { 
-        if (!pauseMenu.transform.GetChild(0).gameObject.active) {
+        if (!pauseMenu.transform.GetChild(0).gameObject.activeSelf) {
              // Disable input if in Dialogue Sequence
             dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
 

@@ -45,7 +45,7 @@ public class NPCInteractTrigger : MonoBehaviour
         {   
             //Debug.Log("Enter Hitbox");
             player = other.gameObject;
-            if (!player.GetComponent<PlayerMovementBruce>().playerInvincible) {
+            if (!player.GetComponent<PlayerController>().playerInvincible) {
                 tooltip.SetActive(true);
                 inDetectRange = true;
             }
