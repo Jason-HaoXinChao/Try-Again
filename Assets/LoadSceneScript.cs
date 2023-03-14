@@ -5,23 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneScript : MonoBehaviour
 {
-    [SerializeField] string sceneName;
+    private GameObject gameManager;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gameManager = GameObject.Find("GameManager");
     }
 
     void OnTriggerEnter()
     {
-        // SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        SceneManager.LoadScene("Level Complete");
+        gameManager.GetComponent<GameManager>().currentLevel++;
     }
 }
