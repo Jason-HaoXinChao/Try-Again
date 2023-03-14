@@ -454,8 +454,8 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Drop
-    descriptiveName: 
+    m_Name: CorpseInteract
+    descriptiveName: pick up or drop off corpse
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: e
