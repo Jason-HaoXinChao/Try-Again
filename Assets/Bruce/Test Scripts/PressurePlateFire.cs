@@ -11,35 +11,59 @@ public class PressurePlateFire : MonoBehaviour
 
     private bool triggerLockEnter, triggerLockExit;
     private Vector3 pressurePlateOrgin, pressurePlateSinked;
-    private List<int> objectsInRange;
+    private List<GameObject> objectsInRange;
     private bool fireOn;
+    private GameObject player;
 
     void Start()
     {
-        objectsInRange = new List<int>();
+        objectsInRange = new List<GameObject>();
         updateFire(true);
         pressurePlateOrgin = pressurePlateSystem.GetComponent<Transform>().position;
         pressurePlateSinked = pressurePlateOrgin - new Vector3(0,0.25f,0);
+        player = GameObject.Find("BlockPlayer");
     }
 
     void Update()
     {
-        if (!fireOn) {
-            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateSinked, 0.01f);
-        } else {
-            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.01f);
+        if (objectsInRange.Count > 0) {
+            // update objects in hitbox
+            List<GameObject> updated = new List<GameObject>();
+            foreach (GameObject item in objectsInRange)
+            {
+                if (item != null) {
+                    if (item.activeSelf) {
+                        updated.Add(item);
+                    }
+                }
+            }
+            objectsInRange = updated;
         }
+        if (!fireOn) {
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateSinked, 0.005f);
+            if (objectsInRange.Count == 0) {
+                if (pressurePlateSystem.GetComponent<Transform>().position == pressurePlateSinked) {
+                    updateFire(true);
+                }
+            }
+        } else {
+            pressurePlateSystem.GetComponent<Transform>().position = Vector3.MoveTowards(pressurePlateSystem.GetComponent<Transform>().position, pressurePlateOrgin, 0.005f);
+        }
+        
     }
 
     void OnTriggerStay (Collider other)
     {
         if (!triggerLockEnter)
         {
-            int count = objectsInRange.Count;
-            int id = other.gameObject.GetInstanceID();
-            if (!objectsInRange.Contains(id)) {
-                objectsInRange.Add(id);
+            GameObject instance = other.gameObject;
+            if (!objectsInRange.Contains(instance) && other.gameObject.name != "PickUpBodyHitbox") {
+                objectsInRange.Add(instance);
                 updateFire(false);
+                // if the object entering hitbox is player's sliding body then it should be removed once player respawn.
+                if (player.GetComponent<PlayerController>().playerInvincible && instance.name == "PlayerHitbox") {
+                    StartCoroutine(RemoveObjectInHitbox(instance));
+                }
             }
 
             StartCoroutine(SetTriggerLockEnter());
@@ -54,27 +78,13 @@ public class PressurePlateFire : MonoBehaviour
         fireOn = on;
     }
 
-    // void OnTriggerEnter (Collider other)
-    // {
-    //     if(!triggerLockEnter)
-    //     {
-    //         fireModel.SetActive(false);
-    //         fireHitbox.SetActive(false);
-    //         smokeModel.SetActive(true);
-    //         pressurePlateSystem.GetComponent<Transform>().position = pressurePlateOrgin - new Vector3(0,0.25f,0);
-
-    //         StartCoroutine(SetTriggerLockEnter());
-    //     }
-    // }
-
     void OnTriggerExit (Collider other)
     {
         if (!triggerLockExit)
         {
-            int id = other.gameObject.GetInstanceID();
-            int index = objectsInRange.IndexOf(id);
-            if (index >= 0) {
-                objectsInRange.RemoveAt(index);
+            GameObject instance = other.gameObject;
+            if (objectsInRange.Contains(instance)) {
+                objectsInRange.Remove(instance);
                 if (objectsInRange.Count == 0) {
                     updateFire(true);
                 }
@@ -95,7 +105,14 @@ public class PressurePlateFire : MonoBehaviour
     IEnumerator SetTriggerLockExit()
     {
         triggerLockExit = true;
-        yield return new WaitForSeconds(0.23f);
+        yield return new WaitForSeconds(0.3f);
         triggerLockExit = false;
+    }
+
+    // remove the target object from object in list
+    IEnumerator RemoveObjectInHitbox(GameObject target)
+    {
+        yield return new WaitForSeconds(1f);
+        objectsInRange.Remove(target);
     }
 }
