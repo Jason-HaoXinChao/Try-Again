@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 1ceeb84c3d82884caf211f3e95033d4e
     GuidInternal: 
-    m_lastTime: -8585229253422330112
+    m_lastTime: -8585246854637938778
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 148030ccd762924d8925dffbf7dab157
     GuidInternal: 
-    m_lastTime: -8585229253436940121
+    m_lastTime: -8585246854639125584
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 136b4a8efa1709468370bd91e5310cb4
     GuidInternal: 
-    m_lastTime: -8585229249218246327
+    m_lastTime: -8585228813532884994
     List:
     - name: Main
       guid: d30d90fd07a7864087142ba3219aec7c
@@ -94,8 +94,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f2540b937b63884b8e5e7acc5918f394
     GuidInternal: 
-    m_lastTime: -8585229249227656345
+    m_lastTime: -8585228813757692152
     List:
+    - name: ButtonOff
+      guid: 690e9e68bc24e242b342345720e649fe
+      id: 1723853972
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: ButtonOff
+        ObjectType: 3
+        guid: 690e9e68bc24e242b342345720e649fe
+      Path: Events\Default Work Unit\ButtonOff
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ButtonOn
+      guid: 24288807a7f71f40a587796618fe48ac
+      id: 2929507982
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: ButtonOn
+        ObjectType: 3
+        guid: 24288807a7f71f40a587796618fe48ac
+      Path: Events\Default Work Unit\ButtonOn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: DialogueMale_End
       guid: 58a63c7914d83d479f9385195d875d36
       id: 2398287214
@@ -380,7 +414,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: efd6fc2e4d3b9e4083f544da4a48a2f8
     GuidInternal: 
-    m_lastTime: -8585229253447230130
+    m_lastTime: -8585246854640681435
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -394,7 +428,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 1014c4a7b5814f43833794694c05933c
     GuidInternal: 
-    m_lastTime: -8585229253422360138
+    m_lastTime: -8585246854637968659
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -408,7 +442,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 507218e0943dfc4bb242dbb8b408f136
     GuidInternal: 
-    m_lastTime: -8585229253422360138
+    m_lastTime: -8585246854637968659
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -422,10 +456,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: b68836cce6b7c14c9e9968e2bd40b30d
     GuidInternal: 
-    m_lastTime: -8585229253422350121
+    m_lastTime: -8585246854637958723
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

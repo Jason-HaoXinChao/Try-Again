@@ -33,6 +33,17 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{074AE7DD-B1F9-472D-886B-BD11B63173A5}" ShortID="212801153">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Stab" ID="{183F5466-29C5-48D4-A9B5-0C682785FE8F}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="TempMusic" ID="{DE1C1161-F926-4D85-8BE5-B293BFE4D655}">
@@ -124,6 +135,90 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{8291C385-364A-420D-A7C5-9D084521235B}" ShortID="116021581">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{133852BA-2D8B-4503-B79B-750AAB3C72D9}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="7"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Keyboard" ID="{ADADD5BA-3770-4BB7-9B32-5C819453EC1E}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{03439AF0-D171-404C-91AE-0BF814E96DBD}" ShortID="620429441">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.5">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6A3B0E12-B5B0-4EEE-9C70-EC41CCB32791}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="6.2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Paper" ID="{1138EBA8-9CEF-46D6-AB53-3F1F3A2DF13E}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{71FEE6E6-0023-4558-B978-D1759ACEFB11}" ShortID="257929166">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{007B81A5-0D19-4F32-85C4-A1405BA8295B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="One Shots" ID="{33D56702-88E2-48DD-8E62-8ECACE3CB29D}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{67A1A7A4-C25A-4475-AFEC-671C7623939C}" ShortID="417481751">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1.8">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1188A3E7-0B05-466D-A46B-BA396111E106}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="6"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pencil" ID="{323CDE9A-E0A2-4161-B203-1E4D16F5F369}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="KeycardPickup" ID="{B630143A-B710-4977-A441-705F99E1134B}">
@@ -165,6 +260,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_player_electrocuted" ID="{D859149D-16C7-4A4F-A9AB-EBE2AA51A7DB}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D224C05D-2346-432A-B238-3DDCCA8BC82C}" ShortID="642923767">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shock" ID="{CA1ECAF1-5774-43DA-A3C7-F00E8A544B1F}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -225,6 +331,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="mus_level_music02" ID="{C0D53276-BDC8-4B8E-B887-91C66E249041}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ButtonOn" ID="{07882824-F7A7-401F-A587-796618FE48AC}">
+					<ChildrenList>
+						<Action Name="" ID="{270EAC4E-F410-4CB8-AAD3-C4863106F411}" ShortID="1044872797">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_button_on" ID="{E0BD126C-E1BA-4B7D-B6A1-8BDB06160E66}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ButtonOff" ID="{689E0E69-24BC-42E2-B342-345720E649FE}">
+					<ChildrenList>
+						<Action Name="" ID="{3E10E85E-BCDD-4BB1-8A4F-9F06E58B267D}" ShortID="86827856">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_button_off" ID="{DB205283-A277-4068-BEEE-9A4FE69F0855}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

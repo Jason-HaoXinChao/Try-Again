@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{39A95A8D-524F-2F4A-3B37-EEEA259FE927}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4DE72C58-0E96-FC0F-4949-8165EFA57E5C}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -32,11 +32,15 @@
 				</File>
 				<File Id="58714284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_room_01.wav</ShortName>
-					<CachePath>SFX/amb_room_01_10C4C929.wem</CachePath>
+					<CachePath>SFX/amb_room_01_D9C3CE6E.wem</CachePath>
 				</File>
 				<File Id="58923651" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_cat.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_cat_10C4C929.wem</CachePath>
+				</File>
+				<File Id="87221731" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_shock01.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_shock01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="102406198" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_open.wav</ShortName>
@@ -58,9 +62,21 @@
 					<ShortName>sfx_door_keycard.wav</ShortName>
 					<CachePath>SFX/sfx_door_keycard_10C4C929.wem</CachePath>
 				</File>
+				<File Id="113761179" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_pencil02.wav</ShortName>
+					<CachePath>SFX/amb_pencil02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="115940102" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_door_open.wav</ShortName>
 					<CachePath>SFX/sfx_door_open_10C4C929.wem</CachePath>
+				</File>
+				<File Id="130695962" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_pencil01.wav</ShortName>
+					<CachePath>SFX/amb_pencil01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="182872527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_clang.wav</ShortName>
+					<CachePath>SFX/amb_clang_10C4C929.wem</CachePath>
 				</File>
 				<File Id="198329098" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_bay.wav</ShortName>
@@ -102,9 +118,21 @@
 					<ShortName>sfx_player_Impale_02.wav</ShortName>
 					<CachePath>SFX/sfx_player_Impale_02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="444410162" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_keyboard04.wav</ShortName>
+					<CachePath>SFX/amb_keyboard04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="477621382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_stab03.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_stab03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="483697947" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_wolf.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_wolf_10C4C929.wem</CachePath>
+				</File>
+				<File Id="483887698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_paper02.wav</ShortName>
+					<CachePath>SFX/amb_paper02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="489787794" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_end.wav</ShortName>
@@ -122,6 +150,10 @@
 					<ShortName>sfx_trap_light_amb.wav</ShortName>
 					<CachePath>SFX/sfx_trap_light_amb_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="597890890" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_keyboard02.wav</ShortName>
+					<CachePath>SFX/amb_keyboard02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="610463159" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_trap_fire.wav</ShortName>
 					<CachePath>SFX/sfx_trap_fire_10C4C929.wem</CachePath>
@@ -134,33 +166,105 @@
 					<ShortName>sfx_phonemes_lowvoice_it.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_it_10C4C929.wem</CachePath>
 				</File>
+				<File Id="644211350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_shock05.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_shock05_10C4C929.wem</CachePath>
+				</File>
 				<File Id="659278889" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_level_music02.wav</ShortName>
 					<CachePath>SFX/mus_level_music02_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="661924728" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_stab02.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_stab02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="671936950" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_keyboard01.wav</ShortName>
+					<CachePath>SFX/amb_keyboard01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="673643020" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_stab01.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_stab01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="698748773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_step_02.wav</ShortName>
 					<CachePath>SFX/sfx_player_step_02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="712808845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_phone.wav</ShortName>
+					<CachePath>SFX/amb_phone_10C4C929.wem</CachePath>
+				</File>
 				<File Id="728876282" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_cure.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_cure_10C4C929.wem</CachePath>
+				</File>
+				<File Id="743495110" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_shock03.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_shock03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="744600462" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_electrocuted.wav</ShortName>
 					<CachePath>SFX/sfx_player_electrocuted_DEF4906D.wem</CachePath>
 				</File>
+				<File Id="751157242" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_paper01.wav</ShortName>
+					<CachePath>SFX/amb_paper01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="754902247" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_squeak_02.wav</ShortName>
 					<CachePath>SFX/sfx_player_squeak_02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="846876555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_paperflip.wav</ShortName>
+					<CachePath>SFX/amb_paperflip_10C4C929.wem</CachePath>
+				</File>
+				<File Id="851458075" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_stab04.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_stab04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="893991293" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_chair.wav</ShortName>
+					<CachePath>SFX/amb_chair_10C4C929.wem</CachePath>
+				</File>
+				<File Id="896904385" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_shock02.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_shock02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="901299637" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_keyboard03.wav</ShortName>
+					<CachePath>SFX/amb_keyboard03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="901860459" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_keycard_01.wav</ShortName>
 					<CachePath>SFX/sfx_keycard_01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="909809485" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_button_off.wav</ShortName>
+					<CachePath>SFX/sfx_button_off_10C4C929.wem</CachePath>
+				</File>
+				<File Id="982083091" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_deathsound_shock04.wav</ShortName>
+					<CachePath>SFX/sfx_player_deathsound_shock04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="983634712" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_trap_fire_extinguish.wav</ShortName>
+					<CachePath>SFX/sfx_trap_fire_extinguish_10C4C929.wem</CachePath>
+				</File>
 				<File Id="994376627" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_trap_light_buzz.wav</ShortName>
 					<CachePath>SFX/sfx_trap_light_buzz_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="996416146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_button_on.wav</ShortName>
+					<CachePath>SFX/sfx_button_on_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1013193081" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_Impale_03.wav</ShortName>
+					<CachePath>SFX/sfx_player_Impale_03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1013771893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>amb_pencil03.wav</ShortName>
+					<CachePath>SFX/amb_pencil03_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1027824676" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_about.wav</ShortName>
@@ -168,6 +272,16 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="1723853972" Name="ButtonOff" DurationType="OneShot" DurationMin="0.35716668" DurationMax="0.35716668">
+					<MediaRefs>
+						<MediaRef Id="909809485"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2929507982" Name="ButtonOn" DurationType="OneShot" DurationMin="0.44202083" DurationMax="0.44202083">
+					<MediaRefs>
+						<MediaRef Id="996416146"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2398287214" Name="DialogueMale_End" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="309398149" Name="DialogueMale_Start" DurationType="Infinite">
 					<MediaRefs>
@@ -192,6 +306,11 @@
 				<Event Id="3609565814" Name="FireBurn" DurationType="OneShot" DurationMin="1.4174112" DurationMax="2.25">
 					<MediaRefs>
 						<MediaRef Id="313365090"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4107157221" Name="FireExtinguish" DurationType="OneShot" DurationMin="4.6789165" DurationMax="4.6789165">
+					<MediaRefs>
+						<MediaRef Id="983634712"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2385628198" Name="Footsteps" DurationType="OneShot" DurationMin="0.46715224" DurationMax="0.70028126">
@@ -227,7 +346,12 @@
 				</Event>
 				<Event Id="1250595908" Name="LightElectrocute" DurationType="OneShot" DurationMin="2.123" DurationMax="2.123">
 					<MediaRefs>
+						<MediaRef Id="87221731"/>
+						<MediaRef Id="644211350"/>
+						<MediaRef Id="743495110"/>
 						<MediaRef Id="744600462"/>
+						<MediaRef Id="896904385"/>
+						<MediaRef Id="982083091"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2423635109" Name="PlayAmbientFire" MaxAttenuation="15" DurationType="OneShot" DurationMin="87.509094" DurationMax="87.509094">
@@ -240,15 +364,33 @@
 						<MediaRef Id="105227380"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="539467320" Name="RoomAmbience" DurationType="OneShot" DurationMin="92.95535" DurationMax="92.95535">
+				<Event Id="539467320" Name="RoomAmbience" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="58714284"/>
+						<MediaRef Id="113761179"/>
+						<MediaRef Id="130695962"/>
+						<MediaRef Id="182872527"/>
+						<MediaRef Id="444410162"/>
+						<MediaRef Id="483887698"/>
+						<MediaRef Id="597890890"/>
+						<MediaRef Id="671936950"/>
+						<MediaRef Id="712808845"/>
+						<MediaRef Id="751157242"/>
+						<MediaRef Id="846876555"/>
+						<MediaRef Id="893991293"/>
+						<MediaRef Id="901299637"/>
+						<MediaRef Id="1013771893"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4181842614" Name="SpikesImpale" DurationType="OneShot" DurationMin="1.8435078" DurationMax="3.241729">
+				<Event Id="4181842614" Name="SpikesImpale" DurationType="OneShot" DurationMin="1.7402703" DurationMax="3.241729">
 					<MediaRefs>
 						<MediaRef Id="342085208"/>
 						<MediaRef Id="420335803"/>
+						<MediaRef Id="477621382"/>
+						<MediaRef Id="661924728"/>
+						<MediaRef Id="673643020"/>
+						<MediaRef Id="851458075"/>
+						<MediaRef Id="1013193081"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1917263390" Name="StopMusic" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -260,5 +402,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4EB86657-0C18-483E-36F9-9E575F6A9BC2}</FileHash>
+	<FileHash>{1D49FAD4-7BD2-86DB-9BEB-A02AF4F63C3A}</FileHash>
 </SoundBanksInfo>
