@@ -647,6 +647,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 806147977}
     m_Modifications:
+    - target: {fileID: 507257545019762302, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 507257545019762302, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1228
+      objectReference: {fileID: 0}
+    - target: {fileID: 507257545019762302, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 507257545019762302, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6570189
+      objectReference: {fileID: 0}
+    - target: {fileID: 507257545019762302, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1878448
+      objectReference: {fileID: 0}
     - target: {fileID: 1437490599434649558, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
       propertyPath: m_Name
       value: Fire Trap
