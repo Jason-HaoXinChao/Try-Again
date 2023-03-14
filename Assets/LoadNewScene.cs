@@ -10,6 +10,7 @@ public class LoadNewScene : MonoBehaviour
     void Update() {
         if (Input.GetButtonDown("Restart"))
         {
+            Destroy(GameObject.Find("GameManager"));
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
     }

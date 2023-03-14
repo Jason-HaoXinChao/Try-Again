@@ -8,6 +8,7 @@ public class Level1_CoffeeTable : MonoBehaviour
     [SerializeField] private GameObject tooltip;
 
     private bool inDetectRange;
+    public string itemName;
     public GameObject player;
 
     [Header("Quest Giver")]
@@ -66,8 +67,13 @@ public class Level1_CoffeeTable : MonoBehaviour
         {
             player.GetComponent<PlayerController>().FaceNPC();
 
-            Debug.Log("dd");
             // Pick up coffee
+            GameObject playerInventory = GameObject.Find("Inventory");
+            if(playerInventory.GetComponent<PlayerInventory>().collectedItems.Count == 0)
+            {
+                playerInventory.GetComponent<PlayerInventory>().collectItem(itemName);
+            }
+            
         }
     }
 
