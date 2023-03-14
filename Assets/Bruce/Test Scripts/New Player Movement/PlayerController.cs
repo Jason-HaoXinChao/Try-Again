@@ -361,9 +361,9 @@ public class PlayerController : MonoBehaviour, IPlayerController
         wetfloorOverride = true;
         playerInvincible = true;
 
-        _minFallSpeed = 5f;
-        _maxFallSpeed = 5f;
-        _currentVerticalSpeed += 10f;
+        _minFallSpeed = 8f;
+        _maxFallSpeed = 12f;
+        _currentVerticalSpeed = 0f;
         StartCoroutine(WetFloorDuration());
     }
 
