@@ -361,9 +361,9 @@ public class PlayerController : MonoBehaviour, IPlayerController
         wetfloorOverride = true;
         playerInvincible = true;
 
-        _minFallSpeed = 5f;
-        _maxFallSpeed = 5f;
-        _currentVerticalSpeed += 10f;
+        _minFallSpeed = 8f;
+        _maxFallSpeed = 12f;
+        _currentVerticalSpeed = 0f;
         StartCoroutine(WetFloorDuration());
     }
 
@@ -390,8 +390,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
         this.gameObject.GetComponent<Transform>().position = respawnPoint.position + new Vector3(0,-3,0);
         
         /// Reset Player Height
-        controller.height = 0.055f;
-        controller.center = new Vector3(0, 0.01f, 0);
+        controller.height = 0.05f;
+        controller.center = new Vector3(0, 0.0115f, 0);
         
         this.gameObject.SetActive(true);
         wetfloorOverride = false;

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     void Awake() {
         DontDestroyOnLoad(this.gameObject);
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame

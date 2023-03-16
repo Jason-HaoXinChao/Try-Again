@@ -9,6 +9,7 @@ public class DetectBodyPickUp : MonoBehaviour
     private GameObject bodyHighlighted;
     [SerializeField] private GameObject deadPlayer;
     private bool pickupLock;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class DetectBodyPickUp : MonoBehaviour
         bodyInRange = new List<GameObject>();
         bodyInHand = false;
         bodyHighlighted = null;
+        player = GameObject.Find("BlockPlayer");
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class DetectBodyPickUp : MonoBehaviour
     {
         BodyPickUp();
         BodyDrop();
-        if (bodyInHand == false && bodyInRange.Count > 0) {
+        if (bodyInHand == false && bodyInRange.Count > 0 && !player.GetComponent<PlayerController>().playerInvincible) {
             // highlight closest corpse
             GameObject closestBody = FindClosestCorpse();
             if (bodyHighlighted != null & closestBody != bodyHighlighted) {
@@ -37,7 +39,7 @@ public class DetectBodyPickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         GameObject body = other.gameObject;
         if (body.tag == "MoveableCorpse") {
-            Debug.Log(body);
+            // Debug.Log(body);
             if (!bodyInRange.Contains(body)) {
                 bodyInRange.Add(body);
             }
@@ -80,7 +82,7 @@ public class DetectBodyPickUp : MonoBehaviour
 
     void BodyPickUp()
     {
-        if(bodyHighlighted != null && bodyInHand == false && Input.GetButtonDown("Confirm"))
+        if(bodyHighlighted != null && bodyInHand == false && Input.GetButtonDown("CorpseInteract"))
         {
             bodyInRange.Remove(bodyHighlighted);
             Destroy(bodyHighlighted, 0.1f);
@@ -94,7 +96,7 @@ public class DetectBodyPickUp : MonoBehaviour
     {
         if (!pickupLock) 
         {
-            if(bodyInHand == true && Input.GetButtonDown("Confirm"))
+            if(bodyInHand == true && Input.GetButtonDown("CorpseInteract"))
             {
                 GameObject player = GameObject.FindWithTag("Player");
                 Vector3 position = player.gameObject.transform.position;
