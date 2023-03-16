@@ -6,20 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 32c197af1c801424196c7a908890c856
-  - enabled: 1
-    path: Assets/Scenes/Main Game - Level 1.unity
-    guid: 27ead613ffbbcba40b39f91f71cac3b0
-  - enabled: 1
-    path: Assets/Scenes/Level Showcase.unity
-    guid: 7a2dc555a8ca32148a4ff937b0fe054c
-  - enabled: 1
-    path: Assets/Scenes/Level Select.unity
-    guid: 39140ae3508448240ae688bb5fb73747
+    path: Assets/Scenes/Start Screen.unity
+    guid: d6cc1981597f70745b85ca169683e194
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 78b25819be1cd3843a5aa91e2472629a
+  - enabled: 1
+    path: Assets/Scenes/Level Select.unity
+    guid: 39140ae3508448240ae688bb5fb73747
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 32c197af1c801424196c7a908890c856
@@ -27,8 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Complete.unity
     guid: 1da42ed95d9b73e4cb1a245e69b99853
   - enabled: 1
-    path: Assets/Scenes/Start Screen.unity
-    guid: d6cc1981597f70745b85ca169683e194
+    path: Assets/Scenes/Main Game - Level 1.unity
+    guid: 27ead613ffbbcba40b39f91f71cac3b0
+  - enabled: 1
+    path: Assets/Scenes/Level Showcase.unity
+    guid: 7a2dc555a8ca32148a4ff937b0fe054c
   - enabled: 1
     path: Assets/Scenes/Alpha - End Screen.unity
     guid: ee6880a2de3f16e46b48be0e7587d095

@@ -39,7 +39,7 @@ public class DetectBodyPickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         GameObject body = other.gameObject;
         if (body.tag == "MoveableCorpse") {
-            Debug.Log(body);
+            // Debug.Log(body);
             if (!bodyInRange.Contains(body)) {
                 bodyInRange.Add(body);
             }

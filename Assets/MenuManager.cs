@@ -62,9 +62,9 @@ public class MenuManager : MonoBehaviour
         int bodyCount = 0;
         while (bodyCount < deathCount)
         {
-            Debug.Log("waiting");
+            //Debug.Log("waiting");
             yield return new WaitForSeconds(0.1f);
-            Debug.Log("done");
+            //Debug.Log("done");
             float x = Random.Range(-7.0f,7.0f);
             Vector3 position = new Vector3(x, 6, 9);
             Quaternion rotation = Random.rotation;
