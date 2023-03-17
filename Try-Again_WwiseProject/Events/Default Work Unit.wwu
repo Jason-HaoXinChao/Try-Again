@@ -384,6 +384,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="HUDCounter" ID="{58E20349-EC00-43A9-A7A8-929759FB64D7}">
+					<ChildrenList>
+						<Action Name="" ID="{FF104AB4-7D09-4A0E-BB48-E98E7D91B111}" ShortID="653914409">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win Counter" ID="{096FFB95-C8B3-4B14-B6B1-D6F46A353D2F}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

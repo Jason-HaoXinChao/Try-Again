@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3A335451-834D-976E-6B74-99298165C63D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7C37BC18-4CD1-FDCA-30CE-B1FC46622B1F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -41,6 +41,10 @@
 				<File Id="58923651" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_cat.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_cat_10C4C929.wem</CachePath>
+				</File>
+				<File Id="73965292" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>gore - wood beating flesh wet blood splat - medium - 11.wav</ShortName>
+					<CachePath>SFX/gore - wood beating flesh wet blood splat - medium - 11_112B22E5.wem</CachePath>
 				</File>
 				<File Id="75641351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_about.wav</ShortName>
@@ -84,11 +88,15 @@
 				</File>
 				<File Id="129545044" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_chair.wav</ShortName>
-					<CachePath>SFX/sfx_phonemes_npc_chair_9B3F7494.wem</CachePath>
+					<CachePath>SFX/sfx_phonemes_npc_chair_7CD9C100.wem</CachePath>
 				</File>
 				<File Id="130695962" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_pencil01.wav</ShortName>
 					<CachePath>SFX/amb_pencil01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="148699886" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PUNCH_DESIGNED_LIGHT_78.wav</ShortName>
+					<CachePath>SFX/PUNCH_DESIGNED_LIGHT_78_0BEA98FD.wem</CachePath>
 				</File>
 				<File Id="182872527" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_clang.wav</ShortName>
@@ -133,6 +141,10 @@
 				<File Id="358845744" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_sky.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_sky_10C4C929.wem</CachePath>
+				</File>
+				<File Id="377521859" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PM_LB_SOURCE_FLESH_DROPS_ORANGES_MKH8060_6.wav</ShortName>
+					<CachePath>SFX/PM_LB_SOURCE_FLESH_DROPS_ORANGES_MKH8060_6_08EB035E.wem</CachePath>
 				</File>
 				<File Id="402651656" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_cat.wav</ShortName>
@@ -186,6 +198,10 @@
 					<ShortName>sfx_phonemes_lowvoice_now.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_now_10C4C929.wem</CachePath>
 				</File>
+				<File Id="550886321" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Borax,Impact,Slime,Gore,Various16.wav</ShortName>
+					<CachePath>SFX/Borax,Impact,Slime,Gore,Various16_701D9D90.wem</CachePath>
+				</File>
 				<File Id="561756807" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_step_01.wav</ShortName>
 					<CachePath>SFX/sfx_player_step_01_10C4C929.wem</CachePath>
@@ -193,6 +209,10 @@
 				<File Id="566863628" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_trap_light_amb.wav</ShortName>
 					<CachePath>SFX/sfx_trap_light_amb_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="567048478" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Quirboilly,leather,metal,twist,contort,small,smooth,lightmetal,drop,slightdistance,roomAMB,release,bounce,settle.wav</ShortName>
+					<CachePath>SFX/Quirboilly,leather,metal,twist,contort,small,smooth,lightmetal,drop,slightdistance,roomAMB,release,bounce,settle_92E35771.wem</CachePath>
 				</File>
 				<File Id="597890890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_keyboard02.wav</ShortName>
@@ -421,6 +441,15 @@
 						<MediaRef Id="754902247"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2050202576" Name="HUDCounter" DurationType="OneShot" DurationMin="0.11252898" DurationMax="0.47717524">
+					<MediaRefs>
+						<MediaRef Id="73965292"/>
+						<MediaRef Id="148699886"/>
+						<MediaRef Id="377521859"/>
+						<MediaRef Id="550886321"/>
+						<MediaRef Id="567048478"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2230797588" Name="KeycardDoor" DurationType="OneShot" DurationMin="2.742854" DurationMax="2.742854">
 					<MediaRefs>
 						<MediaRef Id="113432090"/>
@@ -502,5 +531,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{17C4CE6F-03AD-DBEE-089A-8E3D48E95A37}</FileHash>
+	<FileHash>{2065CC75-895D-F45C-4C88-5A94CD984CC4}</FileHash>
 </SoundBanksInfo>

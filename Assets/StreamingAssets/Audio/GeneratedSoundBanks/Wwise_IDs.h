@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID FIREBURN = 3609565814U;
         static const AkUniqueID FIREEXTINGUISH = 4107157221U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID HUDCOUNTER = 2050202576U;
         static const AkUniqueID KEYCARDDOOR = 2230797588U;
         static const AkUniqueID KEYCARDPICKUP = 1514899416U;
         static const AkUniqueID LEVEL01MUSIC = 663442949U;
