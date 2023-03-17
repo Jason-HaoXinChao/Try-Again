@@ -22,10 +22,14 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4DE72C58-0E96-FC0F-4949-8165EFA57E5C}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3A335451-834D-976E-6B74-99298165C63D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="13186997" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_cure.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_cure_10C4C929.wem</CachePath>
+				</File>
 				<File Id="16069325" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_squeak_01.wav</ShortName>
 					<CachePath>SFX/sfx_player_squeak_01_10C4C929.wem</CachePath>
@@ -37,6 +41,10 @@
 				<File Id="58923651" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_cat.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_cat_10C4C929.wem</CachePath>
+				</File>
+				<File Id="75641351" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_about.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_about_10C4C929.wem</CachePath>
 				</File>
 				<File Id="87221731" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_deathsound_shock01.wav</ShortName>
@@ -70,6 +78,14 @@
 					<ShortName>sfx_door_open.wav</ShortName>
 					<CachePath>SFX/sfx_door_open_10C4C929.wem</CachePath>
 				</File>
+				<File Id="128505941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_end.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_end_10C4C929.wem</CachePath>
+				</File>
+				<File Id="129545044" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_chair.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_chair_9B3F7494.wem</CachePath>
+				</File>
 				<File Id="130695962" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_pencil01.wav</ShortName>
 					<CachePath>SFX/amb_pencil01_10C4C929.wem</CachePath>
@@ -77,6 +93,10 @@
 				<File Id="182872527" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_clang.wav</ShortName>
 					<CachePath>SFX/amb_clang_10C4C929.wem</CachePath>
+				</File>
+				<File Id="186590334" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_now.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_now_10C4C929.wem</CachePath>
 				</File>
 				<File Id="198329098" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_bay.wav</ShortName>
@@ -89,6 +109,10 @@
 				<File Id="270127892" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_keycard_02.wav</ShortName>
 					<CachePath>SFX/sfx_keycard_02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="280185230" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_wolf.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_wolf_10C4C929.wem</CachePath>
 				</File>
 				<File Id="287279307" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_chair.wav</ShortName>
@@ -110,6 +134,10 @@
 					<ShortName>sfx_phonemes_lowvoice_sky.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_sky_10C4C929.wem</CachePath>
 				</File>
+				<File Id="402651656" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_cat.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_cat_10C4C929.wem</CachePath>
+				</File>
 				<File Id="404381212" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_who.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_who_10C4C929.wem</CachePath>
@@ -121,6 +149,14 @@
 				<File Id="444410162" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_keyboard04.wav</ShortName>
 					<CachePath>SFX/amb_keyboard04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="454590140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_bird.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_bird_10C4C929.wem</CachePath>
+				</File>
+				<File Id="458719437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_sky.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_sky_10C4C929.wem</CachePath>
 				</File>
 				<File Id="477621382" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_deathsound_stab03.wav</ShortName>
@@ -138,6 +174,14 @@
 					<ShortName>sfx_phonemes_lowvoice_end.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_end_10C4C929.wem</CachePath>
 				</File>
+				<File Id="496309522" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_who.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_who_10C4C929.wem</CachePath>
+				</File>
+				<File Id="524035292" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_open.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_open_10C4C929.wem</CachePath>
+				</File>
 				<File Id="535712261" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_now.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_now_10C4C929.wem</CachePath>
@@ -153,6 +197,10 @@
 				<File Id="597890890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_keyboard02.wav</ShortName>
 					<CachePath>SFX/amb_keyboard02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="609994354" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_be.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_be_10C4C929.wem</CachePath>
 				</File>
 				<File Id="610463159" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_trap_fire.wav</ShortName>
@@ -186,6 +234,14 @@
 					<ShortName>sfx_player_deathsound_stab01.wav</ShortName>
 					<CachePath>SFX/sfx_player_deathsound_stab01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="674308160" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_join.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_join_10C4C929.wem</CachePath>
+				</File>
+				<File Id="697217701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_it.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_it_10C4C929.wem</CachePath>
+				</File>
 				<File Id="698748773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_step_02.wav</ShortName>
 					<CachePath>SFX/sfx_player_step_02_10C4C929.wem</CachePath>
@@ -197,6 +253,10 @@
 				<File Id="728876282" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_cure.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_cure_10C4C929.wem</CachePath>
+				</File>
+				<File Id="733724383" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_ear.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_ear_10C4C929.wem</CachePath>
 				</File>
 				<File Id="743495110" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_deathsound_shock03.wav</ShortName>
@@ -242,6 +302,14 @@
 					<ShortName>sfx_button_off.wav</ShortName>
 					<CachePath>SFX/sfx_button_off_10C4C929.wem</CachePath>
 				</File>
+				<File Id="966220899" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_swan.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_swan_10C4C929.wem</CachePath>
+				</File>
+				<File Id="968169850" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_paw.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_paw_10C4C929.wem</CachePath>
+				</File>
 				<File Id="982083091" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_deathsound_shock04.wav</ShortName>
 					<CachePath>SFX/sfx_player_deathsound_shock04_10C4C929.wem</CachePath>
@@ -257,6 +325,14 @@
 				<File Id="996416146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_button_on.wav</ShortName>
 					<CachePath>SFX/sfx_button_on_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1010990578" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_lug.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_lug_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1011596096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_phonemes_npc_arm.wav</ShortName>
+					<CachePath>SFX/sfx_phonemes_npc_arm_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1013193081" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_Impale_03.wav</ShortName>
@@ -301,6 +377,30 @@
 						<MediaRef Id="640990006"/>
 						<MediaRef Id="728876282"/>
 						<MediaRef Id="1027824676"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1988486606" Name="DialogueNPC_End" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="240104165" Name="DialogueNPC_Start" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="13186997"/>
+						<MediaRef Id="75641351"/>
+						<MediaRef Id="128505941"/>
+						<MediaRef Id="129545044"/>
+						<MediaRef Id="186590334"/>
+						<MediaRef Id="280185230"/>
+						<MediaRef Id="402651656"/>
+						<MediaRef Id="454590140"/>
+						<MediaRef Id="458719437"/>
+						<MediaRef Id="496309522"/>
+						<MediaRef Id="524035292"/>
+						<MediaRef Id="609994354"/>
+						<MediaRef Id="674308160"/>
+						<MediaRef Id="697217701"/>
+						<MediaRef Id="733724383"/>
+						<MediaRef Id="966220899"/>
+						<MediaRef Id="968169850"/>
+						<MediaRef Id="1010990578"/>
+						<MediaRef Id="1011596096"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3609565814" Name="FireBurn" DurationType="OneShot" DurationMin="1.4174112" DurationMax="2.25">
@@ -402,5 +502,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{76FB2215-8A21-5823-1073-9AED62D91A88}</FileHash>
+	<FileHash>{17C4CE6F-03AD-DBEE-089A-8E3D48E95A37}</FileHash>
 </SoundBanksInfo>

@@ -358,6 +358,32 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="DialogueNPC_Start" ID="{071D99E0-DFCC-41D5-9FD6-1B17653A7E3A}">
+					<ChildrenList>
+						<Action Name="" ID="{4D3528E1-222A-4AD2-B370-62FE736C6C0C}" ShortID="682920205">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MaleNPC" ID="{328991FB-2416-4518-8906-2B38DF4F5BB5}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DialogueNPC_End" ID="{B449406E-9CBA-4EBA-90E6-BA6A2A2002C4}">
+					<ChildrenList>
+						<Action Name="" ID="{E0587774-26AC-4A97-A3B5-CD62E041B051}" ShortID="931412454">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MaleNPC" ID="{328991FB-2416-4518-8906-2B38DF4F5BB5}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

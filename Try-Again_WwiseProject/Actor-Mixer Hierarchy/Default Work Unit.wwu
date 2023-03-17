@@ -2529,6 +2529,472 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="MaleNPC" ID="{328991FB-2416-4518-8906-2B38DF4F5BB5}" ShortID="921638674">
+							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.25">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D56B7935-A876-44C3-8D80-58712ED06750}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+													<Property Name="Min" Type="Real64" Value="-0.15"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_phonemes_npc_about" ID="{472F7642-81EC-42B2-A5B9-459D2CDFB035}" ShortID="540534743">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_about" ID="{421D0D84-F8FE-4203-A842-65092CD685A5}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_about.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="75641351"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_about" ID="{421D0D84-F8FE-4203-A842-65092CD685A5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_arm" ID="{2D15F27E-0F65-4709-8980-F96430F72C5F}" ShortID="311344009">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_arm" ID="{63F4F56B-D68D-4A05-A15C-4955C635799E}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_arm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1011596096"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_arm" ID="{63F4F56B-D68D-4A05-A15C-4955C635799E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_be" ID="{807F1782-78A6-438E-86BA-C725338FFADB}" ShortID="494050230">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_be" ID="{AA4F37F8-FC34-4096-A774-9FC180C7D723}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_be.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="609994354"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_be" ID="{AA4F37F8-FC34-4096-A774-9FC180C7D723}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_bird" ID="{18E136CE-A7E2-47C4-8920-2C51BAEE819D}" ShortID="1024363612">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_bird" ID="{D16C2E54-B8A7-4AE7-A719-5675F3AAA3FB}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_bird.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="454590140"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_bird" ID="{D16C2E54-B8A7-4AE7-A719-5675F3AAA3FB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_cat" ID="{81DA38EE-18DB-4FF7-A6D5-D402F68A948D}" ShortID="944954231">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_cat" ID="{BB893115-1FFB-44B8-B007-19666E0D26E5}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_cat.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="402651656"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_cat" ID="{BB893115-1FFB-44B8-B007-19666E0D26E5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_chair" ID="{F6CA1300-0215-4C26-85A5-C4544E92B6AC}" ShortID="729778637">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_chair" ID="{4040D669-B14E-4C55-9F6A-89747BD93AA7}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0413815789473684"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.140697368421053"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.136559210526316"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_chair.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="129545044"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_chair" ID="{4040D669-B14E-4C55-9F6A-89747BD93AA7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_cure" ID="{5802F09D-B01D-4521-A857-6F3BCED5C750}" ShortID="120115986">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_cure" ID="{D917C9B5-0F89-4382-A77C-0CE7B7F6E221}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_cure.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="13186997"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_cure" ID="{D917C9B5-0F89-4382-A77C-0CE7B7F6E221}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_ear" ID="{56A4A06B-8891-4CD0-B1B0-C632BF81D13C}" ShortID="984728571">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_ear" ID="{50B8782F-EABB-4053-8F9A-F6C316B845FF}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_ear.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="733724383"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_ear" ID="{50B8782F-EABB-4053-8F9A-F6C316B845FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_end" ID="{E4B42C7B-A4F5-4AB1-BC49-232B320351A2}" ShortID="517586553">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_end" ID="{2D21EE33-3694-45BA-924C-61C155539FF5}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_end.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="128505941"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_end" ID="{2D21EE33-3694-45BA-924C-61C155539FF5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_it" ID="{BB19E2BA-7FA2-4EF1-BD7B-98A619F110CD}" ShortID="833220448">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_it" ID="{103A54F1-1ECB-4EF6-85F8-54B42F2078C3}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_it.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="697217701"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_it" ID="{103A54F1-1ECB-4EF6-85F8-54B42F2078C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_join" ID="{C3E128DC-2CE2-41E0-B5EA-B12E0AD9FACB}" ShortID="198551426">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_join" ID="{F3B920A4-2CFD-4FB0-ACDF-87E6B866807E}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_join.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="674308160"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_join" ID="{F3B920A4-2CFD-4FB0-ACDF-87E6B866807E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_lug" ID="{AC2F45B4-6722-443F-973E-BBC1C3311216}" ShortID="551712880">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_lug" ID="{E038A02F-A964-4606-90A7-2579B6276A57}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_lug.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1010990578"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_lug" ID="{E038A02F-A964-4606-90A7-2579B6276A57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_now" ID="{085E526C-ACA4-428A-9FA8-539223FB3FEF}" ShortID="286466461">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_now" ID="{383CC560-B358-4AC6-937A-7E9CF044928E}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_now.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="186590334"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_now" ID="{383CC560-B358-4AC6-937A-7E9CF044928E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_open" ID="{44AE262F-6359-4B98-A4AF-F2CC0CD97184}" ShortID="624100736">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_open" ID="{BA6034FD-D7F5-4AA5-A014-6EBB2F57B415}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_open.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="524035292"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_open" ID="{BA6034FD-D7F5-4AA5-A014-6EBB2F57B415}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_paw" ID="{BADE7592-98F5-4067-946F-9ADAD39C7049}" ShortID="531333294">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_paw" ID="{2C61475D-3D3F-43C0-ADBB-8FD391850EA0}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_paw.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="968169850"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_paw" ID="{2C61475D-3D3F-43C0-ADBB-8FD391850EA0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_sky" ID="{CF7F9FD6-5D54-41D5-B5F1-3A32C78CF0BF}" ShortID="856951018">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_sky" ID="{9AEDC122-67AE-4F22-9D76-DF7F71B8A21D}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_sky.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="458719437"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_sky" ID="{9AEDC122-67AE-4F22-9D76-DF7F71B8A21D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_swan" ID="{B7430641-BEA6-4E6C-80D6-6A6D530115D2}" ShortID="180126403">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_swan" ID="{B31204C3-CD2A-4EF9-9638-A2E8BBC1ED1F}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_swan.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="966220899"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_swan" ID="{B31204C3-CD2A-4EF9-9638-A2E8BBC1ED1F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_who" ID="{B347E88B-41E5-4D3F-96C7-D7D8E9AC6B1A}" ShortID="423056331">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_who" ID="{D244175A-3715-4FC7-93A2-93047465D967}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_who.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="496309522"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_who" ID="{D244175A-3715-4FC7-93A2-93047465D967}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_phonemes_npc_wolf" ID="{3352EF6F-CA91-45FC-9738-1FCA5909FA39}" ShortID="870443311">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{26FB3946-B2B0-421B-BB82-69C7DD3508B6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CC308014-62D7-4D92-8925-DFFBF7DAB157}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_phonemes_npc_wolf" ID="{0E992F18-5298-4322-A33C-BEC01BC1A233}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_phonemes_npc_wolf.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="280185230"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_phonemes_npc_wolf" ID="{0E992F18-5298-4322-A33C-BEC01BC1A233}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
