@@ -1,7 +1,7 @@
 -> main
 
 === main ===
-Hey intern, our morning coffe just arrived #Colleague_Icon
+Hey intern, our morning coffee just arrived #Colleague_Icon
 Come help me deliver them #Colleague_Icon
 Who are they for? #Player_Icon_Neutral
 Everyone #Colleague_Icon
