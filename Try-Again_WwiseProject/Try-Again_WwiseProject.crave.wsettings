@@ -47,7 +47,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="ffzAigLsPUqPsPHNwvLYmz7LPA1BFAFFvTKIK5/ocGA="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="0w2Q/QenhkCHFCujIZrsfA=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="1uuW0HUH40ynAYCrzTBHxwEAdJ92AAAAwKR6oPx/AABoCcd/ywEAAAAAAADLAQAAwKR6oPx/AAAEks6g/H8AAOAguxDLAQAAAAAAAMsBAAAIAAAAAAAAAEjkdJ92AAAAAADjoPx/AAAfAeOg/H8AAAAA46D8fwAAwKR6oPx/AADApHqg/H8AAGgJx3/LAQAAAQAAAJKq5OkUI5lHqyCGqdUryHgBAHSfdgAAAMCkeqD8fwAAaAnHf8sBAAAAAAAAywEAAMCkeqD8fwAABJLOoPx/AADgILsQywEAAAAAAADLAQAACAAAAAAAAABI5HSfdgAAAAAA46D8fwAAHwHjoPx/AAAAAOOg/H8AAMCkeqD8fwAAwKR6oPx/AABoCcd/ywEAAAEAAAA="/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="1uuW0HUH40ynAYCrzTBHxwEAvIjDAAAAwKTGgPx/AABIokgIkAIAAAAAAACQAgAAwKTGgPx/AAAEklmB/H8AADDMyRaQAgAAAAAAAJACAAAIAAAAAAAAAKjivIjDAAAAAABugfx/AAAfAW6B/H8AAAAAboH8fwAAwKTGgPx/AADApMaA/H8AAEiiSAiQAgAAAQAAAJKq5OkUI5lHqyCGqdUryHgBALyIwwAAAMCkxoD8fwAASKJICJACAAAAAAAAkAIAAMCkxoD8fwAABJJZgfx/AAAwzMkWkAIAAAAAAACQAgAACAAAAAAAAACo4ryIwwAAAAAAboH8fwAAHwFugfx/AAAAAG6B/H8AAMCkxoD8fwAAwKTGgPx/AABIokgIkAIAAAEAAAA="/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
