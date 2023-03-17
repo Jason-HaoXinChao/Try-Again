@@ -1530,6 +1530,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1437490599725978925, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+      propertyPath: ButtonOn.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 27a144415a42b104787dd1f0f6b4fc80, type: 2}
+    - target: {fileID: 1437490599725978925, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
+      propertyPath: ButtonOff.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d5324cbfb92af149934b0fa0e184115, type: 2}
     - target: {fileID: 1437490599870012668, guid: 20fab04b6cfc5bb4d9c38853e2c9d957, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.402734
