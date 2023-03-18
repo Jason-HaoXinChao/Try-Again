@@ -17,6 +17,7 @@ public class GlobalDialogueSystem : MonoBehaviour
 
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
+    private bool firstLine;
 
     void Awake()
     {
@@ -37,6 +38,7 @@ public class GlobalDialogueSystem : MonoBehaviour
         dialogueIsPlaying = false;
         characterProfile.SetActive(false);
         dialoguePanel.SetActive(false);
+        firstLine = false;
     }
 
     void Update()
@@ -45,6 +47,9 @@ public class GlobalDialogueSystem : MonoBehaviour
 
         if(Input.GetButtonUp("Confirm"))
         {
+            if(firstLine){firstLine = false;}
+            else{EndPreviousDialogueVoice();}
+            
             ContinueStory();
         }
     }
@@ -55,6 +60,7 @@ public class GlobalDialogueSystem : MonoBehaviour
         dialogueIsPlaying = true;
         characterProfile.SetActive(true);
         dialoguePanel.SetActive(true);
+        firstLine = true;
     }
 
     void ContinueStory()
@@ -63,6 +69,8 @@ public class GlobalDialogueSystem : MonoBehaviour
         {
             dialogueText.text = currentStory.Continue();
             List<string> tags = currentStory.currentTags;
+
+            DialogueRNGVoice();
 
             characterIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>($"Dialogue UI/Speaker Icon/{tags[0]}");
         }
@@ -78,5 +86,33 @@ public class GlobalDialogueSystem : MonoBehaviour
         characterProfile.SetActive(false);
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+    }
+
+    void DialogueRNGVoice()
+    {
+        float dialogueLength = dialogueText.text.Length * 0.2f; //Change the number to modify length of speech
+        Debug.Log(dialogueLength);
+
+        string dialogueSpeaker = currentStory.currentTags[0].Split('_')[0];
+        Debug.Log(dialogueSpeaker);
+
+        // TODO: Play Voice Here
+        // if (dialogueSpeaker == "Player")
+        // {
+
+        // }
+        // else if (dialogueSpeaker == "Colleague")
+        // {
+
+        // }
+        // else
+        // {
+        //     Debug.LogError("Dialogue System Error: Incorrect Speaker Identifier");
+        // }
+    }
+
+    void EndPreviousDialogueVoice()
+    {
+        // TODO: Stop voice from previous line of dialogue
     }
 }

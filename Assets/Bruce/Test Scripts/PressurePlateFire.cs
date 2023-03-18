@@ -8,6 +8,7 @@ public class PressurePlateFire : MonoBehaviour
     [SerializeField] private GameObject fireHitbox;
     [SerializeField] private GameObject smokeModel;
     [SerializeField] private GameObject pressurePlateSystem;
+    [SerializeField] private GameObject sprinklerModel;
 
     private bool triggerLockEnter, triggerLockExit;
     private Vector3 pressurePlateOrgin, pressurePlateSinked;
@@ -77,6 +78,7 @@ public class PressurePlateFire : MonoBehaviour
         fireModel.SetActive(on);
         fireHitbox.SetActive(on);
         smokeModel.SetActive(!on);
+        sprinklerModel.SetActive(!on);
         fireOn = on;
     }
 
