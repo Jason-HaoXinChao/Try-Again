@@ -18,6 +18,10 @@ public class GlobalDialogueSystem : MonoBehaviour
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool firstLine;
+    public AK.Wwise.Event colleagueVoice;
+    public AK.Wwise.Event colleagueVoiceEnd;
+    public AK.Wwise.Event playerVoice;
+    public AK.Wwise.Event playerVoiceEnd;
 
     void Awake()
     {
@@ -95,24 +99,27 @@ public class GlobalDialogueSystem : MonoBehaviour
 
         string dialogueSpeaker = currentStory.currentTags[0].Split('_')[0];
         Debug.Log(dialogueSpeaker);
-
-        // TODO: Play Voice Here
-        // if (dialogueSpeaker == "Player")
+        if (dialogueSpeaker == "Player")
+        {
+            playerVoice.Post(gameObject);
+        }
+        else if (dialogueSpeaker == "Colleague")
+        {
+            colleagueVoice.Post(gameObject);
+        }
+        // else if (dialogueSpeaker == "CHARACTERNAMEHERE")
         // {
 
         // }
-        // else if (dialogueSpeaker == "Colleague")
-        // {
-
-        // }
-        // else
-        // {
-        //     Debug.LogError("Dialogue System Error: Incorrect Speaker Identifier");
-        // }
+        else
+        {
+            Debug.LogError("Dialogue System Error: Incorrect Speaker Identifier");
+        }
     }
 
     void EndPreviousDialogueVoice()
     {
-        // TODO: Stop voice from previous line of dialogue
+        playerVoiceEnd.Post(gameObject);
+        colleagueVoiceEnd.Post(gameObject);
     }
 }

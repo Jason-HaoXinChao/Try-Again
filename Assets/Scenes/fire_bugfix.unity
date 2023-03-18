@@ -11174,6 +11174,22 @@ MonoBehaviour:
   characterIcon: {fileID: 450185426}
   dialoguePanel: {fileID: 54787928}
   dialogueText: {fileID: 1708003041}
+  colleagueVoice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e58e9ae5fd8e39044ae0c29a069c3bcf, type: 2}
+  colleagueVoiceEnd:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b596357672c801f43900f4dbd4130abc, type: 2}
+  playerVoice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 094a5bc671183ab4ab09fcca205fb810, type: 2}
+  playerVoiceEnd:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d6ba19b288bcf564cb1bb965760e5e09, type: 2}
 --- !u!4 &789582899
 Transform:
   m_ObjectHideFlags: 0
