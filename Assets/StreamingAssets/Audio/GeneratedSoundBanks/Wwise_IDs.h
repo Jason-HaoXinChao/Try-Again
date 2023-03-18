@@ -17,9 +17,12 @@ namespace AK
         static const AkUniqueID BUTTONON = 2929507982U;
         static const AkUniqueID DIALOGUEMALE_END = 2398287214U;
         static const AkUniqueID DIALOGUEMALE_START = 309398149U;
+        static const AkUniqueID DIALOGUENPC_END = 1988486606U;
+        static const AkUniqueID DIALOGUENPC_START = 240104165U;
         static const AkUniqueID FIREBURN = 3609565814U;
         static const AkUniqueID FIREEXTINGUISH = 4107157221U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID HUDCOUNTER = 2050202576U;
         static const AkUniqueID KEYCARDDOOR = 2230797588U;
         static const AkUniqueID KEYCARDPICKUP = 1514899416U;
         static const AkUniqueID LEVEL01MUSIC = 663442949U;
