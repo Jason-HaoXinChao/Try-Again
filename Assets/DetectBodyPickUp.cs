@@ -10,6 +10,7 @@ public class DetectBodyPickUp : MonoBehaviour
     [SerializeField] private GameObject deadPlayer;
     private bool pickupLock;
     private GameObject player;
+    public AK.Wwise.Event dropSound;
 
     // Start is called before the first frame update
     void Start()
@@ -107,6 +108,7 @@ public class DetectBodyPickUp : MonoBehaviour
                     position.x += 2.0f;
                 }
                 Instantiate(deadPlayer, position, rotation);
+                dropSound.Post(gameObject);
                 bodyInHand = false;
             }
         }

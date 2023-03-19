@@ -15,6 +15,8 @@ public class PressurePlateFire : MonoBehaviour
     private List<GameObject> objectsInRange;
     private bool fireOn;
     private GameObject player;
+    public AK.Wwise.Event ButtonOn;
+    public AK.Wwise.Event ButtonOff;
 
     void Start()
     {
