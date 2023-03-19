@@ -19,6 +19,7 @@ public class DetectBodyPickUp : MonoBehaviour
         bodyInHand = false;
         bodyHighlighted = null;
         player = GameObject.Find("BlockPlayer");
+        player.GetComponent<PlayerController>().PickUpCorpse(false);
     }
 
     // Update is called once per frame
@@ -89,6 +90,7 @@ public class DetectBodyPickUp : MonoBehaviour
             Destroy(bodyHighlighted, 0.1f);
             bodyHighlighted = null;
             bodyInHand = true;
+            player.GetComponent<PlayerController>().PickUpCorpse(true);
             StartCoroutine(SetPickupLock());
         }
     }
@@ -110,6 +112,7 @@ public class DetectBodyPickUp : MonoBehaviour
                 Instantiate(deadPlayer, position, rotation);
                 dropSound.Post(gameObject);
                 bodyInHand = false;
+                player.GetComponent<PlayerController>().PickUpCorpse(false);
             }
         }
         

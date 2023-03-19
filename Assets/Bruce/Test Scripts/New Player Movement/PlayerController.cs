@@ -28,6 +28,7 @@ using System.Linq;
 ///         - Walk
 ///         - Jump
 ///         - Slide
+///         - Holding Corpse
 /// </Contents>
 
 public class PlayerController : MonoBehaviour, IPlayerController
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #region Animatior
     Animator _Animator;
     bool isJumping;
+    bool isHoldingCorpse;
     #endregion
 
     #region UI
@@ -151,6 +153,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         _Animator.SetBool("IsWalking", isWalking);
         _Animator.SetBool("IsJumping", isJumping);
         _Animator.SetBool("IsSliding", wetfloorOverride);
+        _Animator.SetBool("IsHoldingCorpse", isHoldingCorpse);
         isJumping = false;
     }
     #endregion
@@ -397,6 +400,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         wetfloorOverride = false;
         playerInvincible = false;
         wallJumpLock = false;
+        isHoldingCorpse = false;    // disable holding corpse flag
         _moveClamp = clampOverride;
 
         _minFallSpeed = 80f;
@@ -423,5 +427,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         Quaternion target = Quaternion.Euler(0, 90, 0);
         _Animator.transform.rotation = target;
+    }
+
+    // Toggle boolean indicating if player is holding a corpse (for animation)
+    public void PickUpCorpse(bool holdingCorpse) {
+        isHoldingCorpse = holdingCorpse;
     }
 }
