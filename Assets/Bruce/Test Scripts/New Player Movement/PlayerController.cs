@@ -7,6 +7,7 @@ using System.Linq;
 /// <Disclaimer>
 ///     Original Base Code by Tarodev
 ///     Ultimate 2D Platformer Controller in Unity: https://youtu.be/3sWTzMsmdx8
+///     https://github.com/Matthew-J-Spencer/Ultimate-2D-Controller/blob/main/Scripts/PlayerController.cs
 /// </Disclaimer>
 
 /// <Contents>
@@ -14,6 +15,7 @@ using System.Linq;
 ///         - Coyote Time
 ///         - Queued Jump
 ///         - Wall Hop
+///         - Wall Slide
 ///     
 ///     UI Score Update
 ///         - Death Counter
@@ -33,6 +35,10 @@ using System.Linq;
 public class PlayerController : MonoBehaviour, IPlayerController
 {
     public CharacterController controller;
+
+    #region AssistMode
+    public bool AssistMode = false;
+    #endregion
 
     #region Animatior
     Animator _Animator;
@@ -67,7 +73,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #endregion
 
     private Vector3 _lastPosition;
-    [SerializeField] private float _currentHorizontalSpeed, _currentVerticalSpeed;
+
+    [Header("SPEED")]
+    [SerializeField] private float _currentHorizontalSpeed;
+    [SerializeField] private float _currentVerticalSpeed;
 
     private bool _active;
     void Awake() => Invoke(nameof(Activate), 0.5f);
@@ -170,7 +179,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
     #region Collisions
     [Header("COLLISION")]
-    [SerializeField] private bool _colUp, _colRight, _colDown, _colLeft;
+    [SerializeField] private bool _colUp;
+    [SerializeField] private bool _colRight, _colDown, _colLeft;
     private float _timeLeftGrounded;
 
     private void RunCollisionChecks() {
@@ -186,8 +196,17 @@ public class PlayerController : MonoBehaviour, IPlayerController
         _colDown = groundedCheck;
         _colUp = Physics.CheckSphere(transform.position + new Vector3(0, 1.3f, 0), 0.05f);
 
-        // _colLeft = Physics.CheckBox(transform.position + new Vector3(-Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
-        // _colRight = Physics.CheckBox(transform.position + new Vector3(Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
+        //Wall
+        _colLeft = Physics.CheckBox(transform.position + new Vector3(-Dis, Tall, 0), new Vector3(BoxX/2, BoxY/2, BoxZ/2));
+        _colRight = Physics.CheckBox(transform.position + new Vector3(Dis, Tall, 0), new Vector3(BoxX/2, BoxY/2, BoxZ/2));
+
+        if (wallCheck && _colLeft || _colRight) {
+            _wallhopUsable = true;
+        }
+        else if (wallCheck && !_colLeft && !_colRight)
+        {
+            wallCheck = false;
+        }
     }
     #endregion
 
@@ -195,11 +214,13 @@ public class PlayerController : MonoBehaviour, IPlayerController
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawSphere(transform.position + new Vector3(0, 1.3f, 0), 0.05f);
-        // Gizmos.DrawCube(transform.position + new Vector3(-Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
-        // Gizmos.DrawCube(transform.position + new Vector3(Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
+        Gizmos.DrawCube(transform.position + new Vector3(-Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
+        Gizmos.DrawCube(transform.position + new Vector3(Dis, Tall, 0), new Vector3(BoxX, BoxY, BoxZ));
     }
 
-    // public float BoxX, BoxY, BoxZ, Dis, Tall;
+    [Header("SIDE COLLISION")]
+    [SerializeField] private float BoxX = 0.05f;
+    [SerializeField] private float BoxY = 1.5f, BoxZ = 0.1f, Dis = 0.4f, Tall = 0.3f;
 
     #region Walk
     [Header("WALKING")] [SerializeField] private float _acceleration = 90;
@@ -226,15 +247,6 @@ public class PlayerController : MonoBehaviour, IPlayerController
             // No input. Let's slow the character down
             _currentHorizontalSpeed = Mathf.MoveTowards(_currentHorizontalSpeed, 0, _deceleration * Time.deltaTime);
         }
-
-        // if(wetfloorOverride && (_colLeft || _colRight))
-        // {
-        //     Input = new FrameInput {
-        //         Jumped = UnityEngine.Input.GetButtonDown("Jump"),
-        //         X = 0
-        //     };
-        // }
-
     }
     #endregion
 
@@ -276,18 +288,49 @@ public class PlayerController : MonoBehaviour, IPlayerController
             _apexPoint = 0;
         }
     }
+
+    private bool _wallhopUsable;
+    private bool CanUseWallHop => _wallhopUsable && !_colDown;
     
     private void CalculateJump() 
     {
         // Jump if: grounded or within coyote threshold || sufficient jump buffer
-        if (Input.Jumped && CanUseCoyote || HasBufferedJump) 
+        if (Input.Jumped) 
         {
-            _currentVerticalSpeed = _jumpHeight;
-            _coyoteUsable = false;
-            _timeLeftGrounded = float.MinValue;
-            JumpingThisFrame = true;
+            // Wall Jump
+            if (wallCheck && !controller.isGrounded)
+            {
+                if(!wallJumpLock && CanUseWallHop && wallHit != null)
+                {
+                    // Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
+                    _currentVerticalSpeed = _jumpHeight;
+                    _currentHorizontalSpeed = wallHit.normal.x * _jumpHeight * _wallJumpBonus;
 
-            isJumping = true;
+                    isJumping = true;
+                    CharacterRotation(true, wallHit.normal.x);
+
+                    wallHit = null;
+
+                    _moveClamp = _wallJumpClamp;
+                    
+                    if(!wallJumpLock)
+                    {
+                        StartCoroutine(SetWallJumpLock());
+                    }
+                }
+            }
+            else // Normal Jump
+            {
+                if (CanUseCoyote || HasBufferedJump)
+                {
+                    _currentVerticalSpeed = _jumpHeight;
+                    _coyoteUsable = false;
+                    _timeLeftGrounded = float.MinValue;
+                    JumpingThisFrame = true;
+
+                    isJumping = true;
+                }
+            }
         }
         else 
         {
@@ -306,26 +349,16 @@ public class PlayerController : MonoBehaviour, IPlayerController
     [Header("WALL JUMP")] [SerializeField] private float _wallJumpBonus;
     [SerializeField] private float _wallJumpClamp;
 
+    bool wallCheck;
+    ControllerColliderHit wallHit;
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if(!_colDown && hit.normal.y < 0.1f)
         {
-            if(Input.Jumped && !wallJumpLock)
-            {
-                // Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
-                _currentVerticalSpeed = _jumpHeight;
-                _currentHorizontalSpeed = hit.normal.x * _jumpHeight * _wallJumpBonus;
 
-                isJumping = true;
-                CharacterRotation(true, hit.normal.x);
-
-                _moveClamp = _wallJumpClamp;
-                
-                if(!wallJumpLock)
-                {
-                    StartCoroutine(SetWallJumpLock());
-                }
-            }
+            wallCheck = true;
+            wallHit = hit;
         }
     }
 
@@ -340,11 +373,19 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #endregion
 
     #region Move
-    // [Header("MOVE")] [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
+    [Header("MOVE")] 
+    // [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
     // private int _freeColliderIterations = 10;
 
+    [SerializeField] private float WallSlideClamp = 4;
     private void MoveCharacter() 
     {
+        if (wallCheck)
+        {
+            if (_currentVerticalSpeed < _fallClamp/WallSlideClamp) 
+                _currentVerticalSpeed = _fallClamp/WallSlideClamp;
+        }
+
         RawMovement = new Vector3(_currentHorizontalSpeed, _currentVerticalSpeed);
         var move = RawMovement * Time.deltaTime;
 
