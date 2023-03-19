@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
             CalculateWalk(); // Horizontal movement
             CalculateJumpApex(); // Affects fall speed, so calculate before gravity
             CalculateGravity(); // Vertical movement
-            CalculateJump(); // Possibly overrides vertical
+            if(!wetfloorOverride) CalculateJump(); // Possibly overrides vertical
 
             if(dialogueActive) _currentHorizontalSpeed = 0;
 
@@ -303,6 +303,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
                 if(!wallJumpLock && CanUseWallHop && wallHit != null)
                 {
                     // Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
+                    // Debug.Log("Wall Jump");
+
                     _currentVerticalSpeed = _jumpHeight;
                     _currentHorizontalSpeed = wallHit.normal.x * _jumpHeight * _wallJumpBonus;
 
@@ -321,6 +323,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
             }
             else // Normal Jump
             {
+                // Debug.Log("Normal Jump");
                 if (CanUseCoyote || HasBufferedJump)
                 {
                     _currentVerticalSpeed = _jumpHeight;
@@ -349,7 +352,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     [Header("WALL JUMP")] [SerializeField] private float _wallJumpBonus;
     [SerializeField] private float _wallJumpClamp;
 
-    bool wallCheck;
+    [SerializeField] bool wallCheck;
     ControllerColliderHit wallHit;
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -397,10 +400,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #region Wet Floor Trap
     public void WetFloor()
     {
+        playerInvincible = true;
+        wetfloorOverride = true;
         controller.height = 0.01f;
         controller.center = new Vector3(0, 0, 0);
-        wetfloorOverride = true;
-        playerInvincible = true;
 
         _minFallSpeed = 8f;
         _maxFallSpeed = 12f;
