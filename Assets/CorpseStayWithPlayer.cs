@@ -17,6 +17,7 @@ public class CorpseStayWithPlayer : MonoBehaviour
     {
         Vector3 position = player.transform.position;
         position.y = position.y + 1.0f;
+        
         this.transform.position = position;
         Quaternion playerRotation = player.gameObject.transform.rotation;
         if (playerRotation.y == 0) {
