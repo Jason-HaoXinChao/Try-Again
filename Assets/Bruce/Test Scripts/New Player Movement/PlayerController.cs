@@ -364,6 +364,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
         wetfloorOverride = true;
         playerInvincible = true;
 
+        this.transform.Find("PickUpBodyHitbox").GetComponent<DetectBodyPickUp>().Reset();
+
         _minFallSpeed = 8f;
         _maxFallSpeed = 12f;
         _currentVerticalSpeed = 0f;

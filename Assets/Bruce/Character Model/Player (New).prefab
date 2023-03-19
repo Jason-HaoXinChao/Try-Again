@@ -346,7 +346,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7cbd5a48e4d6c408122a535aa77d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadPlayer: {fileID: 1124384197097789274, guid: 355351c60940b9c4890a7643a800e7a3, type: 3}
+  deadPlayer: {fileID: 1391917714402646341, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
+  carriableCorpse: {fileID: 266281393276141790, guid: deb77961ea6c4ce41ab503ad37baeb67, type: 3}
+  dropSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &2152811860857296209
 GameObject:
   m_ObjectHideFlags: 0
