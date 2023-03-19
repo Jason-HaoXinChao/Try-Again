@@ -8,8 +8,11 @@ public class DetectBodyPickUp : MonoBehaviour
     private bool bodyInHand;
     private GameObject bodyHighlighted;
     [SerializeField] private GameObject deadPlayer;
+    [SerializeField] private GameObject carriableCorpse;
+    private GameObject corpseCarried;
     private bool pickupLock;
     private GameObject player;
+    public AK.Wwise.Event dropSound;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,7 @@ public class DetectBodyPickUp : MonoBehaviour
         bodyInHand = false;
         bodyHighlighted = null;
         player = GameObject.Find("BlockPlayer");
+        player.GetComponent<PlayerController>().PickUpCorpse(false);
     }
 
     // Update is called once per frame
@@ -88,6 +92,16 @@ public class DetectBodyPickUp : MonoBehaviour
             Destroy(bodyHighlighted, 0.1f);
             bodyHighlighted = null;
             bodyInHand = true;
+            player.GetComponent<PlayerController>().PickUpCorpse(true);
+            Vector3 position = player.gameObject.transform.position;
+            Quaternion playerRotation = player.gameObject.transform.rotation;
+            Quaternion rotation;
+            if (playerRotation.y == 0) {
+                rotation = Quaternion.Euler(0, 90, -90);
+            } else {
+                rotation = Quaternion.Euler(0, -90, -90);
+            }
+            this.corpseCarried = Instantiate(carriableCorpse, position, rotation) as GameObject;
             StartCoroutine(SetPickupLock());
         }
     }
@@ -98,25 +112,39 @@ public class DetectBodyPickUp : MonoBehaviour
         {
             if(bodyInHand == true && Input.GetButtonDown("CorpseInteract"))
             {
-                GameObject player = GameObject.FindWithTag("Player");
-                Vector3 position = player.gameObject.transform.position;
-                Quaternion rotation = player.gameObject.transform.rotation;
-                if (rotation.y == 0) {
-                    position.x -= 2.0f;
-                } else {
-                    position.x += 2.0f;
-                }
-                Instantiate(deadPlayer, position, rotation);
-                bodyInHand = false;
+                DumpCorpse();
             }
         }
         
     }
 
+    private void DumpCorpse()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+        Vector3 position = this.corpseCarried.gameObject.transform.position;
+        position.y += 0.5f;
+        Quaternion rotation = this.corpseCarried.gameObject.transform.rotation;
+        Destroy(this.corpseCarried, 0.1f);
+        this.corpseCarried = null;
+        GameObject ragdoll = Instantiate(deadPlayer, position, rotation) as GameObject;
+        Rigidbody spine = ragdoll.transform.Find("spine").gameObject.GetComponent<Rigidbody>();
+        if (player.transform.rotation.y == 0) {
+            spine.AddForce(-60f, 0f, 0f, ForceMode.VelocityChange);
+        } else {
+            spine.AddForce(60f, 0f, 0f, ForceMode.VelocityChange);
+        }
+        dropSound.Post(gameObject);
+        bodyInHand = false;
+        player.GetComponent<PlayerController>().PickUpCorpse(false);
+    }
+
     public void Reset()
     {
+        if (bodyInHand) {
+            DumpCorpse();
+            bodyInHand = false;
+        }
         bodyInRange.Clear();
-        bodyInHand = false;
         if (bodyHighlighted != null) {
             SwitchHighlight(bodyHighlighted, false);
         }
