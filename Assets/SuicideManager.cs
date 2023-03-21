@@ -61,6 +61,10 @@ public class SuicideManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.R)) {
             startTime = float.NegativeInfinity;
             buttonHeld = false;
+
+            var tempColour = blackScreen.color;
+            tempColour.a = 0f;
+            blackScreen.color = tempColour;
         }
     }
 
