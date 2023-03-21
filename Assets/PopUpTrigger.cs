@@ -5,13 +5,13 @@ using UnityEngine;
 public class PopUpTrigger : MonoBehaviour
 {   
     [SerializeField] private GameObject tooltip;
-    private bool inDetectRange;
+    // private bool inDetectRange;
     public GameObject player;
 
     void Start()
     {
         tooltip.SetActive(false);
-        inDetectRange = false;
+        // inDetectRange = false;
         player = null;
     }
     
@@ -23,7 +23,7 @@ public class PopUpTrigger : MonoBehaviour
             player = other.gameObject;
             if (!player.GetComponent<PlayerController>().playerInvincible) {
                 tooltip.SetActive(true);
-                inDetectRange = true;
+                // inDetectRange = true;
             }
         }
     }
@@ -40,6 +40,6 @@ public class PopUpTrigger : MonoBehaviour
     void DisableInteract() {
         player = null;
         tooltip.SetActive(false);
-        inDetectRange = false;
+        // inDetectRange = false;
     }
 }
