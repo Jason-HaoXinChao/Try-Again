@@ -33,7 +33,8 @@ public class StompPlayer : MonoBehaviour
 
     IEnumerator RespawnTimer()
     {
-        yield return new WaitForSeconds(1.3f);
+        player.GetComponent<PlayerController>().DropRagdollBody();
+        yield return new WaitForSeconds(1.0f);
         player.GetComponent<PlayerController>().RespawnCall();
     }
 }

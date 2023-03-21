@@ -46,12 +46,6 @@ public class MoveStamp : MonoBehaviour
                 }
                 stamps[index].transform.position = Vector3.MoveTowards(stamps[index].transform.position, targetLocation, speed);
                 if (stamps[index].transform.position.y == targetY) {
-                    if (index == 0) {
-                        Debug.Log("position: " + positions[index]);
-                        Debug.Log("y: " + stamps[index].transform.position.y);
-                        Debug.Log("targety: " + targetY);
-                    }
-                    
                     if (positions[index] < 3) {
                         // move up 1 level
                         positions[index]++;
@@ -66,7 +60,7 @@ public class MoveStamp : MonoBehaviour
         }
     }
 
-    // makes sure the stamps start moving 1 second apart
+    // makes sure the stamps start moving some seconds apart
     IEnumerator Initialize()
     {
         int initialCounter = 0;
@@ -77,7 +71,7 @@ public class MoveStamp : MonoBehaviour
         }
     }
 
-    // Update the target position of the stamp
+    // make stamp wait before moving to next spot
     IEnumerator Wait(int index)
     {
         waiting[index] = true;
