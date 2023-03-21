@@ -17839,7 +17839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6440807294217901018, guid: d0c86d1a6a1df69469159ab44e812b46, type: 3}
       propertyPath: timeBetweenBlackout
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0c86d1a6a1df69469159ab44e812b46, type: 3}
