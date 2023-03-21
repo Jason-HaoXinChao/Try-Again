@@ -45,8 +45,8 @@ public class MenuManager : MonoBehaviour
                 GameObject.Find("Canvas/Level/Level 1").SetActive(false);
             } else if (gameManager.GetComponent<GameManager>().currentLevel == 3) {
                 levelTitle.GetComponent<TMP_Text>().text = "Level 3";
-                GameObject.Find("Canvas/Level/Level 2").SetActive(true);
-                GameObject.Find("Canvas/Level/Level 1").SetActive(false);
+                GameObject.Find("Canvas/Level/Level 3").SetActive(true);
+                GameObject.Find("Canvas/Level/Level 2").SetActive(false);
             } 
         } else if (sceneName == "Level Complete") {
             int deathCount = gameManager.GetComponent<GameManager>().currDeathCount;
@@ -93,6 +93,8 @@ public class MenuManager : MonoBehaviour
         } else if (gameManager.GetComponent<GameManager>().currentLevel == 2) {
             SceneManager.LoadScene("Level Showcase");
         } else if (gameManager.GetComponent<GameManager>().currentLevel == 3) {
+            SceneManager.LoadScene("Main Game - Level 3");
+        } else if (gameManager.GetComponent<GameManager>().currentLevel == 4) {
             SceneManager.LoadScene("Alpha - End Screen");
         } 
 
