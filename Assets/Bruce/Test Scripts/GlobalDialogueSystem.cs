@@ -87,6 +87,10 @@ public class GlobalDialogueSystem : MonoBehaviour
         else
         {
             ExitDialogueMode();
+            GameObject blackout = GameObject.Find("Blackout");
+            if (blackout) {
+                blackout.GetComponent<GenerateBlackout>().StartBlackout();
+            }
         }
     }
 
