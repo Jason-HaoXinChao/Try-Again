@@ -58,7 +58,6 @@ public class OpenDoorScript : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log(other);
         if (other.tag == "Player")
         {
             DisableOpen();
