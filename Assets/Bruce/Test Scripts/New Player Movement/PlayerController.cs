@@ -424,7 +424,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #endregion
 
     #region RespawnCalls
-    public void RespawnCall()
+
+    public void DropRagdollBody()
     {
         // reset highlighted corpse
         Transform pickupBodyHitbox = this.transform.Find("PickUpBodyHitbox");
@@ -432,7 +433,10 @@ public class PlayerController : MonoBehaviour, IPlayerController
         if (pickupBodyHitbox != null) {
             pickupBodyHitbox.GetComponent<DetectBodyPickUp>().Reset();
         }
+    }
 
+    public void RespawnCall()
+    {
         _currentHorizontalSpeed = 0;
         _currentVerticalSpeed = 0;
 
@@ -443,6 +447,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         controller.center = new Vector3(0, 0.0115f, 0);
         
         this.gameObject.SetActive(true);
+
         wetfloorOverride = false;
         playerInvincible = false;
         wallJumpLock = false;

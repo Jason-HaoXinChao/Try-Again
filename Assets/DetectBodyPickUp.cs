@@ -128,14 +128,20 @@ public class DetectBodyPickUp : MonoBehaviour
         this.corpseCarried = null;
         GameObject ragdoll = Instantiate(deadPlayer, position, rotation) as GameObject;
         Rigidbody spine = ragdoll.transform.Find("spine").gameObject.GetComponent<Rigidbody>();
-        if (player.transform.rotation.y == 0) {
-            spine.AddForce(-60f, 0f, 0f, ForceMode.VelocityChange);
-        } else {
-            spine.AddForce(60f, 0f, 0f, ForceMode.VelocityChange);
+        
+        if (player != null)
+        {
+            if (player.transform.rotation.y == 0) {
+                spine.AddForce(-100f, 0f, 0f, ForceMode.VelocityChange);
+            } else {
+                spine.AddForce(100f, 0f, 0f, ForceMode.VelocityChange);
+            }
+
+            player.GetComponent<PlayerController>().PickUpCorpse(false);
         }
+
         dropSound.Post(gameObject);
         bodyInHand = false;
-        player.GetComponent<PlayerController>().PickUpCorpse(false);
     }
 
     public void Reset()

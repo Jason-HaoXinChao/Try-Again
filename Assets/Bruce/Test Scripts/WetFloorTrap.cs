@@ -54,6 +54,7 @@ public class WetFloorTrap : MonoBehaviour
 
     IEnumerator RespawnTimer()
     {
+        player.GetComponent<PlayerController>().DropRagdollBody();
         yield return new WaitForSeconds(0.1f);
         player.GetComponent<PlayerController>().RespawnCall();
     }
