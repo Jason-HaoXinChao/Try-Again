@@ -588,6 +588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuicideScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 6188309279005004251, guid: 72e24cb1cc43cbc4a865818e3c254ef3, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 1207929708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e24cb1cc43cbc4a865818e3c254ef3, type: 3}
 --- !u!1 &26233609
@@ -2092,6 +2096,7 @@ GameObject:
   - component: {fileID: 120033448}
   - component: {fileID: 120033450}
   - component: {fileID: 120033449}
+  - component: {fileID: 120033451}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -2169,6 +2174,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &120033451
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120033447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1.4
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!4 &133474530 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2718777767583876067, guid: e91c078897d74084f9728a7978374eef, type: 3}
@@ -19209,6 +19231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207929707}
   - component: {fileID: 1207929706}
+  - component: {fileID: 1207929708}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -19270,6 +19293,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 15, y: 5, z: 0}
+--- !u!114 &1207929708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207929705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc156daa837fa4442becdd9946be9fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1209419985
 PrefabInstance:
   m_ObjectHideFlags: 0

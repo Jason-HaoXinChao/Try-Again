@@ -62,7 +62,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 1198724a846e64c49820cbb4df2173c4, type: 2}
-  deadPlayer: {fileID: 2053892673688807678, guid: 1e9c564293a7ff648b28b5978e03d892, type: 3}
+  deadPlayer: {fileID: 1391917714402646341, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
 --- !u!1 &1753661745043774139
 GameObject:
   m_ObjectHideFlags: 0

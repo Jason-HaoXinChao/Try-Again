@@ -63,7 +63,7 @@ public class Level1_CoffeeTable : MonoBehaviour
 
     void PlayerInteract()
     {
-        if(inDetectRange && !GlobalDialogueSystem.GetInstance().dialogueIsPlaying && Input.GetButtonDown("Confirm") && !inNPCRange)
+        if(inDetectRange && !GlobalDialogueSystem.GetInstance().dialogueIsPlaying && Input.GetButtonDown("Confirm") && !inNPCRange && questStatus.activeSelf)
         {
             player.GetComponent<PlayerController>().FaceNPC();
 
