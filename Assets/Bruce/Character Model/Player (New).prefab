@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 785920996360626169}
+  AssistMode: 0
   score: {fileID: 0}
   respawnPoint: {fileID: 0}
   _currentHorizontalSpeed: 0
@@ -210,6 +211,11 @@ MonoBehaviour:
   _colRight: 0
   _colDown: 0
   _colLeft: 0
+  BoxX: 0.05
+  BoxY: 1.5
+  BoxZ: 0.1
+  Dis: 0.4
+  Tall: 0.3
   _acceleration: 90
   _moveClamp: 11
   _deceleration: 60
@@ -223,7 +229,9 @@ MonoBehaviour:
   _jumpBuffer: 0.1
   _wallJumpBonus: 1.2
   _wallJumpClamp: 25
+  wallCheck: 0
   jumpLockTime: 0.2
+  WallSlideClamp: 3
 --- !u!1 &468582791549631890
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +354,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7cbd5a48e4d6c408122a535aa77d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadPlayer: {fileID: 1124384197097789274, guid: 355351c60940b9c4890a7643a800e7a3, type: 3}
+  deadPlayer: {fileID: 1391917714402646341, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
+  carriableCorpse: {fileID: 266281393276141790, guid: deb77961ea6c4ce41ab503ad37baeb67, type: 3}
+  dropSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &2152811860857296209
 GameObject:
   m_ObjectHideFlags: 0

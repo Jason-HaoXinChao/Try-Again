@@ -63,7 +63,7 @@ public class Level1_CoffeeTable : MonoBehaviour
 
     void PlayerInteract()
     {
-        if(inDetectRange && !GlobalDialogueSystem.GetInstance().dialogueIsPlaying && Input.GetButtonDown("Confirm") && !inNPCRange)
+        if(inDetectRange && !GlobalDialogueSystem.GetInstance().dialogueIsPlaying && Input.GetButtonDown("Confirm") && !inNPCRange && questStatus.activeSelf)
         {
             player.GetComponent<PlayerController>().FaceNPC();
 
@@ -72,6 +72,11 @@ public class Level1_CoffeeTable : MonoBehaviour
             if(playerInventory.GetComponent<PlayerInventory>().collectedItems.Count == 0)
             {
                 playerInventory.GetComponent<PlayerInventory>().collectItem(itemName);
+                playerInventory.GetComponent<PlayerInventory>().CoffeeFloatingText("Obtained Coffee", transform.position);
+            }
+            else
+            {
+                playerInventory.GetComponent<PlayerInventory>().CoffeeFloatingText("Inventory Full", transform.position);
             }
             
         }

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
         currentLevel = 0;
         deathCount = 0;
         currDeathCount = 0;
+        // Cursor.visible = false;
     }
 
     void Awake() {

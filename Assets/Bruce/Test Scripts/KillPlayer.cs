@@ -40,6 +40,7 @@ public class KillPlayer : MonoBehaviour
 
     IEnumerator RespawnTimer()
     {
+        player.GetComponent<PlayerController>().DropRagdollBody();
         yield return new WaitForSeconds(1.3f);
         player.GetComponent<PlayerController>().RespawnCall();
     }
