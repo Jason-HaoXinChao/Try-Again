@@ -6355,6 +6355,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 716efad736b55c0458023c6af42f566d, type: 3}
   itemInHand: 
   collectedItems: []
+  FloatingTextPrefab: {fileID: 0}
 --- !u!4 &355426983
 Transform:
   m_ObjectHideFlags: 0
@@ -6685,7 +6686,7 @@ Transform:
   m_GameObject: {fileID: 381216005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25, y: 0, z: -1}
-  m_LocalScale: {x: 200, y: 100, z: 1}
+  m_LocalScale: {x: 300, y: 300, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -9736,7 +9737,7 @@ Transform:
   m_GameObject: {fileID: 577295982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 25, y: 0, z: 1}
-  m_LocalScale: {x: 200, y: 100, z: 1}
+  m_LocalScale: {x: 300, y: 300, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
