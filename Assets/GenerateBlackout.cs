@@ -8,6 +8,7 @@ public class GenerateBlackout : MonoBehaviour
     [SerializeField] private float blackoutSize;
     [SerializeField] private GameObject blackBar;
     [SerializeField] private GameObject flickeringblackBar;
+    [SerializeField] private GameObject airwall;
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private bool start;
     private Vector3 currentPosition;
@@ -66,6 +67,7 @@ public class GenerateBlackout : MonoBehaviour
 
     public void StartBlackout(){
         start = true;
+        airwall.SetActive(false);
     }
 
     public void OpenBlackoutMenu()
