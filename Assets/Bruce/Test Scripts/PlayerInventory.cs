@@ -14,6 +14,7 @@ public class PlayerInventory : MonoBehaviour
     public List<string> collectedItems;   // non-physical items
 
     private GameObject player;
+    public GameObject FloatingTextPrefab;
 
     void Start()
     {
@@ -42,6 +43,8 @@ public class PlayerInventory : MonoBehaviour
                 } 
             }
         }
+
+        PopUpTextCount = this.transform.childCount;
     }
 
     // void Awake()
@@ -83,6 +86,16 @@ public class PlayerInventory : MonoBehaviour
         while (index < this.itemSpriteHUD.Count) {
             this.itemSpriteHUD[index].SetActive(false);
             index++;
+        }
+    }
+
+    int PopUpTextCount = 0;
+    public void CoffeeFloatingText(string txt, Vector3 pos)
+    {
+        if(PopUpTextCount < 5)
+        {
+            var popup = Instantiate(FloatingTextPrefab, pos, Quaternion.identity, transform);
+            popup.GetComponent<TextMesh>().text = txt;
         }
     }
 }
