@@ -6,6 +6,8 @@ public class GenerateBlackout : MonoBehaviour
 {
     [SerializeField] private float timeBetweenBlackout;
     [SerializeField] private float blackoutSize;
+    [SerializeField] private float timeReduceEachBlackout;
+    [SerializeField] private float minimumBlackoutTime;
     [SerializeField] private GameObject blackBar;
     [SerializeField] private GameObject flickeringblackBar;
     [SerializeField] private GameObject airwall;
@@ -49,12 +51,13 @@ public class GenerateBlackout : MonoBehaviour
         GameObject solidBar = Instantiate(blackBar, currentPosition + Vector3.zero, Quaternion.identity) as GameObject;
         solidBar.transform.localScale = new Vector3(999f, blackoutSize, 10f);
         currentPosition.y -= blackoutSize;
+        timeBetweenBlackout -= timeReduceEachBlackout;
+        timeBetweenBlackout = Mathf.Max(timeBetweenBlackout, minimumBlackoutTime);
         queued = false;
     }
 
     IEnumerator Flicker() {
         flickering = true;
-        Debug.Log("flicker");
         Color tmp = nextBlackBar.GetComponent<Renderer>().material.color;
         tmp.a = 0f;
         nextBlackBar.GetComponent<Renderer>().material.color = tmp;

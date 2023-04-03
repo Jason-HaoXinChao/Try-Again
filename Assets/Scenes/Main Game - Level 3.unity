@@ -16618,8 +16618,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966949616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: -100, z: 400}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 8, y: -100, z: 200}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -19010,8 +19010,16 @@ PrefabInstance:
       value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6440807294217901018, guid: d0c86d1a6a1df69469159ab44e812b46, type: 3}
+      propertyPath: minimumBlackoutTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440807294217901018, guid: d0c86d1a6a1df69469159ab44e812b46, type: 3}
       propertyPath: timeBetweenBlackout
-      value: 60
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440807294217901018, guid: d0c86d1a6a1df69469159ab44e812b46, type: 3}
+      propertyPath: timeReduceEachBlackout
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0c86d1a6a1df69469159ab44e812b46, type: 3}
