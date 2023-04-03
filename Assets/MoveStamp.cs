@@ -46,7 +46,7 @@ public class MoveStamp : MonoBehaviour
                 }
                 stamps[index].transform.position = Vector3.MoveTowards(stamps[index].transform.position, targetLocation, speed);
                 if (stamps[index].transform.position.y == targetY) {
-                    if (positions[index] < 3) {
+                    if (positions[index] < 1) {
                         // move up 1 level
                         positions[index]++;
                     } else {
@@ -65,7 +65,7 @@ public class MoveStamp : MonoBehaviour
     {
         int initialCounter = 0;
         while (initialCounter<stamps.Count) {
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(Random.Range(1.0f, 3.0f));
             positions[initialCounter]++;
             initialCounter++;
         }
