@@ -24,17 +24,22 @@ public class KillPlayer : MonoBehaviour
                 // Debug.Log("object in hitbox" + other.gameObject.name);
                 // Debug.Log("player" + position);
                 // Debug.Log("local" + other.transform.position);
-                getImpaled.Post(gameObject);
+                getImpaled.Post(player);
                 other.gameObject.SetActive(false);
                 Instantiate(deadPlayer, position, rotation);
                 
             
                 StartCoroutine(RespawnTimer());
             } else {
-                Debug.Log("stopped sliding");
                 player.GetComponent<PlayerController>().RemoveHorizontalInertia();
             }
 
+        } else if (other.gameObject.tag == "MoveableCorpse" && deadPlayer.tag != "MoveableCorpse") {
+            Vector3 position = other.gameObject.transform.position;
+            Quaternion rotation = other.gameObject.transform.rotation;
+            Destroy(other.gameObject);
+            getImpaled.Post(player);
+            Instantiate(deadPlayer, position, rotation);
         }
     }
 
