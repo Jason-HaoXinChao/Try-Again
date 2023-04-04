@@ -16796,6 +16796,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1744602230071319710, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
   m_PrefabInstance: {fileID: 972820101}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &972820106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4424120097763663393, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+  m_PrefabInstance: {fileID: 972820101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &972820107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4090556814672767261, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+  m_PrefabInstance: {fileID: 972820101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &972949491
 GameObject:
   m_ObjectHideFlags: 0
@@ -21439,10 +21455,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b73d82fb21a3641ab2847d4f748f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgUI: {fileID: 972820107}
   characterProfile: {fileID: 972820105}
   characterIcon: {fileID: 972820104}
   dialoguePanel: {fileID: 972820103}
   dialogueText: {fileID: 972820102}
+  speakerName: {fileID: 972820106}
+  playerInv: {fileID: 418300035}
   colleagueVoice:
     idInternal: 0
     valueGuidInternal: 

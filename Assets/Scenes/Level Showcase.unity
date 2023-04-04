@@ -4245,6 +4245,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 716efad736b55c0458023c6af42f566d, type: 3}
   itemInHand: 
   collectedItems: []
+  FloatingTextPrefab: {fileID: 0}
 --- !u!4 &273079508
 Transform:
   m_ObjectHideFlags: 0
@@ -12303,10 +12304,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b73d82fb21a3641ab2847d4f748f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgUI: {fileID: 816680098}
   characterProfile: {fileID: 1490514670}
   characterIcon: {fileID: 450185426}
   dialoguePanel: {fileID: 54787928}
   dialogueText: {fileID: 1708003041}
+  speakerName: {fileID: 816680097}
+  playerInv: {fileID: 1773052841}
   colleagueVoice:
     idInternal: 0
     valueGuidInternal: 
@@ -12839,6 +12843,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+--- !u!114 &816680097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4424120097763663393, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+  m_PrefabInstance: {fileID: 816680096}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &816680098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4090556814672767261, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+  m_PrefabInstance: {fileID: 816680096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &819282971
 PrefabInstance:
   m_ObjectHideFlags: 0
