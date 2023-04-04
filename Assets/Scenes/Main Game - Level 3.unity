@@ -16768,6 +16768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Temp UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1744602231004409895, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716005fba941bb748afa3e7b1f2c9e32, type: 3}
 --- !u!114 &972820102 stripped
