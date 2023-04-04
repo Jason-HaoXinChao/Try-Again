@@ -131,10 +131,10 @@ public class GlobalDialogueSystem : MonoBehaviour
         //Change the number to modify length of speech
         float dialogueLength = dialogueText.text.Length * (0.06f + 
             (Math.Max(((dialogueText.text.Length - 40)/10), 0)/ 100));
-        Debug.Log(dialogueLength);
+        //Debug.Log(dialogueLength);
 
         string dialogueSpeaker = currentStory.currentTags[0].Split('_')[0];
-        Debug.Log(dialogueSpeaker);
+        //Debug.Log(dialogueSpeaker);
         
         stillPlaying = true;
 
@@ -146,10 +146,10 @@ public class GlobalDialogueSystem : MonoBehaviour
         {
             colleagueVoice.Post(gameObject);
         }
-        // else if (dialogueSpeaker == "CHARACTERNAMEHERE")
-        // {
-
-        // }
+        else if (dialogueSpeaker == "Janitor")
+        {
+            colleagueVoice.Post(gameObject);
+        }
         else
         {
             Debug.LogError("Dialogue System Error: Incorrect Speaker Identifier");
