@@ -27,6 +27,7 @@ public class DetectBodyPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateCorpseNearby();
         BodyPickUp();
         BodyDrop();
         if (bodyInHand == false && bodyInRange.Count > 0 && !player.GetComponent<PlayerController>().playerInvincible) {
@@ -43,7 +44,6 @@ public class DetectBodyPickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         GameObject body = other.gameObject;
         if (body.tag == "MoveableCorpse") {
-            // Debug.Log(body);
             if (!bodyInRange.Contains(body)) {
                 bodyInRange.Add(body);
             }
@@ -58,6 +58,17 @@ public class DetectBodyPickUp : MonoBehaviour
             SwitchHighlight(body, false);
             if (bodyHighlighted == body) {
                 bodyHighlighted = null;
+            }
+        }
+    }
+
+    void UpdateCorpseNearby()
+    {
+        for (int i = bodyInRange.Count - 1; i >=0; i--)
+        {
+            if (bodyInRange[i] == null)
+            {
+                bodyInRange.RemoveAt(i);
             }
         }
     }

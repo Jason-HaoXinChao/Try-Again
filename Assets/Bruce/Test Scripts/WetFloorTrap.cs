@@ -48,7 +48,6 @@ public class WetFloorTrap : MonoBehaviour
         rotation = Quaternion.Euler(0, rotation.y, rotation.z);
         player.gameObject.SetActive(false);
         Instantiate(deadPlayer, position, rotation);
-
         StartCoroutine(RespawnTimer());
     }
 
