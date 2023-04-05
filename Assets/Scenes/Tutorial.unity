@@ -12749,10 +12749,10 @@ GameObject:
   - component: {fileID: 2027299553}
   - component: {fileID: 2027299552}
   - component: {fileID: 2027299558}
+  - component: {fileID: 2027299562}
   - component: {fileID: 2027299560}
   - component: {fileID: 2027299559}
   - component: {fileID: 2027299561}
-  - component: {fileID: 2027299562}
   - component: {fileID: 2027299563}
   m_Layer: 0
   m_Name: Main Camera
