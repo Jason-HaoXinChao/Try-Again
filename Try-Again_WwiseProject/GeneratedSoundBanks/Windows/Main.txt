@@ -1,9 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
+	68157183	Jumping			\Default Work Unit\Jumping	
+	219011350	SpecialAmbience			\Default Work Unit\SpecialAmbience	
 	240104165	DialogueNPC_Start			\Default Work Unit\DialogueNPC_Start	
 	309398149	DialogueMale_Start			\Default Work Unit\DialogueMale_Start	
 	539467320	RoomAmbience			\Default Work Unit\RoomAmbience	
 	663442949	Level01Music			\Default Work Unit\Level01Music	
 	667982098	PlayerRespawn			\Default Work Unit\PlayerRespawn	
+	672567764	Level02music			\Default Work Unit\Level02music	
+	679636833	Menumusic			\Default Work Unit\Menumusic	
+	838070629	Discoverystinger			\Default Work Unit\Discoverystinger	
+	951896297	Victorystinger			\Default Work Unit\Victorystinger	
 	1250595908	LightElectrocute			\Default Work Unit\LightElectrocute	
 	1514899416	KeycardPickup			\Default Work Unit\KeycardPickup	
 	1723853972	ButtonOff			\Default Work Unit\ButtonOff	
@@ -24,6 +30,7 @@ Event	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	13186997	sfx_phonemes_npc_cure	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_cure_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_cure		205512
 	16069325	sfx_player_squeak_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_squeak_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Squeaks\sfx_player_squeak_01		71288
+	43833902	mus_stinger	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\mus_stinger_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_stinger		1411408
 	58714284	amb_room_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_room_01_D9C3CE6E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\amb_room_01		17847572
 	58923651	sfx_phonemes_lowvoice_cat	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_cat_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_cat		72932
 	73965292	sfx_HUD_counter02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\gore - wood beating flesh wet blood splat - medium - 11_112B22E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\HUD\Win Counter\sfx_HUD_counter02		31788
@@ -40,24 +47,32 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	129545044	sfx_phonemes_npc_chair	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_chair_7CD9C100.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_chair		180188
 	130695962	amb_pencil01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_pencil01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\Pencil\amb_pencil01		569092
 	148699886	sfx_HUD_counter04	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\PUNCH_DESIGNED_LIGHT_78_0BEA98FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\HUD\Win Counter\sfx_HUD_counter04		25788
+	173091586	mus_victory	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\mus_victory_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_victory		1270288
 	182872527	amb_clang	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_clang_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\One Shots\amb_clang		158816
 	186590334	sfx_phonemes_npc_now	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_now_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_now		195316
 	198329098	sfx_phonemes_lowvoice_bay	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_bay_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_bay		81684
 	208036280	sfx_phonemes_lowvoice_ear	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_ear_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_ear		63928
+	211932242	sfx_player_jump03	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_jump03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Jumps\sfx_player_jump03		48096
+	227961128	sfx_player_footstep01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_footstep01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_footstep01		48096
 	270127892	sfx_keycard_02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_keycard_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Door and Keycard\Keycard\sfx_keycard_02		7756
 	280185230	sfx_phonemes_npc_wolf	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_wolf_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_wolf		163588
+	286758308	sfx_player_footstep05	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_footstep05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_footstep05		48096
 	287279307	sfx_phonemes_lowvoice_chair	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_chair_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_chair		55104
 	301144359	sfx_phonemes_lowvoice_join	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_join_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_join		56636
 	313365090	sfx_trap_fire_woosh	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_trap_fire_woosh_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\sfx_trap_fire_woosh		432096
 	342085208	sfx_player_Impale_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_Impale_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Impale\sfx_player_Impale_01		421068
 	358845744	sfx_phonemes_lowvoice_sky	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_sky_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_sky		80040
+	375135562	sfx_player_footstep03	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_footstep03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_footstep03		48096
 	377521859	sfx_HUD_counter03	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\PM_LB_SOURCE_FLESH_DROPS_ORANGES_MKH8060_6_08EB035E.wem		\Actor-Mixer Hierarchy\Default Work Unit\HUD\Win Counter\sfx_HUD_counter03		38616
+	399939901	mus_level_music03	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\mus_level_music03_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_level_music03		6245716
 	402651656	sfx_phonemes_npc_cat	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_cat_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_cat		151252
 	404381212	sfx_phonemes_lowvoice_who	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_who_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_who		55832
 	420335803	sfx_player_Impale_02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_Impale_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Impale\sfx_player_Impale_02		523528
 	444410162	amb_keyboard04	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_keyboard04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\Keyboard\amb_keyboard04		1933920
+	451102599	sfx_player_footstep06	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_footstep06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_footstep06		48096
 	454590140	sfx_phonemes_npc_bird	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_bird_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_bird		168304
 	458719437	sfx_phonemes_npc_sky	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_sky_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_sky		199248
+	474219410	sfx_player_footstep02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_footstep02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_footstep02		48096
 	477621382	sfx_player_deathsound_stab03	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_deathsound_stab03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Player Death Sounds\Stab\sfx_player_deathsound_stab03		130416
 	483697947	sfx_phonemes_lowvoice_wolf	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_wolf_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_wolf		53016
 	483887698	amb_paper02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_paper02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\Paper\amb_paper02		1308948
@@ -66,7 +81,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	524035292	sfx_phonemes_npc_open	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_open		189904
 	535712261	sfx_phonemes_lowvoice_now	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_now_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_now		67648
 	550886321	sfx_HUD_counter01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\Borax,Impact,Slime,Gore,Various16_701D9D90.wem		\Actor-Mixer Hierarchy\Default Work Unit\HUD\Win Counter\sfx_HUD_counter01		60324
-	561756807	sfx_player_step_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_step_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_step_01		134548
 	566863628	sfx_trap_light_amb	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_trap_light_amb_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Traps\LightFixture\sfx_trap_light_amb		17280096
 	567048478	sfx_HUD_counter05	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\Quirboilly,leather,metal,twist,contort,small,smooth,lightmetal,drop,slightdistance,roomAMB,release,bounce,settle_92E35771.wem		\Actor-Mixer Hierarchy\Default Work Unit\HUD\Win Counter\sfx_HUD_counter05		36578
 	597890890	amb_keyboard02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_keyboard02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\Keyboard\amb_keyboard02		1985772
@@ -80,8 +94,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	671936950	amb_keyboard01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_keyboard01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\Keyboard\amb_keyboard01		1914348
 	673643020	sfx_player_deathsound_stab01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_deathsound_stab01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Player Death Sounds\Stab\sfx_player_deathsound_stab01		57820
 	674308160	sfx_phonemes_npc_join	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_join_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_join		183592
+	687217269	sfx_player_jump01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_jump01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Jumps\sfx_player_jump01		48096
 	697217701	sfx_phonemes_npc_it	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_it_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_it		147912
-	698748773	sfx_player_step_02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_step_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_step_02		134484
+	698393145	sfx_player_footstep04	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_footstep04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Foosteps\sfx_player_footstep04		48096
 	712808845	amb_phone	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_phone_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\One Shots\amb_phone		1078940
 	728876282	sfx_phonemes_lowvoice_cure	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_lowvoice_cure_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleLow\sfx_phonemes_lowvoice_cure		65604
 	733724383	sfx_phonemes_npc_ear	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_ear_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_ear		199396
@@ -96,12 +111,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	901299637	amb_keyboard03	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\amb_keyboard03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Ambience\Ambience\Keyboard\amb_keyboard03		1796392
 	901860459	sfx_keycard_01	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_keycard_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Door and Keycard\Keycard\sfx_keycard_01		24912
 	909809485	sfx_button_off	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_button_off_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Traps\Button\sfx_button_off		68672
+	920975868	sfx_player_jump02	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_jump02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Jumps\sfx_player_jump02		48096
 	966220899	sfx_phonemes_npc_swan	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_swan_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_swan		172892
 	968169850	sfx_phonemes_npc_paw	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_paw_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_paw		167792
 	982083091	sfx_player_deathsound_shock04	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_deathsound_shock04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Player Death Sounds\Shock\sfx_player_deathsound_shock04		223512
 	983634712	sfx_trap_fire_extinguish	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_trap_fire_extinguish_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Traps\Fire\sfx_trap_fire_extinguish		898448
 	994376627	sfx_trap_light_buzz	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_trap_light_buzz_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Traps\LightFixture\sfx_trap_light_buzz		860768
 	996416146	sfx_button_on	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_button_on_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Traps\Button\sfx_button_on		84964
+	1007037961	mus_menu	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\mus_menu_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\mus_menu		7526608
 	1010990578	sfx_phonemes_npc_lug	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_lug_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_lug		184448
 	1011596096	sfx_phonemes_npc_arm	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_phonemes_npc_arm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\MaleNPC\sfx_phonemes_npc_arm		186284
 	1013193081	sfx_player_Impale_03	G:\Game Builds\Try-Again\Try-Again_WwiseProject\.cache\Windows\SFX\sfx_player_Impale_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\Impale\sfx_player_Impale_03		397448

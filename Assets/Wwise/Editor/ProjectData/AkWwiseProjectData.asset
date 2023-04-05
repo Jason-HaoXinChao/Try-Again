@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 136b4a8efa1709468370bd91e5310cb4
     GuidInternal: 
-    m_lastTime: -8585211470653700669
+    m_lastTime: -8585209430552629143
     List:
     - name: Main
       guid: d30d90fd07a7864087142ba3219aec7c
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f2540b937b63884b8e5e7acc5918f394
     GuidInternal: 
-    m_lastTime: -8585211470654077583
+    m_lastTime: -8585209430558089458
     List:
     - name: ButtonOff
       guid: 690e9e68bc24e242b342345720e649fe
@@ -198,6 +198,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Discoverystinger
+      guid: c7e19badf2e6294eb4d0a41db5349982
+      id: 838070629
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: Discoverystinger
+        ObjectType: 3
+        guid: c7e19badf2e6294eb4d0a41db5349982
+      Path: Events\Default Work Unit\Discoverystinger
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: FireBurn
       guid: 8198a91af8af034a814fe763c4793496
       id: 3609565814
@@ -266,6 +283,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Jumping
+      guid: 0f318b98eb458f4f8956fa1a3fde5307
+      id: 68157183
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: Jumping
+        ObjectType: 3
+        guid: 0f318b98eb458f4f8956fa1a3fde5307
+      Path: Events\Default Work Unit\Jumping
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: KeycardDoor
       guid: 7157f14122b904478a15b293a19ab2d1
       id: 2230797588
@@ -317,6 +351,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Level02music
+      guid: aae0ccaf24d1874eb9f0864ca2d6d9d3
+      id: 672567764
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: Level02music
+        ObjectType: 3
+        guid: aae0ccaf24d1874eb9f0864ca2d6d9d3
+      Path: Events\Default Work Unit\Level02music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: LightAmbience
       guid: 735d78322ea64545b643c5938b3a3547
       id: 2186217851
@@ -348,6 +399,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0333a3f240967c4a8b3ea4c5ba0e59af
       Path: Events\Default Work Unit\LightElectrocute
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menumusic
+      guid: 408e76f6ed5de14e82a8c6d5ac6274a5
+      id: 679636833
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: Menumusic
+        ObjectType: 3
+        guid: 408e76f6ed5de14e82a8c6d5ac6274a5
+      Path: Events\Default Work Unit\Menumusic
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -402,6 +470,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: SpecialAmbience
+      guid: bb471b7c1859ba4882ffdaf5accf8077
+      id: 219011350
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: SpecialAmbience
+        ObjectType: 3
+        guid: bb471b7c1859ba4882ffdaf5accf8077
+      Path: Events\Default Work Unit\SpecialAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: SpikesImpale
       guid: 7129d8934c7fa9478876377785af5301
       id: 4181842614
@@ -450,6 +535,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 61111cde26f9854d8be5b293bfe4d655
       Path: Events\Default Work Unit\TempMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Victorystinger
+      guid: 1e8cbe4c83a888429363c1973f90ed06
+      id: 951896297
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f2540b937b63884b8e5e7acc5918f394
+      - ElementName: Victorystinger
+        ObjectType: 3
+        guid: 1e8cbe4c83a888429363c1973f90ed06
+      Path: Events\Default Work Unit\Victorystinger
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

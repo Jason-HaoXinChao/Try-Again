@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7C37BC18-4CD1-FDCA-30CE-B1FC46622B1F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{51C002DF-431C-DE0B-2806-748800F2F5AF}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -33,6 +33,10 @@
 				<File Id="16069325" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_squeak_01.wav</ShortName>
 					<CachePath>SFX/sfx_player_squeak_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="43833902" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_stinger.wav</ShortName>
+					<CachePath>SFX/mus_stinger_10C4C929.wem</CachePath>
 				</File>
 				<File Id="58714284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_room_01.wav</ShortName>
@@ -98,6 +102,10 @@
 					<ShortName>PUNCH_DESIGNED_LIGHT_78.wav</ShortName>
 					<CachePath>SFX/PUNCH_DESIGNED_LIGHT_78_0BEA98FD.wem</CachePath>
 				</File>
+				<File Id="173091586" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_victory.wav</ShortName>
+					<CachePath>SFX/mus_victory_10C4C929.wem</CachePath>
+				</File>
 				<File Id="182872527" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_clang.wav</ShortName>
 					<CachePath>SFX/amb_clang_10C4C929.wem</CachePath>
@@ -114,6 +122,14 @@
 					<ShortName>sfx_phonemes_lowvoice_ear.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_ear_10C4C929.wem</CachePath>
 				</File>
+				<File Id="211932242" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_jump03.wav</ShortName>
+					<CachePath>SFX/sfx_player_jump03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="227961128" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstep01.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstep01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="270127892" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_keycard_02.wav</ShortName>
 					<CachePath>SFX/sfx_keycard_02_10C4C929.wem</CachePath>
@@ -121,6 +137,10 @@
 				<File Id="280185230" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_wolf.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_npc_wolf_10C4C929.wem</CachePath>
+				</File>
+				<File Id="286758308" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstep05.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstep05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="287279307" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_lowvoice_chair.wav</ShortName>
@@ -142,9 +162,17 @@
 					<ShortName>sfx_phonemes_lowvoice_sky.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_lowvoice_sky_10C4C929.wem</CachePath>
 				</File>
+				<File Id="375135562" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstep03.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstep03_10C4C929.wem</CachePath>
+				</File>
 				<File Id="377521859" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PM_LB_SOURCE_FLESH_DROPS_ORANGES_MKH8060_6.wav</ShortName>
 					<CachePath>SFX/PM_LB_SOURCE_FLESH_DROPS_ORANGES_MKH8060_6_08EB035E.wem</CachePath>
+				</File>
+				<File Id="399939901" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_music03.wav</ShortName>
+					<CachePath>SFX/mus_level_music03_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="402651656" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_cat.wav</ShortName>
@@ -162,6 +190,10 @@
 					<ShortName>amb_keyboard04.wav</ShortName>
 					<CachePath>SFX/amb_keyboard04_10C4C929.wem</CachePath>
 				</File>
+				<File Id="451102599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstep06.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstep06_10C4C929.wem</CachePath>
+				</File>
 				<File Id="454590140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_bird.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_npc_bird_10C4C929.wem</CachePath>
@@ -169,6 +201,10 @@
 				<File Id="458719437" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_sky.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_npc_sky_10C4C929.wem</CachePath>
+				</File>
+				<File Id="474219410" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstep02.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstep02_10C4C929.wem</CachePath>
 				</File>
 				<File Id="477621382" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_deathsound_stab03.wav</ShortName>
@@ -201,10 +237,6 @@
 				<File Id="550886321" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Borax,Impact,Slime,Gore,Various16.wav</ShortName>
 					<CachePath>SFX/Borax,Impact,Slime,Gore,Various16_701D9D90.wem</CachePath>
-				</File>
-				<File Id="561756807" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_step_01.wav</ShortName>
-					<CachePath>SFX/sfx_player_step_01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="566863628" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_trap_light_amb.wav</ShortName>
@@ -258,13 +290,17 @@
 					<ShortName>sfx_phonemes_npc_join.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_npc_join_10C4C929.wem</CachePath>
 				</File>
+				<File Id="687217269" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_jump01.wav</ShortName>
+					<CachePath>SFX/sfx_player_jump01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="697217701" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_it.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_npc_it_10C4C929.wem</CachePath>
 				</File>
-				<File Id="698748773" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_step_02.wav</ShortName>
-					<CachePath>SFX/sfx_player_step_02_10C4C929.wem</CachePath>
+				<File Id="698393145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstep04.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstep04_10C4C929.wem</CachePath>
 				</File>
 				<File Id="712808845" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb_phone.wav</ShortName>
@@ -322,6 +358,10 @@
 					<ShortName>sfx_button_off.wav</ShortName>
 					<CachePath>SFX/sfx_button_off_10C4C929.wem</CachePath>
 				</File>
+				<File Id="920975868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_jump02.wav</ShortName>
+					<CachePath>SFX/sfx_player_jump02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="966220899" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_swan.wav</ShortName>
 					<CachePath>SFX/sfx_phonemes_npc_swan_10C4C929.wem</CachePath>
@@ -345,6 +385,10 @@
 				<File Id="996416146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_button_on.wav</ShortName>
 					<CachePath>SFX/sfx_button_on_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1007037961" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_menu.wav</ShortName>
+					<CachePath>SFX/mus_menu_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="1010990578" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_phonemes_npc_lug.wav</ShortName>
@@ -423,6 +467,11 @@
 						<MediaRef Id="1011596096"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="838070629" Name="Discoverystinger" DurationType="OneShot" DurationMin="8" DurationMax="8">
+					<MediaRefs>
+						<MediaRef Id="43833902"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3609565814" Name="FireBurn" DurationType="OneShot" DurationMin="1.4174112" DurationMax="2.25">
 					<MediaRefs>
 						<MediaRef Id="313365090"/>
@@ -433,11 +482,15 @@
 						<MediaRef Id="983634712"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2385628198" Name="Footsteps" DurationType="OneShot" DurationMin="0.46715224" DurationMax="0.70028126">
+				<Event Id="2385628198" Name="Footsteps" DurationType="OneShot" DurationMin="0.26403943" DurationMax="0.44257525">
 					<MediaRefs>
 						<MediaRef Id="16069325"/>
-						<MediaRef Id="561756807"/>
-						<MediaRef Id="698748773"/>
+						<MediaRef Id="227961128"/>
+						<MediaRef Id="286758308"/>
+						<MediaRef Id="375135562"/>
+						<MediaRef Id="451102599"/>
+						<MediaRef Id="474219410"/>
+						<MediaRef Id="698393145"/>
 						<MediaRef Id="754902247"/>
 					</MediaRefs>
 				</Event>
@@ -448,6 +501,13 @@
 						<MediaRef Id="377521859"/>
 						<MediaRef Id="550886321"/>
 						<MediaRef Id="567048478"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="68157183" Name="Jumping" DurationType="OneShot" DurationMin="0.2102241" DurationMax="0.29730177">
+					<MediaRefs>
+						<MediaRef Id="211932242"/>
+						<MediaRef Id="687217269"/>
+						<MediaRef Id="920975868"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2230797588" Name="KeycardDoor" DurationType="OneShot" DurationMin="2.742854" DurationMax="2.742854">
@@ -467,6 +527,11 @@
 						<MediaRef Id="659278889"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="672567764" Name="Level02music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="399939901"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2186217851" Name="LightAmbience" MaxAttenuation="15" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="566863628"/>
@@ -481,6 +546,11 @@
 						<MediaRef Id="744600462"/>
 						<MediaRef Id="896904385"/>
 						<MediaRef Id="982083091"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="679636833" Name="Menumusic" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1007037961"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2423635109" Name="PlayAmbientFire" MaxAttenuation="15" DurationType="OneShot" DurationMin="87.509094" DurationMax="87.509094">
@@ -511,6 +581,11 @@
 						<MediaRef Id="1013771893"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="219011350" Name="SpecialAmbience" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="58714284"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4181842614" Name="SpikesImpale" DurationType="OneShot" DurationMin="1.7402703" DurationMax="3.241729">
 					<MediaRefs>
 						<MediaRef Id="342085208"/>
@@ -528,8 +603,13 @@
 						<MediaRef Id="104933937"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="951896297" Name="Victorystinger" DurationType="OneShot" DurationMin="7.2" DurationMax="7.2">
+					<MediaRefs>
+						<MediaRef Id="173091586"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2065CC75-895D-F45C-4C88-5A94CD984CC4}</FileHash>
+	<FileHash>{84AC42B2-A3B5-719E-86D5-267E71107A7D}</FileHash>
 </SoundBanksInfo>

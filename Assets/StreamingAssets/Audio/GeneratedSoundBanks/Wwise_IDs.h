@@ -19,21 +19,27 @@ namespace AK
         static const AkUniqueID DIALOGUEMALE_START = 309398149U;
         static const AkUniqueID DIALOGUENPC_END = 1988486606U;
         static const AkUniqueID DIALOGUENPC_START = 240104165U;
+        static const AkUniqueID DISCOVERYSTINGER = 838070629U;
         static const AkUniqueID FIREBURN = 3609565814U;
         static const AkUniqueID FIREEXTINGUISH = 4107157221U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID HUDCOUNTER = 2050202576U;
+        static const AkUniqueID JUMPING = 68157183U;
         static const AkUniqueID KEYCARDDOOR = 2230797588U;
         static const AkUniqueID KEYCARDPICKUP = 1514899416U;
         static const AkUniqueID LEVEL01MUSIC = 663442949U;
+        static const AkUniqueID LEVEL02MUSIC = 672567764U;
         static const AkUniqueID LIGHTAMBIENCE = 2186217851U;
         static const AkUniqueID LIGHTELECTROCUTE = 1250595908U;
+        static const AkUniqueID MENUMUSIC = 679636833U;
         static const AkUniqueID PLAYAMBIENTFIRE = 2423635109U;
         static const AkUniqueID PLAYERRESPAWN = 667982098U;
         static const AkUniqueID ROOMAMBIENCE = 539467320U;
+        static const AkUniqueID SPECIALAMBIENCE = 219011350U;
         static const AkUniqueID SPIKESIMPALE = 4181842614U;
         static const AkUniqueID STOPMUSIC = 1917263390U;
         static const AkUniqueID TEMPMUSIC = 2622437216U;
+        static const AkUniqueID VICTORYSTINGER = 951896297U;
     } // namespace EVENTS
 
     namespace BANKS

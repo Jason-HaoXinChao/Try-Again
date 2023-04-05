@@ -334,6 +334,26 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{CF2721B3-722F-4C90-84EA-63A39B7EF4B8}" ShortID="946688787">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_menu" ID="{3F50C7EA-4E29-495E-90CC-1D6E064F524B}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{39B60C84-64C4-4633-9DD5-5AE466045F0A}" ShortID="469203010">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_level_music03" ID="{4760B44F-025A-45F8-9773-A896549D19DB}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="ButtonOn" ID="{07882824-F7A7-401F-A587-796618FE48AC}">
@@ -390,6 +410,72 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Win Counter" ID="{096FFB95-C8B3-4B14-B6B1-D6F46A353D2F}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Level02music" ID="{AFCCE0AA-D124-4E87-B9F0-864CA2D6D9D3}">
+					<ChildrenList>
+						<Action Name="" ID="{1D098F74-9E20-4387-BA70-F1B827D16D0D}" ShortID="567054178">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_level_music03" ID="{4760B44F-025A-45F8-9773-A896549D19DB}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Menumusic" ID="{F6768E40-5DED-4EE1-82A8-C6D5AC6274A5}">
+					<ChildrenList>
+						<Action Name="" ID="{AD0D6F23-0B97-4ED6-8BA0-246F9B3FD43F}" ShortID="66478486">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_menu" ID="{3F50C7EA-4E29-495E-90CC-1D6E064F524B}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Victorystinger" ID="{4CBE8C1E-A883-4288-9363-C1973F90ED06}">
+					<ChildrenList>
+						<Action Name="" ID="{07A40759-D8E3-4B06-A4C2-D1EC49FD41B9}" ShortID="1006903428">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_victory" ID="{9CB6CC85-A199-4E32-8A42-DBB56578BAAB}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Discoverystinger" ID="{AD9BE1C7-E6F2-4E29-B4D0-A41DB5349982}">
+					<ChildrenList>
+						<Action Name="" ID="{6C1AD52F-6D67-4296-8619-2C789899A017}" ShortID="269431532">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_stinger" ID="{DED2110D-FB44-4D86-9675-F06EE4790E9A}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Jumping" ID="{988B310F-45EB-4F8F-8956-FA1A3FDE5307}">
+					<ChildrenList>
+						<Action Name="" ID="{995E51A4-B5EC-44DD-9943-F463B1A93522}" ShortID="773507879">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jumps" ID="{65ED65A9-7575-490B-8F4E-00ED45732D58}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SpecialAmbience" ID="{7C1B47BB-5918-48BA-82FF-DAF5ACCF8077}">
+					<ChildrenList>
+						<Action Name="" ID="{7097247E-69E4-4CB1-8710-3BC4560DAE48}" ShortID="825031870">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="amb_room_01" ID="{48C0B6B6-35DD-41C6-A32D-96905A4CE221}" WorkUnitID="{A12D9A5B-7B7B-4590-81B3-F512E630C6D1}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
