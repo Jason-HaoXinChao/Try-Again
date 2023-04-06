@@ -15,7 +15,7 @@ public class GenerateBlackout : MonoBehaviour
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private bool start;
     public AK.Wwise.Event turnOnBossMusic;
-    public AK.Wwise.Event turnOnAmbient;
+    // public AK.Wwise.Event turnOnAmbient;
     private Vector3 currentPosition;
     private GameObject nextBlackBar;
     private bool queued;
@@ -29,7 +29,7 @@ public class GenerateBlackout : MonoBehaviour
         queued = false;
         flickering = false;
         currentPosition = startPosition;
-        turnOnAmbient.Post(gameObject);
+        // turnOnAmbient.Post(gameObject);
     }
 
     // Update is called once per frame
