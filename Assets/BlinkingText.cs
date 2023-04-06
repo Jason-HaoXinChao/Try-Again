@@ -7,9 +7,9 @@ using UnityEngine.EventSystems;
 public class BlinkingText : MonoBehaviour
 {   
     TMP_Text text;
-    public float blinkFadeInTime = 0.5f;
-    public float blinkStayTime = 0.8f;
-    public float blinkFadeOutTime = 0.7f;
+    public float blinkFadeInTime = 0.75f;
+    public float blinkStayTime = 0.1f;
+    public float blinkFadeOutTime = 1f;
     private float time = 0f;
     private Color color;
     private bool selected;
@@ -40,7 +40,7 @@ public class BlinkingText : MonoBehaviour
                 text.color = tempColor;
             } else if (time < blinkFadeInTime + blinkStayTime + blinkFadeOutTime) {
                 var tempColor = text.color;
-                tempColor.a = 1 - (time - (blinkFadeInTime + blinkStayTime))/ blinkFadeOutTime;
+                tempColor.a = 1 - (time - (blinkFadeInTime + blinkStayTime))/ blinkFadeOutTime + 0.2f;
                 text.color = tempColor;
             } else {
                 time = 0f;

@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
         currentLevel = 0;
         deathCount = 0;
         currDeathCount = 0;
-        // Cursor.visible = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Awake() {
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Cursor.visible) {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }
