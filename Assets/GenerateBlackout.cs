@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GenerateBlackout : MonoBehaviour
 {
     [SerializeField] private float timeBetweenBlackout;
@@ -13,6 +14,8 @@ public class GenerateBlackout : MonoBehaviour
     [SerializeField] private GameObject airwall;
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private bool start;
+    [SerializeField] private AK.Wwise.Event turnOnBossMusic;
+    [SerializeField] private AK.Wwise.Event turnOnAmbient;
     private Vector3 currentPosition;
     private GameObject nextBlackBar;
     private bool queued;
