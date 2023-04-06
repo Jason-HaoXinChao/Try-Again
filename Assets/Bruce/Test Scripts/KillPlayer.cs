@@ -24,7 +24,7 @@ public class KillPlayer : MonoBehaviour
                 // Debug.Log("object in hitbox" + other.gameObject.name);
                 // Debug.Log("player" + position);
                 // Debug.Log("local" + other.transform.position);
-                getImpaled.Post(player);
+                getImpaled.Post(gameObject);
                 other.gameObject.SetActive(false);
                 Instantiate(deadPlayer, position, rotation);
                 
@@ -38,7 +38,7 @@ public class KillPlayer : MonoBehaviour
             Vector3 position = other.gameObject.transform.position;
             Quaternion rotation = other.gameObject.transform.rotation;
             Destroy(other.gameObject);
-            getImpaled.Post(player);
+            getImpaled.Post(gameObject);
             Instantiate(deadPlayer, position, rotation);
         }
     }

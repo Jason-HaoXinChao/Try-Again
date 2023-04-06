@@ -11,14 +11,21 @@ public class GlobalDialogueSystem : MonoBehaviour
     static GlobalDialogueSystem instance;
 
     [Header("Dialogue UI")]
+    [SerializeField] private GameObject bgUI;
     [SerializeField] private GameObject characterProfile;
     [SerializeField] private GameObject characterIcon;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI speakerName;
+
+    [Header("Player Inventory")]
+    [SerializeField] private GameObject playerInv;
 
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool firstLine;
+
+    [Header("Audio")]
     public AK.Wwise.Event colleagueVoice;
     public AK.Wwise.Event colleagueVoiceEnd;
     public AK.Wwise.Event playerVoice;
@@ -44,6 +51,7 @@ public class GlobalDialogueSystem : MonoBehaviour
     void Start()
     {
         dialogueIsPlaying = false;
+        bgUI.SetActive(false);
         characterProfile.SetActive(false);
         dialoguePanel.SetActive(false);
         firstLine = false;
@@ -67,6 +75,10 @@ public class GlobalDialogueSystem : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+
+        playerInv.SetActive(false);
+
+        bgUI.SetActive(true);
         characterProfile.SetActive(true);
         dialoguePanel.SetActive(true);
         firstLine = true;
@@ -82,6 +94,10 @@ public class GlobalDialogueSystem : MonoBehaviour
 
             DialogueRNGVoice();
 
+            if (tags[0].Split('_')[0] == "Player")
+                speakerName.text = "Me";
+            else
+                speakerName.text = tags[0].Split('_')[0];
             characterIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>($"Dialogue UI/Speaker Icon/{tags[0]}");
         }
         else
@@ -96,7 +112,15 @@ public class GlobalDialogueSystem : MonoBehaviour
 
     void ExitDialogueMode()
     {
+        dialogueText.text = "";
+        speakerName.text = "";
+        characterIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("Dialogue UI/Speaker Icon/EmptySquare");
+        
         dialogueIsPlaying = false;
+
+        playerInv.SetActive(true);
+
+        bgUI.SetActive(false);
         characterProfile.SetActive(false);
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -107,10 +131,10 @@ public class GlobalDialogueSystem : MonoBehaviour
         //Change the number to modify length of speech
         float dialogueLength = dialogueText.text.Length * (0.06f + 
             (Math.Max(((dialogueText.text.Length - 40)/10), 0)/ 100));
-        Debug.Log(dialogueLength);
+        //Debug.Log(dialogueLength);
 
         string dialogueSpeaker = currentStory.currentTags[0].Split('_')[0];
-        Debug.Log(dialogueSpeaker);
+        //Debug.Log(dialogueSpeaker);
         
         stillPlaying = true;
 
@@ -122,10 +146,10 @@ public class GlobalDialogueSystem : MonoBehaviour
         {
             colleagueVoice.Post(gameObject);
         }
-        // else if (dialogueSpeaker == "CHARACTERNAMEHERE")
-        // {
-
-        // }
+        else if (dialogueSpeaker == "Janitor")
+        {
+            colleagueVoice.Post(gameObject);
+        }
         else
         {
             Debug.LogError("Dialogue System Error: Incorrect Speaker Identifier");
