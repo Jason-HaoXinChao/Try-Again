@@ -32,7 +32,8 @@ public class MenuManager : MonoBehaviour
             int deathCount = gameManager.GetComponent<GameManager>().currDeathCount;
             GameObject.Find("Canvas/Details/Death Count").GetComponent<TMP_Text>().text = "Interns Fired: " + deathCount;
 
-            int minDeathCount = minDeaths[Math.Min(Math.Max(gameManager.GetComponent<GameManager>().currentLevel - 1, 0), 3)];
+            // int minDeathCount = minDeaths[Math.Min(Math.Max(gameManager.GetComponent<GameManager>().currentLevel - 1, 0), 3)];
+            int minDeathCount = minDeaths[gameManager.GetComponent<GameManager>().currentLevel];
             int rating = Math.Max(6 - (Math.Max(deathCount, minDeathCount) - minDeathCount) / ratingIncrement, 0);
 
             GameObject.Find("Canvas/Details/Rating").GetComponent<TMP_Text>().text = ratings[rating] + " Expectations";
