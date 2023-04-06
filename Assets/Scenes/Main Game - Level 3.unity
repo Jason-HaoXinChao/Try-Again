@@ -29434,6 +29434,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339621196}
     m_Modifications:
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.867
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589265876457926960, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 6771246012981691897, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -29489,6 +29529,10 @@ PrefabInstance:
     - target: {fileID: 6890302613093481284, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
       propertyPath: m_Name
       value: RedDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459703204498062265, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b14e9513aa5cd45b4c9379ac3f8d44, type: 3}
