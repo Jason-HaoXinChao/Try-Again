@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 1ceeb84c3d82884caf211f3e95033d4e
     GuidInternal: 
-    m_lastTime: -8585246854637938778
+    m_lastTime: -8585233587364245407
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -612,7 +612,7 @@ MonoBehaviour:
     m_lastTime: -8585246854637958723
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
