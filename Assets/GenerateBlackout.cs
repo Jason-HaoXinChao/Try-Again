@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GenerateBlackout : MonoBehaviour
 {
     [SerializeField] private float timeBetweenBlackout;
@@ -13,6 +14,8 @@ public class GenerateBlackout : MonoBehaviour
     [SerializeField] private GameObject airwall;
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private bool start;
+    public AK.Wwise.Event turnOnBossMusic;
+    public AK.Wwise.Event turnOnAmbient;
     private Vector3 currentPosition;
     private GameObject nextBlackBar;
     private bool queued;
@@ -26,6 +29,7 @@ public class GenerateBlackout : MonoBehaviour
         queued = false;
         flickering = false;
         currentPosition = startPosition;
+        turnOnAmbient.Post(gameObject);
     }
 
     // Update is called once per frame
@@ -71,6 +75,7 @@ public class GenerateBlackout : MonoBehaviour
     public void StartBlackout(){
         start = true;
         airwall.SetActive(false);
+        turnOnBossMusic.Post(gameObject);
     }
 
     public void OpenBlackoutMenu()
