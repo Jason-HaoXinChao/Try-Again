@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         if(!_active) return;
 
-        if (!pauseMenu.transform.GetChild(0).gameObject.activeSelf)
+        if (!pauseMenu.transform.GetChild(0).gameObject.activeSelf && !pauseMenu.transform.GetChild(2).gameObject.activeSelf)
         {
             // Check if Dialogue Sequence is active
             dialogueActive = GlobalDialogueSystem.GetInstance().dialogueIsPlaying;
