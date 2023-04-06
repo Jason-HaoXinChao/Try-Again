@@ -1387,6 +1387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8906706303276352476, guid: eed346feb75e0384582202945a236989, type: 3}
+      propertyPath: pickUpCard.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7038ba4cddcab7b4e8066c358712ab71, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eed346feb75e0384582202945a236989, type: 3}
 --- !u!4 &55806218 stripped
@@ -21002,6 +21006,10 @@ PrefabInstance:
       propertyPath: timeReduceEachBlackout
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6440807294217901018, guid: d0c86d1a6a1df69469159ab44e812b46, type: 3}
+      propertyPath: turnOnBossMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d2e1f3b996a2c9d49bf24b3ad0c5037f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0c86d1a6a1df69469159ab44e812b46, type: 3}
 --- !u!1001 &1096335300
@@ -27358,6 +27366,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5463111654694208660, guid: 8cdeaf124409fd34291068d9cad46861, type: 3}
+      propertyPath: dropSound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: dbf97f825cc306e449a720df39e7ddef, type: 2}
     - target: {fileID: 5492529869065803667, guid: 8cdeaf124409fd34291068d9cad46861, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 89.81337
@@ -30779,6 +30791,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6563039915352421220, guid: a1dc7021621f2c64f92a9a3c632fa227, type: 3}
+      propertyPath: doorSounds.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d0d6c5482334dd42b70d1791e9df7d4, type: 2}
     - target: {fileID: 6771246012981691897, guid: a1dc7021621f2c64f92a9a3c632fa227, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -39883,7 +39899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf1c2421bda2174f8dc5febc43496bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
+  triggerList: f7e1664c
   useOtherObject: 0
   actionOnEventType: 0
   curveInterpolation: 4
