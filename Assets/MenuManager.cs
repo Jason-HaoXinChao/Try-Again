@@ -15,7 +15,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject corpse;
     public int[] minDeaths = {5, 10, 15, 25};
     public int ratingIncrement = 5;
-
+    [SerializeField] GameObject[] instructions;
+    private int instructionsIdx = 0;
     private string[] ratings = {"Does Not Meet", "Meets Some", "Meets Most", "Meets All", "Exceeds", "Greatly Exceeds", "Redefines"};
     void Start()
     {
@@ -153,6 +154,21 @@ public class MenuManager : MonoBehaviour
                 //     GameObject.Find("Canvas/Level/Level 3").GetComponent<RectTransform>().localPosition = Vector3.MoveTowards(GameObject.Find("Canvas/Level/Level 3").GetComponent<RectTransform>().localPosition, new Vector3(438.73f, -137f, 0f), 2);
                 // }
             } 
+        } else if (sceneName == "Onboarding") {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
+                instructions[instructionsIdx].SetActive(false);
+                if (instructionsIdx == 0) {
+                    instructionsIdx = 4;
+                } else {
+                    instructionsIdx -= 1;
+                }
+
+                instructions[instructionsIdx].SetActive(true);
+            } else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
+                instructions[instructionsIdx].SetActive(false);
+                instructionsIdx = (instructionsIdx + 1) % 5;
+                instructions[instructionsIdx].SetActive(true);
+            }
         }
     }
 
@@ -181,6 +197,11 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level Select");
         gameManager.GetComponent<GameManager>().currDeathCount = 0;
+    }
+
+    public void GoToOnboarding()
+    {
+        SceneManager.LoadScene("Onboarding");
     }
 
     public void StartLevel()
