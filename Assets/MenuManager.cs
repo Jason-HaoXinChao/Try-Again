@@ -33,7 +33,7 @@ public class MenuManager : MonoBehaviour
             GameObject.Find("Canvas/Details/Death Count").GetComponent<TMP_Text>().text = "Interns Fired: " + deathCount;
 
             int minDeathCount = minDeaths[gameManager.GetComponent<GameManager>().currentLevel];
-            int rating = Math.Max(6 - (deathCount - minDeathCount)/ ratingIncrement, 0);
+            int rating = Math.Max(6 - (Math.Max(deathCount, minDeathCount) - minDeathCount)/ ratingIncrement, 0);
 
             GameObject.Find("Canvas/Details/Rating").GetComponent<TMP_Text>().text = ratings[rating] + " Expectations";
             StartCoroutine(SpawnCorpse(deathCount));
@@ -207,7 +207,7 @@ public class MenuManager : MonoBehaviour
     public void StartLevel()
     {
         if (gameManager.GetComponent<GameManager>().currentLevel == 0){
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("Prelude");
         } else if (gameManager.GetComponent<GameManager>().currentLevel == 1) {
             SceneManager.LoadScene("Main Game - Level 1");
         } else if (gameManager.GetComponent<GameManager>().currentLevel == 2) {

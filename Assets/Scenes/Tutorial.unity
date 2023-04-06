@@ -6330,6 +6330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighlightableCorpseStanding (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1391917714402646341, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1736917647129003007, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8808,6 +8812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighlightableCorpseStanding (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1391917714402646341, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1736917647129003007, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -9598,7 +9606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1188879102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10931,7 +10939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1380844708
 Transform:
   m_ObjectHideFlags: 0
@@ -12151,6 +12159,10 @@ PrefabInstance:
     - target: {fileID: 1391917714402646341, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
       propertyPath: m_Name
       value: HighlightableCorpseStanding (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391917714402646341, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1736917647129003007, guid: e3ec48088bd0b6f469ce7b098a6dd4ba, type: 3}
       propertyPath: m_RootOrder

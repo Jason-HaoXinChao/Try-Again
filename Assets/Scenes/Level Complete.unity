@@ -1185,6 +1185,7 @@ GameObject:
   - component: {fileID: 1519491363}
   - component: {fileID: 1519491362}
   - component: {fileID: 1519491366}
+  - component: {fileID: 1519491367}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1295,6 +1296,19 @@ MonoBehaviour:
   corpse: {fileID: 2053892673688807678, guid: e1698a89ee35cc844b0408254c28e38d, type: 3}
   minDeaths: 050000000a0000000f00000019000000
   ratingIncrement: 5
+  instructions: []
+--- !u!114 &1519491367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519491361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658ca99d12a64dd4e897b8797ee647c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1530593986
 GameObject:
   m_ObjectHideFlags: 0
